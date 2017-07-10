@@ -1,0 +1,24 @@
+{
+  "name": "dogui",
+  "version": "0.0.1",
+  "description": "A dog UI library for Vuejs",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adogio/dogUI.git"
+  },
+  "keywords": [
+    "UI",
+    "Vue",
+    "ADog"
+  ],
+  "author": "WMXPY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adogio/dogUI/issues"
+  },
+  "homepage": "https://github.com/adogio/dogUI#readme"
+}
