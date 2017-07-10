@@ -24,6 +24,12 @@
     "url": "https://github.com/adogio/dogUI/issues"
   },
   "homepage": "https://github.com/adogio/dogUI#readme",
+  "browserify": {
+    "transform": [
+      "babelify",
+      "vueify"
+    ]
+  },
   "browser": {
     "vue": "vue/dist/vue.common.js"
   },
