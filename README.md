@@ -1,6 +1,6 @@
 # dogUI
 
-A dog UI library frame work on Vue
+adog UI library frame work on Vue
 
 ## Introduction
 
