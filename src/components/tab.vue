@@ -4,7 +4,7 @@
             <div class="col-xs-1 left">
                 <anicon v-bind:icon="icon"></anicon>
             </div>
-            <div class="col-xs-11 right">
+            <div class="col-xs-10 right">
                 <strong><span v-text="info"></span></strong>
             </div>
         </div>
@@ -22,6 +22,11 @@
 </script>
 
 <style scoped>
+    .row {
+        padding: 0px;
+        margin: 0px;
+    }
+
     .left {
         text-align: right;
         font-size: 23px;

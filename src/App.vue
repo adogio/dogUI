@@ -20,6 +20,12 @@
       <dog-block icon="car" info="123">
         123
       </dog-block>
+      <dog-button v-on:click="test" icon="car" size="large" color="red">123</dog-button>
+      <dog-button v-on:click="test" icon="car" size="large" color="orange">123</dog-button>
+      <dog-button v-on:click="test" icon="car" size="large" color="green">123</dog-button>
+      <dog-button v-on:click="test" icon="car" size="large" color="blue">123</dog-button>
+      <dog-button v-on:click="test" icon="car" size="large" color="black">123</dog-button>
+      <dog-button v-on:click="test" icon="car" size="large" color="purple">123</dog-button>
     </dog-title>
   </div>
 </template>
@@ -32,7 +38,13 @@
     components: {
       "dog-block": dogui.block,
       "dog-title": dogui.title,
-      "dog-cell": dogui.cell
+      "dog-cell": dogui.cell,
+      "dog-button": dogui.button
+    },
+    methods: {
+      test: function () {
+        console.log('test');
+      }
     }
   }
 </script>
