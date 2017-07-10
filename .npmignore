@@ -8,7 +8,8 @@ dist
 .babelrc
 karma.conf.js
 demo
-src/app.vue
+src/App.vue
+src/main.js
 index.html
 
 # Runtime data
