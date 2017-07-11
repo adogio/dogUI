@@ -1,6 +1,6 @@
 <template>
     <div>
-        <dog-button @click="calling" :icon="icon">
+        <dog-button @click="calling" :icon="ificon" :size="ifsize" :color="ifcolor">
             <slot></slot>
         </dog-button>
     </div>
@@ -19,13 +19,24 @@
                 pict: null
             }
         },
+        computed: {
+            ifsize: function () {
+                return this.size ? this.size : 'normal'
+            },
+            ifcolor: function () {
+                return this.color ? this.color : undefined
+            },
+            ificon: function () {
+                return this.icon ? this.icon : "question"
+            }
+        },
         mounted: function () {
             this.fileInput = document.createElement("input");
             this.fileInput.type = "file";
             this.fileInput.onchange = this.shrink;
             this.pict = new picture(this.fileInput);
         },
-        props: ['icon', 'quality'],
+        props: ['icon', 'quality', 'size', 'color'],
         components: {
             "dog-button": dogbutton
         },
