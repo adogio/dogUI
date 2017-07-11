@@ -25,12 +25,11 @@
     export default {
         mounted: function () {
             this.combo = Math.floor(Math.random() * 100) % this.part.length;
-
         },
         props: ['title', 'icon'],
         data: function () {
             return {
-                part: ["1FD4F9", "FA4A4C", "52489C", "4062BB", "59C3C3", "DEFFFC", "EB5160", "ED9B40"],
+                part: ["7FB3D5", "A569BD", "EC7063", "AF7AC5", "45B39D", "F4D03F", "E59866", "B2BABB", "F0B27A"],
                 combo: 0
             }
         },
@@ -104,7 +103,7 @@
         -webkit-animation-duration: 2.5s;
         font-size: 55px;
         animation-duration: 2.5s;
-        color: #eaeaea;
+        color: #979A9A;
         text-shadow: 2px 2px 5px #888888;
     }
 
@@ -115,7 +114,7 @@
 
     div.padding-line {
         height: 7px;
-        background-color: red;
+        background-color: black;
         -webkit-animation: colorchange 25s linear infinite alternate;
         animation: colorchange 25s linear infinite alternate;
         /*animation-delay: 2s;
@@ -124,7 +123,7 @@
 
     div.left-bottom {
         font-size: 45px;
-        border-left: 9px solid black;
+        border-left: 9px solid #626567;
         padding-left: 16px;
         padding-bottom: 5px;
         min-width: 100%;

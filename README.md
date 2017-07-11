@@ -31,3 +31,16 @@ import dogUI from 'dogUI'
 <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 ```
+
+## Usage
+
+```html
+<div id="app">
+    <dog-title title="测试" icon="rss">
+      <dog-block icon="car" info="123">
+        <dog-cell left="aoc">testatsat</dog-cell>
+      </dog-block>
+      <dog-button v-on:click="test" icon="car" size="large" color="red">123</dog-button>
+    </dog-title>
+  </div>
+```
