@@ -36,12 +36,12 @@
         margin: 0px;
     }
 
-    .col-xs-4 {
+    .col-xs-3 {
         padding-left: 2px;
         /*border-bottom: 1px solid lightgray;*/
     }
 
-    .col-xs-8 {
+    .col-xs-7 {
         padding-right: 2px;
         /*border-bottom: 1px solid lightgray;*/
     }
