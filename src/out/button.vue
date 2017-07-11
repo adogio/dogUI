@@ -75,7 +75,11 @@
                 if (this.size) {
                     size = this.size;
                 }
-                comClass += " button-" + size;
+                if (this.size == "xl") {
+                    comClass += " button-xl";
+                } else {
+                    comClass += " button-" + size;
+                }
                 return comClass;
             }
         }
@@ -83,6 +87,12 @@
 </script>
 
 <style scoped>
+    .button-xl {
+        height: 105px;
+        font-size: 48px;
+        font-family: 'ubuntu';
+    }
+
     button {
         margin-top: 2px;
     }

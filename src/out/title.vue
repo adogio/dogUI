@@ -103,7 +103,7 @@
         -webkit-animation-duration: 2.5s;
         font-size: 55px;
         animation-duration: 2.5s;
-        color: #979A9A;
+        color: white;
         text-shadow: 2px 2px 5px #888888;
     }
 
@@ -124,6 +124,7 @@
     div.left-bottom {
         font-size: 45px;
         border-left: 9px solid #626567;
+        font-family: 'ubuntu';
         padding-left: 16px;
         padding-bottom: 5px;
         min-width: 100%;
