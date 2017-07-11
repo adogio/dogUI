@@ -3,5 +3,6 @@ export default {
     block: require('./out/block.vue'),
     cell: require('./out/cell.vue'),
     button: require('./out/button.vue'),
-    search: require('./out/searchBar.vue')
+    search: require('./out/searchBar.vue'),
+    upload: require('./out/picture.vue')
 }

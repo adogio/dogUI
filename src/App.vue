@@ -1,34 +1,7 @@
 <template>
   <div id="app">
-    <dog-title title="测试" icon="rss">
-      <dog-search v-on:change="test">搜索...</dog-search>
-      <dog-block icon="car" info="123">
-        <dog-cell left="aoc">testatsat</dog-cell>
-      </dog-block>
-      <dog-block icon="car" info="123">
-        <dog-cell left="aoc">testatsat</dog-cell>
-        <dog-cell left="aoc">testatsat</dog-cell>
-        <dog-cell left="aoc">testatsat</dog-cell>
-        <dog-cell left="aoc">testatsat</dog-cell>
-        <dog-cell left="aoc">testatsat</dog-cell>
-      </dog-block>
-      <dog-block icon="car" info="123">
-        <dog-cell left="aoc">testatsat</dog-cell>
-      </dog-block>
-      <dog-block icon="car" info="123">
-        <dog-cell left="aoc">testatsat</dog-cell>
-      </dog-block>
-      <dog-block icon="car" info="123">
-        <dog-cell left="aoc">testatsat</dog-cell>
-        <dog-cell left="aoc">testatsat</dog-cell>
-        <dog-cell left="aoc">testatsat</dog-cell>
-        <dog-cell left="aoc">testatsat</dog-cell>
-      </dog-block>
-      <dog-block icon="car" info="123">
-        <dog-cell left="aoc">testatsat</dog-cell>
-      </dog-block>
-      <dog-button v-on:click="test" icon="car" size="large" color="red">123</dog-button>
-    </dog-title>
+    <dog-upload icon="car" quality="40" @change="test(0, $event)">123</dog-upload>
+    <img :src="filesss">
   </div>
 </template>
 
@@ -42,11 +15,19 @@
       "dog-title": dogui.title,
       "dog-cell": dogui.cell,
       "dog-button": dogui.button,
-      "dog-search": dogui.search
+      "dog-search": dogui.search,
+      "dog-upload": dogui.upload
     },
+    data: function () {
+      return {
+        file: null,
+        filesss: ""
+      }
+    },
+    mounted: function () {},
     methods: {
-      test: function (eventt) {
-        console.log(eventt);
+      test: function (index, src) {
+        this.filesss = src;
       }
     }
   }

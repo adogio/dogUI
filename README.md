@@ -6,7 +6,7 @@ adog UI library frame work on Vue
 
 ## Version
 
-- Version 1.0.4
+- Version 1.1.0
 
 ## Introduction
 
@@ -46,5 +46,30 @@ import dogUI from 'dogUI'
       </dog-block>
       <dog-button v-on:click="test" icon="car" size="large" color="red">123</dog-button>
     </dog-title>
-  </div>
+    <dog-upload icon="car" quality="40" @change="test(0, $event)">123</dog-upload>
+    <img :src="filesss">
+</div>
 ```
+
+
+/**
+ *
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting  
+ * 　　　　┃　　　┃    神兽保佑,代码无bug
+ * 　　　　┃　　　┃
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　 ┣┓
+ * 　　　　┃　　　　 ┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ *
+ */
