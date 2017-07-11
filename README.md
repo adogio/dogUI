@@ -4,6 +4,10 @@
 
 adog UI library frame work on Vue
 
+## Version
+
+- Version 1.0.4
+
 ## Introduction
 
 dogUI is a Vue based UI library for mobile  
