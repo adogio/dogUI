@@ -1,10 +1,9 @@
 <template>
     <div>
-        <div class="animated bounceIn">
+        <div class="tielanimate animated bounceIn">
             <div class="row">
                 <div class="left-bottom" v-bind:style="titleColor">
                     <i class="animated pulse infinite framee" v-bind:class="parsedicon"></i>
-                    <br>
                     <span v-text="title" class="shadow-dog"></span>
                 </div>
             </div>
@@ -89,6 +88,8 @@
         }
     }
 
+    .tielanimate {}
+
     div {
         padding: 0px;
         margin: 0px;
@@ -101,15 +102,15 @@
 
     .framee {
         -webkit-animation-duration: 2.5s;
-        font-size: 55px;
+        font-size: 46px;
         animation-duration: 2.5s;
         color: white;
         text-shadow: 2px 2px 5px #888888;
     }
 
     div.hint-bottom {
-        animation-delay: 1s;
-        -webkit-animation-delay: 1s;
+        animation-delay: 0.6s;
+        -webkit-animation-delay: 0.6s;
     }
 
     div.padding-line {
@@ -117,8 +118,6 @@
         background-color: black;
         -webkit-animation: colorchange 25s linear infinite alternate;
         animation: colorchange 25s linear infinite alternate;
-        /*animation-delay: 2s;
-        -webkit-animation-delay: 2s;*/
     }
 
     div.left-bottom {
@@ -127,10 +126,8 @@
         font-family: 'ubuntu';
         padding-left: 16px;
         padding-bottom: 5px;
-        min-width: 100%;
-        width: 100%;
         width: 100vw;
-        height: 170px;
+        height: 115px;
         display: table-cell;
         vertical-align: bottom;
     }

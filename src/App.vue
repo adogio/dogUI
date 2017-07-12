@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <dog-upload icon="car" quality="40" @change="test(0, $event)">123</dog-upload>
-    <img :src="filesss">
+    <dog-title icon="plus" title="test">
+
+    </dog-title>
   </div>
 </template>
 

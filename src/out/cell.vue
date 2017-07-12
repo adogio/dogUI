@@ -1,7 +1,8 @@
 <template>
     <div>
         <div class="row">
-            <div class="larger-text col-xs-4" :text="left">
+            <div class="larger-text col-xs-4">
+                {{left}}
             </div>
             <div class="larger-text col-xs-8">
                 <slot></slot>
