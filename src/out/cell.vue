@@ -13,6 +13,7 @@
 
 <script>
     export default {
+        name: "dog-cell",
         props: ['left']
     }
 </script>

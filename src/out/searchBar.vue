@@ -15,6 +15,7 @@
             }
         },
         props: ['placeholder'],
+        name: "dog-search-bar",
         components: {
             "dog-bar": bar,
             "dog-icon": icon

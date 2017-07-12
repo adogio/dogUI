@@ -9,17 +9,26 @@
 </template>
 
 <script>
-  import dogui from './import';
+  import {
+    block,
+    title,
+    cell,
+    button,
+    search,
+    upload,
+    input
+  } from './import';
 
   export default {
     name: 'app',
     components: {
-      "dog-block": dogui.block,
-      "dog-title": dogui.title,
-      "dog-cell": dogui.cell,
-      "dog-button": dogui.button,
-      "dog-search": dogui.search,
-      "dog-upload": dogui.upload
+      "dog-block": block,
+      "dog-title": title,
+      "dog-cell": cell,
+      "dog-button": button,
+      "dog-search": search,
+      "dog-upload": upload,
+      "dog-input": input,
     },
     data: function () {
       return {

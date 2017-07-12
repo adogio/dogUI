@@ -26,6 +26,7 @@
             this.combo = Math.floor(Math.random() * 100) % this.part.length;
         },
         props: ['title', 'icon'],
+        name: "dog-title",
         data: function () {
             return {
                 part: ["7FB3D5", "A569BD", "EC7063", "AF7AC5", "45B39D", "F4D03F", "E59866", "B2BABB", "F0B27A"],
@@ -87,8 +88,6 @@
             background-color: #1FD4F9;
         }
     }
-
-    .tielanimate {}
 
     div {
         padding: 0px;

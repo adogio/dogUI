@@ -17,6 +17,7 @@
                 dogicon: this.icon ? this.icon : "question"
             }
         },
+        name: "dog-button",
         methods: {
             emitclick: function () {
                 this.$emit('click');

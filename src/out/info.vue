@@ -5,7 +5,9 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        name: "dog-info",
+    }
 </script>
 
 <style scoped>

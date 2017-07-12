@@ -37,6 +37,7 @@
             this.pict = new picture(this.fileInput);
         },
         props: ['icon', 'quality', 'size', 'color'],
+        name: "dog-upload",
         components: {
             "dog-button": dogbutton
         },

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <select></select>
     </div>
 </template>
 
@@ -9,7 +8,7 @@
         data: function () {
             return {}
         },
-        name: "dog-selector",
+        name: "dog-input",
         computed: {
 
         },

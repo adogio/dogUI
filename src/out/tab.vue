@@ -22,6 +22,7 @@
                 twondB: this.bgColor(5)
             }
         },
+        name: "dog-tab",
         methods: {
             bgColor: function (area) {
                 const colorList = [

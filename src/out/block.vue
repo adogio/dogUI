@@ -19,6 +19,7 @@
                 this.tabber = true;
             }
         },
+        name: "dog-block",
         data: function () {
             return {
                 tabber: false
