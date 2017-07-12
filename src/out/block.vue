@@ -1,6 +1,6 @@
 <template>
     <div>
-        <info-tab v-if="tabber" v-bind:icon="icon" v-bind:info="info"></info-tab>
+        <info-tab v-if="tabber" v-bind:icon="icon" v-bind:info="info" :outColor="bgColor"></info-tab>
         <div v-bind:style="bgColor" class="contents animated fadeIn">
             <slot></slot>
         </div>
@@ -43,7 +43,7 @@
 </script>
 <style scoped>
     div {
-        padding-top: 2px;
+        padding-top: 1px;
         margin: 0px;
         min-height: 100%;
     }
@@ -57,10 +57,5 @@
     div.hint-bottom {
         animation-delay: 1s;
         -webkit-animation-delay: 1s;
-    }
-
-    div.contents {
-        margin-top: 2px;
-        padding-left: 3px;
     }
 </style>

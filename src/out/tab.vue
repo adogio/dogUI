@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="right" :style="onestB">
-            <div :style="twondB">
+        <div class="right" :style="outColor">
+            <div :style="bgColor">
                 <anicon class="icon" v-bind:icon="icon"></anicon>
                 <span class="spans" v-text="info"></span>
             </div>
@@ -15,22 +15,19 @@
         components: {
             "anicon": anicon
         },
-        props: ['icon', 'info'],
+        props: ['icon', 'info', 'outColor'],
         data: function () {
-            return {
-                onestB: this.bgColor(9),
-                twondB: this.bgColor(5)
-            }
+            return {}
         },
         name: "dog-tab",
-        methods: {
-            bgColor: function (area) {
+        computed: {
+            bgColor: function () {
                 const colorList = [
                     "EE6C4D", "F38D68", "662C91", "17A398", "33312E", "1FD4F9", "FA4A4C", "52489C",
                     "4062BB", "59C3C3"
                 ]
                 let color = "#" + colorList[Math.floor(Math.random() * 100) % colorList.length];
-                return "border-left: " + area + "px solid " + color + ";";
+                return "border-left: " + 5 + "px solid " + color + ";";
             }
         }
     }

@@ -2,7 +2,9 @@
   <div id="app">
     <dog-title icon="plus" title="test">
       <dog-block icon="car" info="asd">
-        123
+        <dog-input>姓名</dog-input>
+        <dog-input>年龄</dog-input>
+        <dog-input>智商</dog-input>
       </dog-block>
     </dog-title>
   </div>
@@ -28,7 +30,7 @@
       "dog-button": button,
       "dog-search": search,
       "dog-upload": upload,
-      "dog-input": input,
+      "dog-input": input
     },
     data: function () {
       return {
