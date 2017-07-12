@@ -1,20 +1,29 @@
 <template>
     <div>
+        <info-tab v-if="tabber" v-bind:icon="icon" v-bind:info="info"></info-tab>
         <div v-bind:style="bgColor" class="contents animated fadeIn">
-            <info-tab v-bind:icon="icon" v-bind:info="info"></info-tab>
             <slot></slot>
         </div>
     </div>
 </template>
 
 <script>
-    import infoTab from '../components/tab.vue';
+    import infoTab from './tab.vue';
 
     export default {
         components: {
             'info-tab': infoTab
         },
-        mounted: function () {},
+        mounted: function () {
+            if (this.info && this.icon) {
+                this.tabber = true;
+            }
+        },
+        data: function () {
+            return {
+                tabber: false
+            }
+        },
         props: ['icon', 'info'],
         computed: {
             bgColor: function () {
@@ -33,7 +42,7 @@
 </script>
 <style scoped>
     div {
-        padding-top: 3px;
+        padding-top: 2px;
         margin: 0px;
         min-height: 100%;
     }
@@ -50,6 +59,7 @@
     }
 
     div.contents {
+        margin-top: 2px;
         padding-left: 3px;
     }
 </style>

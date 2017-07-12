@@ -1,5 +1,6 @@
 <template>
     <div>
+        <select></select>
     </div>
 </template>
 
@@ -19,11 +20,5 @@
 </script>
 
 <style scoped>
-    input {
-        display: none;
-    }
 
-    div {
-        font-size: 32px;
-    }
 </style>

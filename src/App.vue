@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <dog-title icon="plus" title="test">
-
+      <dog-block icon="car" info="asd">
+        123
+      </dog-block>
     </dog-title>
   </div>
 </template>
