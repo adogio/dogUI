@@ -32,6 +32,8 @@
 
 <style scoped>
     select.main {
+        -webkit-appearance: none;
+        border-radius: 0px;
         border: 0px;
         height: 40px;
         border-left: 5px solid #b30000;
