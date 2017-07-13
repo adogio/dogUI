@@ -6,7 +6,6 @@
 
 <script>
     import bar from '../components/bar.vue';
-    import icon from '../components/icon.vue';
 
     export default {
         data: function () {
@@ -15,9 +14,9 @@
             }
         },
         props: ['placeholder'],
+        name: "dog-search-bar",
         components: {
-            "dog-bar": bar,
-            "dog-icon": icon
+            "dog-bar": bar
         },
         computed: {
             placeHT: function () {
@@ -31,8 +30,8 @@
             }
         },
         methods: {
-            onKeyUp: function (event) {
-                this.$emit('change', event);
+            onKeyUp: function () {
+                this.$emit('change', this.inputContent);
             }
         }
     }

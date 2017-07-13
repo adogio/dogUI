@@ -38,6 +38,8 @@ import dogUI from 'dogUI'
 
 ## Usage
 
+The Usage below is out of date, please check App.vue for examples
+
 ```html
 <div id="app">
     <dog-title title="测试" icon="rss">
@@ -48,5 +50,8 @@ import dogUI from 'dogUI'
     </dog-title>
     <dog-upload icon="car" quality="40" @change="test(0, $event)">123</dog-upload>
     <img :src="filesss">
+    <dog-input v-model="inputer">姓名</dog-input>
+    <dog-info info="info">sad</dog-info>
+    <dog-select :list="test" v-model="qqq"></dog-select>
 </div>
 ```

@@ -1,39 +1,58 @@
 <template>
     <div>
-        <div class="row">
-            <div class="col-xs-1 left">
-                <anicon v-bind:icon="icon"></anicon>
-            </div>
-            <div class="col-xs-10 right">
-                <strong><span v-text="info"></span></strong>
+        <div class="right" :style="outColor">
+            <div :style="bgColor">
+                <anicon class="icon" v-bind:icon="icon"></anicon>
+                <span class="spans" v-text="info"></span>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import anicon from './icon.vue';
+    import anicon from '../components/icon.vue';
     export default {
         components: {
             "anicon": anicon
         },
-        props: ['icon', 'info']
+        props: ['icon', 'info', 'outColor'],
+        data: function () {
+            return {}
+        },
+        name: "dog-tab",
+        computed: {
+            ouside: function () {
+                if (this.outColor) {
+                    return this.outColor;
+                } else {
+                    return "";
+                }
+            },
+            bgColor: function () {
+                const colorList = [
+                    "EE6C4D", "F38D68", "662C91", "17A398", "33312E", "1FD4F9", "FA4A4C", "52489C",
+                    "4062BB", "59C3C3"
+                ]
+                let color = "#" + colorList[Math.floor(Math.random() * 100) % colorList.length];
+                return "border-left: " + 6 + "px solid " + color + ";";
+            }
+        }
     }
 </script>
 
 <style scoped>
-    .row {
-        padding: 0px;
-        margin: 0px;
+    .icon {
+        font-size: 21px;
+        padding-left: 7px;
     }
 
-    .left {
-        text-align: right;
-        font-size: 23px;
+    .spans {
+        padding-left: 5px;
     }
 
     .right {
-        text-align: left;
         font-size: 23px;
+        font-family: 'ubuntu';
+        background-color: rgba(100%, 90%, 50%, 0.3);
     }
 </style>

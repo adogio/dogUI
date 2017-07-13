@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="entire">
+        <info-tab v-if="tabber" v-bind:icon="icon" v-bind:info="info" :outColor="bgColor"></info-tab>
         <div v-bind:style="bgColor" class="contents animated fadeIn">
-            <info-tab v-bind:icon="icon" v-bind:info="info"></info-tab>
             <slot></slot>
         </div>
     </div>
@@ -14,7 +14,17 @@
         components: {
             'info-tab': infoTab
         },
-        mounted: function () {},
+        mounted: function () {
+            if (this.info && this.icon) {
+                this.tabber = true;
+            }
+        },
+        name: "dog-block",
+        data: function () {
+            return {
+                tabber: false
+            }
+        },
         props: ['icon', 'info'],
         computed: {
             bgColor: function () {
@@ -32,10 +42,14 @@
     }
 </script>
 <style scoped>
-    div {
+    div.entire {
         padding-top: 3px;
         margin: 0px;
         min-height: 100%;
+    }
+
+    div {
+        padding-top: 1px;
     }
 
     .framee {
@@ -47,9 +61,5 @@
     div.hint-bottom {
         animation-delay: 1s;
         -webkit-animation-delay: 1s;
-    }
-
-    div.contents {
-        padding-left: 3px;
     }
 </style>

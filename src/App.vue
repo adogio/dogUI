@@ -1,31 +1,82 @@
 <template>
   <div id="app">
-    <dog-upload icon="car" quality="40" @change="test(0, $event)">123</dog-upload>
-    <img :src="filesss">
+    <dog-title icon="comments" title="DOGUI DEMO">
+      <dog-search placeholder="搜索框" @change="update"></dog-search>
+      <dog-block icon="car" info="输入框">
+        <dog-input v-model="name">姓名</dog-input>
+        <dog-input v-model="age">年龄</dog-input>
+        <dog-input v-model="aDPS">智商</dog-input>
+      </dog-block>
+      <dog-info info="INPUT测试">
+        这里显示上面输入的信息
+        <br> 姓名:{{name}}
+        <br> 年龄:{{age}}
+        <br> 智商:{{aDPS}}
+      </dog-info>
+      <dog-block icon="podcast" info="表格框">
+        <dog-cell left="Cell">测试Cell</dog-cell>
+        <dog-cell left="搜索框:">{{seach}}</dog-cell>
+      </dog-block>
+      <dog-block icon="rss" info="选择框">
+        <dog-select :list="test" v-model="idselect"></dog-select>
+      </dog-block>
+      <dog-info info="SELECT测试">
+        这里显示上面选择的内容的ID
+        <br> 你选择了:{{idselect}}
+      </dog-info>
+    </dog-title>
   </div>
 </template>
 
 <script>
-  import dogui from './import';
+  import {
+    block,
+    title,
+    cell,
+    button,
+    search,
+    upload,
+    input,
+    select,
+    info
+  } from './import';
 
   export default {
     name: 'app',
     components: {
-      "dog-block": dogui.block,
-      "dog-title": dogui.title,
-      "dog-cell": dogui.cell,
-      "dog-button": dogui.button,
-      "dog-search": dogui.search,
-      "dog-upload": dogui.upload
+      "dog-block": block,
+      "dog-title": title,
+      "dog-cell": cell,
+      "dog-button": button,
+      "dog-search": search,
+      "dog-upload": upload,
+      "dog-input": input,
+      "dog-select": select,
+      "dog-info": info
     },
     data: function () {
       return {
-        file: null,
-        filesss: ""
+        name: "",
+        age: "",
+        aDPS: "不为空时",
+        seach: "",
+        idselect: "",
+        test: [{
+            name: "我的ID是1",
+            id: 1
+          },
+          {
+            name: "我的ID是2",
+            id: 2
+          }
+        ]
       }
     },
     mounted: function () {},
     methods: {
+      update: function (info) {
+        this.seach = info;
+      },
       test: function (index, src) {
         this.filesss = src;
       }

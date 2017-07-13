@@ -1,9 +1,10 @@
 <template>
     <div>
         <div class="row">
-            <div class="larger-text col-xs-3" v-text="left">
+            <div class="larger-text col-xs-4">
+                {{left}}
             </div>
-            <div class="larger-text col-xs-7">
+            <div class="larger-text col-xs-8">
                 <slot></slot>
             </div>
         </div>
@@ -12,6 +13,7 @@
 
 <script>
     export default {
+        name: "dog-cell",
         props: ['left']
     }
 </script>
@@ -36,12 +38,12 @@
         margin: 0px;
     }
 
-    .col-xs-3 {
+    .col-xs-4 {
         padding-left: 2px;
         /*border-bottom: 1px solid lightgray;*/
     }
 
-    .col-xs-7 {
+    .col-xs-8 {
         padding-right: 2px;
         /*border-bottom: 1px solid lightgray;*/
     }
