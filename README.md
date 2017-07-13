@@ -38,6 +38,8 @@ import dogUI from 'dogUI'
 
 ## Usage
 
+The Usage below is out of date, please check App.vue for examples
+
 ```html
 <div id="app">
     <dog-title title="测试" icon="rss">
