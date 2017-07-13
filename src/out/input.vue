@@ -1,13 +1,14 @@
 <template>
     <div>
-        <div class="description" :class="place">
+        <div class="description" :class="place" @click="ClickIn">
             <strong><slot></slot></strong>
         </div>
         <div class="outField">
-            <input v-if="!type" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field">
-            <input v-if="type=='number'" type="number" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field">
+            <input v-if="!type" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field" v-focus="focusStatus">
+            <input v-if="type=='number'" type="number" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field"
+                v-focus="focusStatus">
             <input v-if="type=='password'" type="password" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn"
-                class="field">
+                class="field" v-focus="focusStatus">
         </div>
     </div>
 </template>
@@ -17,7 +18,20 @@
         data: function () {
             return {
                 inputed: "",
-                place: "bigPlaceholder smallPlaceholder"
+                place: "bigPlaceholder smallPlaceholder",
+                focusStatus: false
+            }
+        },
+        directives: {
+            focus: {
+                update: (el, {
+                    value
+                }) => {
+                    if (value) {
+                        el.focus();
+                    }
+
+                }
             }
         },
         name: "dog-input",
@@ -31,6 +45,7 @@
         },
         methods: {
             rePlaceHolder: function () {
+                this.focusStatus = false;
                 if (this.inputed.length > 0) {
                     this.place = "smallPlaceholder";
                 } else {
@@ -39,10 +54,12 @@
             },
             onInput: function () {
                 this.place = "smallPlaceholder";
-                this.$emit('input', this.inputed)
+                this.$emit('input', this.inputed);
+                this.focusStatus = false;
             },
             ClickIn: function () {
                 this.place = "smallPlaceholder";
+                this.focusStatus = true;
             }
         }
     }
@@ -50,14 +67,13 @@
 
 <style scoped>
     .description {
-        font-size: 10px;
         font-family: 'ubuntu';
         color: #a8a8a8;
     }
 
     .smallPlaceholder {
         transition: .2s;
-        font-size: 7px;
+        font-size: 15px;
         line-height: 16px;
         margin-top: 1px;
         margin-left: 7px;
@@ -76,6 +92,7 @@
         position: relative;
         padding-top: 4px;
         padding-left: 10px;
+        font-size: 21px;
         border: 0px;
         border-left: 5px solid #b30000;
         text-indent: 0;
@@ -85,7 +102,7 @@
     }
 
     .bigPlaceholder {
-        font-size: 15px!important;
+        font-size: 21px!important;
         margin: 14px 5px 0 7px!important;
         white-space: nowrap;
     }

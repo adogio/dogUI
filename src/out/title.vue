@@ -120,10 +120,10 @@
     }
 
     div.left-bottom {
-        font-size: 45px;
+        font-size: 33px;
         border-left: 9px solid #626567;
         font-family: 'ubuntu';
-        padding-left: 16px;
+        padding-left: 7px;
         padding-bottom: 5px;
         width: 100vw;
         height: 115px;

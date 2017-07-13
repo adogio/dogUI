@@ -1,8 +1,13 @@
 <template>
     <div>
-        <select class="main" @change="onChange" v-model="vmodel">
-            <option v-for="i in list" :value="i.id">{{i.name}}</option>
-        </select>
+        <div class="borderier">
+            <div class="description">
+                <strong><slot></slot></strong>
+            </div>
+            <select class="main" @change="onChange" v-model="vmodel">
+                <option v-for="i in list" :value="i.id">{{i.name}}</option>
+            </select>
+        </div>
     </div>
 </template>
 
@@ -23,7 +28,6 @@
         components: {},
         methods: {
             onChange: function () {
-                console.log(this.vmodel);
                 this.$emit('input', this.vmodel);
             }
         }
@@ -31,12 +35,28 @@
 </script>
 
 <style scoped>
+    .description {
+        font-family: 'ubuntu';
+        color: #a8a8a8;
+        font-size: 15px;
+        position: absolute;
+        margin: 2px 3px 0 0px!important;
+    }
+
+    .borderier {
+        border-left: 5px solid #b30000;
+    }
+
     select.main {
         -webkit-appearance: none;
+        text-indent: 0;
+        position: relative;
         border-radius: 0px;
+        font-size: 21px;
+        padding-top: 15px;
+        padding-left: 5px;
         border: 0px;
-        height: 40px;
-        border-left: 5px solid #b30000;
+        height: 45px;
         background: url("https://png.icons8.com/right-3-filled/ios7/25") no-repeat scroll right center transparent;
         width: 100%;
     }
