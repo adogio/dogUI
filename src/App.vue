@@ -1,30 +1,29 @@
 <template>
   <div id="app">
-    <dog-title icon="plus" title="test">
-      <dog-search placeholder="test" @change="update"></dog-search>
-      <dog-block icon="car" info="Inputs">
+    <dog-title icon="comments" title="DOGUI DEMO">
+      <dog-search placeholder="搜索框" @change="update"></dog-search>
+      <dog-block icon="car" info="输入框">
         <dog-input v-model="name">姓名</dog-input>
         <dog-input v-model="age">年龄</dog-input>
         <dog-input v-model="aDPS">智商</dog-input>
       </dog-block>
-      <dog-info info="Result">
+      <dog-info info="INPUT测试">
         这里显示上面输入的信息
-        <br> {{name}}
-        <br> {{age}}
-        <br> {{aDPS}}
+        <br> 姓名:{{name}}
+        <br> 年龄:{{age}}
+        <br> 智商:{{aDPS}}
       </dog-info>
-      <dog-block icon="podcast" info="Cells">
+      <dog-block icon="podcast" info="表格框">
         <dog-cell left="Cell">测试Cell</dog-cell>
-        <dog-cell left="搜索框内容">{{seach}}</dog-cell>
+        <dog-cell left="搜索框:">{{seach}}</dog-cell>
       </dog-block>
-      <dog-block icon="rss" info="Selects">
+      <dog-block icon="rss" info="选择框">
         <dog-select :list="test" v-model="idselect"></dog-select>
       </dog-block>
-      <dog-info info="Result">
+      <dog-info info="SELECT测试">
         这里显示上面选择的内容的ID
-        <br> {{idselect}}
+        <br> 你选择了:{{idselect}}
       </dog-info>
-      <dog-info info="info">这是一些测试信息，在警告框中</dog-info>
     </dog-title>
   </div>
 </template>
