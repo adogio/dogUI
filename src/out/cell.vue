@@ -40,11 +40,13 @@
 
     .col-xs-4 {
         padding-left: 2px;
+        word-wrap: break-word;
         /*border-bottom: 1px solid lightgray;*/
     }
 
     .col-xs-8 {
         padding-right: 2px;
+        word-wrap: break-word;
         /*border-bottom: 1px solid lightgray;*/
     }
 
