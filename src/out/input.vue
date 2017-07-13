@@ -4,7 +4,10 @@
             <strong><slot></slot></strong>
         </div>
         <div class="outField">
-            <input v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field" :type="type">
+            <input v-if="!type" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field">
+            <input v-if="type=='number'" type="number" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field">
+            <input v-if="type=='password'" type="password" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn"
+                class="field">
         </div>
     </div>
 </template>
