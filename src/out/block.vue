@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="entire">
         <info-tab v-if="tabber" v-bind:icon="icon" v-bind:info="info" :outColor="bgColor"></info-tab>
         <div v-bind:style="bgColor" class="contents animated fadeIn">
             <slot></slot>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import infoTab from './tab.vue';
+    import infoTab from '../components/tab.vue';
 
     export default {
         components: {
@@ -42,10 +42,14 @@
     }
 </script>
 <style scoped>
-    div {
-        padding-top: 1px;
+    div.entire {
+        padding-top: 3px;
         margin: 0px;
         min-height: 100%;
+    }
+
+    div {
+        padding-top: 1px;
     }
 
     .framee {

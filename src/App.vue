@@ -2,10 +2,14 @@
   <div id="app">
     <dog-title icon="plus" title="test">
       <dog-block icon="car" info="asd">
-        <dog-input>姓名</dog-input>
+        <dog-input v-model="inputer">姓名</dog-input>
         <dog-input>年龄</dog-input>
         <dog-input>智商</dog-input>
       </dog-block>
+      <dog-block icon="rss" info="RSS">
+        <dog-select :list="test" v-model="qqq"></dog-select>
+      </dog-block>
+      <dog-info info="info">infonfoinfoinfoinfoinfoinfoinfoinfoinfoinfo</dog-info>
     </dog-title>
   </div>
 </template>
@@ -18,7 +22,9 @@
     button,
     search,
     upload,
-    input
+    input,
+    select,
+    info
   } from './import';
 
   export default {
@@ -30,12 +36,25 @@
       "dog-button": button,
       "dog-search": search,
       "dog-upload": upload,
-      "dog-input": input
+      "dog-input": input,
+      "dog-select": select,
+      "dog-info": info
     },
     data: function () {
       return {
         file: null,
-        filesss: ""
+        filesss: "",
+        inputer: "",
+        qqq: "",
+        test: [{
+            name: "das",
+            id: 1
+          },
+          {
+            name: "das",
+            id: 2
+          }
+        ]
       }
     },
     mounted: function () {},

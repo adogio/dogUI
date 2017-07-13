@@ -4,7 +4,7 @@
             <strong><slot></slot></strong>
         </div>
         <div class="outField">
-            <input v-model="inputed" @blur="rePlaceHolder" @input="ClickIn" @click="ClickIn" class="field" :type="type">
+            <input v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field" :type="type">
         </div>
     </div>
 </template>
@@ -34,6 +34,10 @@
                     this.place = "bigPlaceholder smallPlaceholder";
                 }
             },
+            onInput: function () {
+                this.place = "smallPlaceholder";
+                this.$emit('input', this.inputed)
+            },
             ClickIn: function () {
                 this.place = "smallPlaceholder";
             }
@@ -52,7 +56,7 @@
         transition: .2s;
         font-size: 7px;
         line-height: 16px;
-        margin-top: 3px;
+        margin-top: 1px;
         margin-left: 7px;
         position: absolute;
         z-index: 4;
@@ -67,9 +71,10 @@
         width: 100%;
         height: 40px;
         position: relative;
-        padding: 8px 0 1px 8px;
+        padding-top: 4px;
+        padding-left: 10px;
         border: 0px;
-        border-left: 3px solid #b30000;
+        border-left: 5px solid #b30000;
         text-indent: 0;
         line-height: 12px;
         color: #000;

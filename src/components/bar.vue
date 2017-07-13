@@ -30,10 +30,10 @@
                 this.bindClass = "outed";
             },
             handleScroll: function () {
-                if (window.scrollY >= 115 && !this.added) {
+                if (window.scrollY >= 118 && !this.added) {
                     this.added = true;
                     this.addFix();
-                } else if (window.scrollY < 115 && this.added) {
+                } else if (window.scrollY < 118 && this.added) {
                     this.added = false;
                     this.outFix();
                 }

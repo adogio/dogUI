@@ -21,13 +21,20 @@
         },
         name: "dog-tab",
         computed: {
+            ouside: function () {
+                if (this.outColor) {
+                    return this.outColor;
+                } else {
+                    return "";
+                }
+            },
             bgColor: function () {
                 const colorList = [
                     "EE6C4D", "F38D68", "662C91", "17A398", "33312E", "1FD4F9", "FA4A4C", "52489C",
                     "4062BB", "59C3C3"
                 ]
                 let color = "#" + colorList[Math.floor(Math.random() * 100) % colorList.length];
-                return "border-left: " + 5 + "px solid " + color + ";";
+                return "border-left: " + 6 + "px solid " + color + ";";
             }
         }
     }
