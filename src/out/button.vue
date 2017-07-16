@@ -96,6 +96,7 @@
 
     button {
         margin-top: 2px;
+        z-index: 4;
     }
 
     .button-block {
