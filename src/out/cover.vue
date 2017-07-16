@@ -54,7 +54,7 @@
         border-radius: 50%;
         margin: auto;
         margin-top: 185px;
-        margin-bottom: 125px;
+        margin-bottom: 135px;
         cursor: pointer;
         text-align: center;
     }

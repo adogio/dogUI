@@ -95,7 +95,7 @@
     mounted: function () {
       setTimeout(() => {
         this.cover = true;
-      }, 2000);
+      }, 4500);
     },
     methods: {
       update: function (info) {
