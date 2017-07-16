@@ -9,7 +9,8 @@ export default {
     select: require('./out/selector.vue'),
     info: require('./out/info.vue'),
     view: require('./out/view.vue'),
-    textarea: require('./out/textarea.vue')
+    textarea: require('./out/textarea.vue'),
+    page: require('./out/page.vue')
 }
 export const title = require('./out/title.vue');
 export const block = require('./out/block.vue');
@@ -22,3 +23,4 @@ export const select = require('./out/selector.vue');
 export const info = require('./out/info.vue');
 export const view = require('./out/view.vue');
 export const textarea = require('./out/textarea.vue');
+export const page = require('./out/page.vue');
