@@ -6,7 +6,15 @@
         <dog-input v-model="name">姓名</dog-input>
         <dog-input v-model="age">年龄</dog-input>
         <dog-input v-model="aDPS">智商</dog-input>
+        <dog-textarea v-model="aDDD">测试</dog-textarea>
       </dog-block>
+      <dog-info info="INPUT测试">
+        这里显示上面输入的信息
+        <br> 姓名:{{name}}
+        <br> 年龄:{{age}}
+        <br> 智商:{{aDPS}}
+        <br> 大矿: {{aDDD}}
+      </dog-info>
       <dog-block icon="picture-o" info="图片预览">
         <dog-view :srcs="['http://img.wxcha.com/file/201703/15/af183778a2.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLRZLWsxMIR6_21w9VocPqTRVrI4imZm5TQnnZyXTWXV27HehTxw','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4N_t4snDnVQYkH4-h1_zg5GTMlU9vUcC_ojIC8kPi_sx_MzS6DQ','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgQyjPmsdY9ozZZBtTdSg_wDDlIMkaVBejDnXPBrhqZOkBA9fPNw','http://img.wxcha.com/file/201703/15/af183778a2.jpg','http://img.wxcha.com/file/201703/15/af183778a2.jpg','http://img.wxcha.com/file/201703/15/af183778a2.jpg','http://img.wxcha.com/file/201703/15/af183778a2.jpg']">下载</dog-view>
       </dog-block>
@@ -14,12 +22,6 @@
         <dog-upload icon="bandcamp" quality="40" @change="testf(0, $event)" color="red">没有预览</dog-upload>
         <dog-upload icon="car" quality="40" @change="testf(0, $event)" color="blue" preview="right">有预览</dog-upload>
       </dog-block>
-      <dog-info info="INPUT测试">
-        这里显示上面输入的信息
-        <br> 姓名:{{name}}
-        <br> 年龄:{{age}}
-        <br> 智商:{{aDPS}}
-      </dog-info>
       <dog-block icon="podcast" info="表格框">
         <dog-cell left="Cell">测试Cell</dog-cell>
         <dog-cell left="搜索框:">{{seach}}</dog-cell>
@@ -47,7 +49,8 @@
     input,
     select,
     info,
-    view
+    view,
+    textarea
   } from './import';
 
   export default {
@@ -62,7 +65,8 @@
       "dog-input": input,
       "dog-select": select,
       "dog-info": info,
-      "dog-view": view
+      "dog-view": view,
+      "dog-textarea": textarea
     },
     data: function () {
       return {
@@ -71,6 +75,7 @@
         aDPS: "不为空时",
         seach: "",
         idselect: "",
+        aDDD: "",
         test: [{
             name: "我的ID是1",
             id: 1
