@@ -1,5 +1,5 @@
 <template>
-    <button v-bind:disabled="disabled" class="button button-block" v-bind:class="computedClass" v-bind:style="computedStyle"
+    <button v-bind:disabled="Tdisabled" class="button button-block" v-bind:class="computedClass" v-bind:style="computedStyle"
         v-on:click="emitclick">
         <anicon v-bind:icon="icon"></anicon>&nbsp;|&nbsp;<slot></slot>
     </button>
@@ -13,17 +13,20 @@
         },
         data: function () {
             return {
-                disabled: this.disablebutton ? this.disablebutton : false,
+                Tdisabled: this.disabled ? this.disabled : null,
                 dogicon: this.icon ? this.icon : "question"
             }
         },
         name: "dog-button",
         methods: {
             emitclick: function () {
+                if (this.disabled == null) {
+                    this.Tdisabled = true;
+                }
                 this.$emit('click');
             }
         },
-        props: ['icon', 'size', 'color', 'disablebutton'],
+        props: ['icon', 'size', 'color', 'disabled'],
         computed: {
             computedStyle: function () {
                 let edge = "border-left: 9px solid #";
