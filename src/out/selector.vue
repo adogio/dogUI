@@ -5,7 +5,7 @@
                 <strong><slot></slot></strong>
             </div>
             <select class="main" @change="onChange" v-model="vmodel">
-                <option v-for="i in list" :value="i.id">{{i.name}}</option>
+                <option v-for="i in statlist" :value="i.id">{{i.name}}</option>
             </select>
         </div>
     </div>
@@ -15,18 +15,38 @@
     export default {
         data: function () {
             return {
-                vmodel: ""
+                vmodel: "",
+                statlist: this.list
             }
         },
         name: "dog-block",
-        computed: {},
+        watch: {
+            list: function () {
+                this.fixList();
+            }
+        },
         mounted: function () {
-            this.vmodel = this.list[0].id;
-            this.onChange();
+            this.fixList();
         },
         props: ["list"],
         components: {},
         methods: {
+            fixList: function () {
+                if (!this.list[0].id || !this.list[0].name) {
+                    let newlist = [];
+                    for (let i = 0; i < this.list.length; i++) {
+                        newlist.push({
+                            id: this.list[i],
+                            name: this.list[i]
+                        });
+                    }
+                    this.statlist = newlist;
+                } else {
+                    this.statlist = this.list;
+                }
+                this.vmodel = this.statlist[0].id;
+                this.onChange();
+            },
             onChange: function () {
                 this.$emit('input', this.vmodel);
             }
