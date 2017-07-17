@@ -84,6 +84,7 @@
 
     .outField {
         padding: 0 3px 0 0px;
+        border-left: 5px solid #b30000;
     }
 
     .field {
@@ -94,7 +95,6 @@
         padding-left: 10px;
         font-size: 21px;
         border: 0px;
-        border-left: 5px solid #b30000;
         text-indent: 0;
         line-height: 12px;
         color: #000;
