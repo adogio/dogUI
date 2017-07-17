@@ -80,7 +80,7 @@
         seach: "",
         idselect: "",
         aDDD: "",
-        cover: false,
+        cover: 'load',
         test: [{
             name: "我的ID是1",
             id: 1
@@ -94,8 +94,8 @@
     },
     mounted: function () {
       setTimeout(() => {
-        this.cover = true;
-      }, 10);
+        this.cover = 'in';
+      }, 1000);
     },
     methods: {
       update: function (info) {
