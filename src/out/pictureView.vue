@@ -11,9 +11,12 @@
             <div class="box" @click="smallClick">
                 <img :src="biggerone">
             </div>
-            <dog-button icon="download" color="purple" @click="download">
+            <div class="displayText">
                 <slot></slot>
-            </dog-button>
+            </div>
+            <!-- <dog-button icon="download" color="purple" @click="download">
+                <slot></slot>
+            </dog-button> -->
         </div>
     </div>
 </template>
@@ -37,13 +40,30 @@
         mounted: function () {
             this.rows = this.getrows();
         },
+        name: "dog-view",
         props: ['srcs'],
         components: {
             "dog-button": button
         },
         methods: {
             download: function () {
-                console.log("???");
+                // TODO
+                // let dataURI = this.rows[this.left][this.top];
+                // var byteString = atob(dataURI.split(',')[1]);
+                // var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+                // var ab = new ArrayBuffer(byteString.length);
+                // var ia = new Uint8Array(ab);
+                // for (var i = 0; i < byteString.length; i++) {
+                //     ia[i] = byteString.charCodeAt(i);
+                // }
+
+                // var bb = new Blob([ab]);
+                // const a = document.createElement('a');
+                // const url = window.URL.createObjectURL(bb);
+                // a.href = url;
+                // a.download = 'atthis_dl.jpg';
+                // a.click();
+                // window.URL.revokeObjectURL(url);
             },
             biggerClick: function (indexl, indexr) {
                 this.left = indexl;
@@ -77,10 +97,16 @@
         text-align: center;
     }
 
+    div.displayText {
+        font-size: 15px;
+        text-align: center;
+        font-family: 'ubuntu';
+    }
+
     .box img {
         max-width: 100%;
         max-height: 100%;
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
