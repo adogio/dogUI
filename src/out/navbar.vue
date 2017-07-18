@@ -1,52 +1,71 @@
 <template>
-    <dog-bar :merge="merge">
-        <input v-bind:placeholder="placeHT" v-on:keyup="onKeyUp" v-model="inputContent">
-    </dog-bar>
+    <div class="field">
+        <div class="outside">
+            <span v-if="stacks.length==0"><slot></slot></span>
+            <a v-else v-for="(i, index) in stacks" @click="activateNav(index)" :style="navColor(index)">
+                {{i.name}}
+                <i v-if="index != stacks.length-1" class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 </template>
 
 <script>
-    import bar from '../components/bar.vue';
-
     export default {
         data: function () {
             return {
-                inputContent: ""
+                stacks: []
             }
         },
-        props: ['placeholder', 'merge'],
-        name: "dog-search-bar",
+        props: [],
+        mounted: function () {
+            window.nav = (name, fun) => {
+                this.stacks.push({
+                    name: name,
+                    fun: fun
+                });
+                return true;
+            }
+        },
+        name: "dog-nav-bar",
         components: {
-            "dog-bar": bar
+
         },
         computed: {
-            placeHT: function () {
-                if (this.placeholder) {
-                    return this.placeholder;
-                } else if (this.$slots.default[0].text) {
-                    return this.$slots.default[0].text
-                } else {
-                    return "Search..."
-                }
-            }
+
         },
         methods: {
-            onKeyUp: function () {
-                this.$emit('change', this.inputContent);
+            activateNav: function (index) {
+                if (index != this.stacks.length - 1) {
+                    this.stacks[index].fun();
+                    let length = this.stacks.length;
+                    for (let i = 0; i < length - index - 1; i++) {
+                        this.stacks.pop();
+                    }
+                }
+            },
+            navColor: function (index) {
+                if (index == this.stacks.length - 1) {
+                    return "color: #ff0d00;font-weight: bold;"
+                } else {
+                    return "";
+                }
             }
         }
     }
 </script>
 
 <style scoped>
-    input {
-        border: 0px;
-        text-indent: 10px;
-        background: transparent;
-        height: 45px;
-        width: 100%
+    div.field {
+        padding-top: 3px;
     }
 
-    div {
-        font-size: 32px;
+    div.outside {
+        padding-left: 3px;
+        height: auto;
+        border-left: 9px solid #ff9700;
+        font-size: 18px;
+        font-family: 'ubuntu';
+        color: #5c5c5c;
     }
 </style>

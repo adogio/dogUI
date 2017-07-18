@@ -3,6 +3,8 @@
     <dog-cover :display="cover" icon="paper-plane" info="Loading">
       <dog-title icon="comments" title="DOGUI DEMO">
         <dog-search placeholder="搜索框" @change="update"></dog-search>
+        <dog-nav-bar>导航栏</dog-nav-bar>
+        <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
         <dog-block icon="car" info="输入框">
           <dog-input v-model="name">姓名</dog-input>
           <dog-input v-model="age">年龄</dog-input>
@@ -35,7 +37,7 @@
           这里显示上面选择的内容的ID
           <br> 你选择了:{{idselect}}
         </dog-info>
-        <dog-button icon="user-o" @click="tocheck" size="large" color="red">DOUBLE CHECK</dog-button>
+        <dog-button icon="user-o" @click="tocheck" size="large" color="red">检查</dog-button>
       </dog-title>
     </dog-cover>
   </div>
@@ -54,7 +56,8 @@
     info,
     view,
     textarea,
-    cover
+    cover,
+    navBar
   } from './import';
 
   export default {
@@ -71,7 +74,8 @@
       "dog-info": info,
       "dog-view": view,
       "dog-textarea": textarea,
-      "dog-cover": cover
+      "dog-cover": cover,
+      "dog-nav-bar": navBar
     },
     data: function () {
       return {
@@ -101,6 +105,20 @@
     methods: {
       update: function (info) {
         this.seach = info;
+      },
+      addNav: function () {
+        window.nav("测试", () => {
+          console.log('test');
+        })
+        window.nav("测试1", () => {
+          console.log('test');
+        })
+        window.nav("测试2", () => {
+          console.log('test');
+        })
+        window.nav("测试3", () => {
+          console.log('test');
+        })
       },
       tocheck: function () {
         check({

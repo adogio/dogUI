@@ -33,7 +33,7 @@
             handleScroll: function () {
                 let mergetop = 122;
                 if (this.merge) {
-                    mergetop += this.merge;
+                    mergetop += parseInt(this.merge);
                 }
                 if (window.scrollY >= mergetop && !this.added) {
                     this.added = true;
