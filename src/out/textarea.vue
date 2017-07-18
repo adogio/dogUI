@@ -3,7 +3,7 @@
         <div class="description" :class="place">
             <strong><slot></slot></strong>
         </div>
-        <div>
+        <div class="borderer">
             <textarea ref="area" class="field" name="textarea" v-model="inputed" @click="ClickIn" @input="onInput" @blur="rePlaceHolder"
                 :style="autoHeight"></textarea>
         </div>
@@ -60,14 +60,15 @@
         font-family: 'ubuntu';
         color: #a8a8a8;
     }
-
+    .borderer{
+        border-left: 5px solid #b30000;
+    }
     .field {
         position: relative;
         padding-top: 4px;
         padding-left: 10px;
         font-size: 21px;
         border: 0px;
-        border-left: 5px solid #b30000;
         color: #000;
         background: #fff;
     }
