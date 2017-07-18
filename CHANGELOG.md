@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 1.8.0
+    -   Add qrcode function
+    -   thanks for qrgenerate js source code
 -   Version 1.7.2
     -   Fix input pre value bug
 -   Version 1.7.1

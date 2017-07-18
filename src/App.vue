@@ -5,6 +5,7 @@
         <dog-search placeholder="搜索框" @change="update"></dog-search>
         <dog-nav-bar>导航栏</dog-nav-bar>
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
+        <dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
         <dog-block icon="car" info="输入框">
           <dog-input v-model="name">姓名</dog-input>
           <dog-input v-model="age">年龄</dog-input>
@@ -100,9 +101,12 @@
     mounted: function () {
       setTimeout(() => {
         this.cover = 'in';
-      }, 1000);
+      }, 4500);
     },
     methods: {
+      Qrcode: function () {
+        window.flow('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+      },
       update: function (info) {
         this.seach = info;
       },
