@@ -1,0 +1,44 @@
+# Changelog
+
+-   Version 1.7.0
+    -   Add Uploading view
+    -   Add nav bar view
+    -   Fix bugs
+    -   Update cover view
+-   Version 1.6.1
+    -   Fix minor bugs
+    -   Fix border color
+-   Version 1.6.1
+    -   Fix minor bugs
+    -   Fix textarea bugs
+    -   Fix bounding bugs
+-   Version 1.6.0
+    -   Add Pictures view
+    -   Add Domb view
+-   Version 1.5.1
+    -   Fix minor bugs
+-   Version 1.5.0
+    -   Add Info view
+    -   Fix bugs
+-   Version 1.4.0
+    -   Add Cover view
+    -   Add loading view
+    -   Fix input bugs
+-   Version 1.3.0
+    -   Add Textarea view
+    -   Fix bugs
+-   Version 1.2.1
+    -   FIx minor bugs
+-   Version 1.2.0
+    -   Add Bar view
+    -   Add Search bar view
+-   Version 1.1.0
+    -   Add picture upload view
+    -   Add selector view
+    -   Fix bugs
+-   Version 1.0.0
+    -   Update to useable version
+    -   Input view
+    -   Block view
+    -   Title view
+    -   Cell view
