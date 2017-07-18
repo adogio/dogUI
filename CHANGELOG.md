@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 1.7.2
+    -   Fix input pre value bug
 -   Version 1.7.1
     -   Add padding line to upload page
     -   fix bugs
