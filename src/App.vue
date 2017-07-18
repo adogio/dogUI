@@ -112,7 +112,9 @@
           color: "buttonColor",
           bcolor: "backButtonColor", //optional
           top: "topIcon", //optional
-          then: function () {},
+          then: function () {
+            upload();
+          },
         })
       },
       testf: function (index, src) {
