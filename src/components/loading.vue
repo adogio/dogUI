@@ -24,7 +24,6 @@
         props: [],
         components: {
             "dog-icon": icon
-
         },
         methods: {}
     }

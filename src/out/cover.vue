@@ -17,13 +17,18 @@
     import loading from '../components/loading.vue';
     import dumb from '../components/dumb.vue';
     import dbcheck from '../components/doublecheck.vue';
+    import uploading from '../components/uploading.vue';
 
     export default {
         data: function () {
             return {
-                view: this.display,
+                view: 'load',
                 doublecheck: false,
-                data: null
+                data: null,
+                upload: {
+                    icon: "cloud-upload",
+                    info: "Uploading"
+                }
             }
         },
         computed: {
@@ -40,12 +45,41 @@
                 this.doublecheck = true;
                 return true;
             }
+            window.upload = (icon, info) => {
+                if (icon) {
+                    this.upload.icon = icon;
+                }
+                if (info) {
+                    this.upload.info = info;
+                }
+                this.view = 'uploading';
+                return true;
+            }
+            window.unupload = () => {
+                this.view = 'in';
+                return true;
+            }
+            window.back = () => {
+                if (getURLVar('environment')) {
+                    webkit.messageHandlers.IOS.postMessage("done");
+                    return "ios";
+                } else {
+                    alert("Close");
+                    return "normal";
+                }
+
+                function getURLVar(string) {
+                    return decodeURIComponent((new RegExp('[?|&]' + string + '=' + '([^&;]+?)(&|#|;|$)').exec(
+                        location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+                }
+            }
         },
         props: ['display', 'info', 'icon'],
         components: {
             "load": loading,
             "in": dumb,
-            "check": dbcheck
+            "check": dbcheck,
+            "uploading": uploading
         },
         methods: {}
     }

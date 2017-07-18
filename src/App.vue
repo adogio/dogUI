@@ -94,9 +94,9 @@
       }
     },
     mounted: function () {
-      setTimeout(() => {
-        this.cover = 'in';
-      }, 1000);
+      // setTimeout(() => {
+      //   this.cover = 'in';
+      // }, 1000);
 
     },
     methods: {
