@@ -24,8 +24,11 @@
         computed: {
 
         },
-        mounted: function () {},
-        props: [],
+        mounted: function () {
+            this.inputed = this.value;
+            this.rePlaceHolder();
+        },
+        props: ['value'],
         components: {
 
         },
@@ -60,9 +63,11 @@
         font-family: 'ubuntu';
         color: #a8a8a8;
     }
-    .borderer{
+
+    .borderer {
         border-left: 5px solid #b30000;
     }
+
     .field {
         position: relative;
         padding-top: 4px;

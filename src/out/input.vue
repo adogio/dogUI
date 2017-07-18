@@ -38,8 +38,11 @@
         computed: {
 
         },
-        mounted: function () {},
-        props: ['type'],
+        mounted: function () {
+            this.inputed = this.value;
+            this.rePlaceHolder();
+        },
+        props: ['type', 'value'],
         components: {
 
         },
