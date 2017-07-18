@@ -105,12 +105,14 @@
       },
       tocheck: function () {
         check({
-          message: 213,
-          button: 123,
-          color: "red",
-          next: function () {
-            console.log(123)
-          }
+          icon: "buttonIcon", //optional
+          message: "message",
+          next: "buttonText",
+          back: "backButtonText",
+          color: "buttonColor",
+          bcolor: "backButtonColor", //optional
+          top: "topIcon", //optional
+          then: function () {},
         })
       },
       testf: function (index, src) {

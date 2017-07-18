@@ -2,14 +2,16 @@
     <div v-if="content">
         <div class="padding-line">
         </div>
-        <div class="topper">
+        <div class="topper animated fadeIn">
             <i class="animated pulse infinite framee" :class="warnicon"></i>
         </div>
-        <div class="content">
+        <div class="content animated fadeIn">
             <p v-html="content.message"></p>
         </div>
-        <dog-button size="large" :color="content.color" :icon="ifIcon" @click="confirms">{{content.next}}</dog-button>
-        <dog-button size="small" :color="ifColor" icon="arrow-left" @click="goback">{{content.back}}</dog-button>
+        <div class="animated fadeIn">
+            <dog-button size="large" :color="content.color" :icon="ifIcon" @click="confirms">{{content.next}}</dog-button>
+            <dog-button size="small" :color="ifColor" icon="arrow-left" @click="goback">{{content.back}}</dog-button>
+        </div>
     </div>
 </template>
 
