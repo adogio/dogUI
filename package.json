@@ -1,6 +1,6 @@
 {
   "name": "dogui",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "A dog UI library for Vuejs",
   "main": "src/import.js",
   "scripts": {

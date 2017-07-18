@@ -35,6 +35,7 @@
           这里显示上面选择的内容的ID
           <br> 你选择了:{{idselect}}
         </dog-info>
+        <dog-button icon="user-o" @click="tocheck" size="large" color="red">DOUBLE CHECK</dog-button>
       </dog-title>
     </dog-cover>
   </div>
@@ -96,10 +97,21 @@
       setTimeout(() => {
         this.cover = 'in';
       }, 1000);
+
     },
     methods: {
       update: function (info) {
         this.seach = info;
+      },
+      tocheck: function () {
+        check({
+          message: 213,
+          button: 123,
+          color: "red",
+          next: function () {
+            console.log(123)
+          }
+        })
       },
       testf: function (index, src) {
         this.filesss = src;
