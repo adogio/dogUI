@@ -1,5 +1,5 @@
 <template>
-    <dog-bar>
+    <dog-bar :merge="merge">
         <input v-bind:placeholder="placeHT" v-on:keyup="onKeyUp" v-model="inputContent">
     </dog-bar>
 </template>
@@ -13,7 +13,7 @@
                 inputContent: ""
             }
         },
-        props: ['placeholder'],
+        props: ['placeholder', 'merge'],
         name: "dog-search-bar",
         components: {
             "dog-bar": bar

@@ -13,7 +13,6 @@
         },
         data: function () {
             return {
-                disabled: this.disablebutton ? this.disablebutton : false,
                 dogicon: this.icon ? this.icon : "question"
             }
         },
@@ -23,7 +22,7 @@
                 this.$emit('click');
             }
         },
-        props: ['icon', 'size', 'color', 'disablebutton'],
+        props: ['icon', 'size', 'color', 'disabled'],
         computed: {
             computedStyle: function () {
                 let edge = "border-left: 9px solid #";
@@ -96,6 +95,7 @@
 
     button {
         margin-top: 2px;
+        z-index: 4;
     }
 
     .button-block {

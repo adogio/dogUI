@@ -7,7 +7,11 @@ export default {
     upload: require('./out/picture.vue'),
     input: require('./out/input.vue'),
     select: require('./out/selector.vue'),
-    info: require('./out/info.vue')
+    info: require('./out/info.vue'),
+    view: require('./out/pictureView.vue'),
+    textarea: require('./out/textarea.vue'),
+    cover: require('./out/cover.vue'),
+    navBar: require('./out/navbar.vue')
 }
 export const title = require('./out/title.vue');
 export const block = require('./out/block.vue');
@@ -18,3 +22,7 @@ export const upload = require('./out/picture.vue');
 export const input = require('./out/input.vue');
 export const select = require('./out/selector.vue');
 export const info = require('./out/info.vue');
+export const view = require('./out/pictureView.vue');
+export const textarea = require('./out/textarea.vue');
+export const cover = require('./out/cover.vue');
+export const navBar = require('./out/navbar.vue');
