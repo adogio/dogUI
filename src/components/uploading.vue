@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="loader">
-            <div class="text"><i class="fa fa-cloud-upload"></i></div>
+            <div class="text"><i :class="bindClass"></i></div>
             <div class="inner one"></div>
             <div class="inner two"></div>
             <div class="inner three"></div>
@@ -19,7 +19,13 @@
             }
         },
         computed: {
-
+            bindClass: function () {
+                if (this.icon) {
+                    return "fa fa-" + this.icon;
+                } else {
+                    return "fa fa-cloud-upload";
+                }
+            }
         },
         mounted: function () {},
         props: [],

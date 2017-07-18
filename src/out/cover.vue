@@ -53,6 +53,9 @@
                     this.upload.info = info;
                 }
                 this.view = 'uploading';
+                setTimeout(() => {
+                    this.doublecheck = false;
+                }, 150);
                 return true;
             }
             window.unupload = () => {

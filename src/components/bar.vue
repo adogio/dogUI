@@ -19,6 +19,7 @@
         mounted: function () {
             window.addEventListener('scroll', this.handleScroll);
         },
+        props: ['merge'],
         methods: {
             addFix: function () {
                 this.bindClass = "fixed bgcolor";
@@ -30,10 +31,14 @@
                 this.bindClass = "outed";
             },
             handleScroll: function () {
-                if (window.scrollY >= 122 && !this.added) {
+                let mergetop = 122;
+                if (this.merge) {
+                    mergetop += this.merge;
+                }
+                if (window.scrollY >= mergetop && !this.added) {
                     this.added = true;
                     this.addFix();
-                } else if (window.scrollY < 122 && this.added) {
+                } else if (window.scrollY < mergetop && this.added) {
                     this.added = false;
                     this.outFix();
                 }

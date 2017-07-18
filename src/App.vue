@@ -94,10 +94,9 @@
       }
     },
     mounted: function () {
-      // setTimeout(() => {
-      //   this.cover = 'in';
-      // }, 1000);
-
+      setTimeout(() => {
+        this.cover = 'in';
+      }, 1000);
     },
     methods: {
       update: function (info) {
@@ -113,7 +112,7 @@
           bcolor: "backButtonColor", //optional
           top: "topIcon", //optional
           then: function () {
-            upload();
+            window.upload("car", "123");
           },
         })
       },
