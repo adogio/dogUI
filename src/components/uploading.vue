@@ -1,5 +1,7 @@
 <template>
     <div>
+        <div class="padding-line">
+        </div>
         <div class="loader">
             <div class="text"><i :class="bindClass"></i></div>
             <div class="inner one"></div>
@@ -66,25 +68,76 @@
         border-radius: 50%;
     }
 
+    @keyframes colorchange {
+        0% {
+            background-color: #DEFFFC;
+        }
+
+        20% {
+            background-color: #EB5160;
+        }
+        40% {
+            background-color: #ED9B40;
+        }
+        60% {
+            background-color: #CBE896;
+        }
+        80% {
+            background-color: #8BAAAD;
+        }
+        100% {
+            background-color: #1FD4F9;
+        }
+    }
+
+    @-webkit-keyframes colorchange {
+        0% {
+            background-color: #DEFFFC;
+        }
+
+        20% {
+            background-color: #EB5160;
+        }
+        40% {
+            background-color: #ED9B40;
+        }
+        60% {
+            background-color: #CBE896;
+        }
+        80% {
+            background-color: #8BAAAD;
+        }
+        100% {
+            background-color: #1FD4F9;
+        }
+    }
+
+    div.padding-line {
+        height: 7px;
+        background-color: black;
+        -webkit-animation: colorchange 25s linear infinite alternate;
+        animation: colorchange 25s linear infinite alternate;
+    }
+
     .inner.one {
         left: 0%;
         top: 0%;
         animation: rotate-one 1.8s linear infinite;
-        border-bottom: 5px solid firebrick;
+        border-bottom: 15px solid firebrick;
     }
 
     .inner.two {
         right: 0%;
         top: 0%;
         animation: rotate-two 1.8s linear infinite;
-        border-right: 5px solid orange;
+        border-right: 15px solid orange;
     }
 
     .inner.three {
         right: 0%;
         bottom: 0%;
         animation: rotate-three 1.8s linear infinite;
-        border-top: 5px solid blueviolet;
+        border-top: 15px solid blueviolet;
     }
 
     @keyframes rotate-one {

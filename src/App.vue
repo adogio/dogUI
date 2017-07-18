@@ -85,7 +85,7 @@
         seach: "",
         idselect: "",
         aDDD: "",
-        cover: 'load',
+        cover: 'uploading',
         test: [{
             name: "我的ID是1",
             id: 1

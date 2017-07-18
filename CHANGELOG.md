@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 1.7.1
+    -   Add padding line to upload page
+    -   fix bugs
 -   Version 1.7.0
     -   Add Uploading view
     -   Add nav bar view
