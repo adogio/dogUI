@@ -91,7 +91,7 @@
 
     .field {
         position: relative;
-        padding-top: 7px;
+        padding-top: 9px;
         padding-left: 10px;
         font-size: 21px;
         border: 0px;
@@ -101,7 +101,7 @@
 
     .bigPlaceholder {
         font-size: 21px!important;
-        margin: 14px 5px 0 7px!important;
+        margin: 8px 5px 0 7px!important;
         white-space: nowrap;
     }
 

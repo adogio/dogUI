@@ -122,7 +122,7 @@
         width: 100%;
         height: 40px;
         position: relative;
-        padding-top: 7px;
+        padding-top: 9px;
         padding-left: 10px;
         font-size: 21px;
         border: 0px;
