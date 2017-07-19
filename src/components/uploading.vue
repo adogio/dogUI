@@ -1,7 +1,6 @@
 <template>
     <div>
-        <div class="padding-line">
-        </div>
+        <padding-bar></padding-bar>
         <div class="loader">
             <div class="text"><i :class="bindClass"></i></div>
             <div class="inner one"></div>
@@ -13,6 +12,7 @@
 </template>
 
 <script>
+    import paddingbar from './paddingbar.vue';
     export default {
         data: function () {
             return {
@@ -31,7 +31,9 @@
         },
         mounted: function () {},
         props: [],
-        components: {},
+        components: {
+            "padding-bar": paddingbar
+        },
         methods: {}
     }
 </script>
@@ -66,57 +68,6 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-    }
-
-    @keyframes colorchange {
-        0% {
-            background-color: #DEFFFC;
-        }
-
-        20% {
-            background-color: #EB5160;
-        }
-        40% {
-            background-color: #ED9B40;
-        }
-        60% {
-            background-color: #CBE896;
-        }
-        80% {
-            background-color: #8BAAAD;
-        }
-        100% {
-            background-color: #1FD4F9;
-        }
-    }
-
-    @-webkit-keyframes colorchange {
-        0% {
-            background-color: #DEFFFC;
-        }
-
-        20% {
-            background-color: #EB5160;
-        }
-        40% {
-            background-color: #ED9B40;
-        }
-        60% {
-            background-color: #CBE896;
-        }
-        80% {
-            background-color: #8BAAAD;
-        }
-        100% {
-            background-color: #1FD4F9;
-        }
-    }
-
-    div.padding-line {
-        height: 7px;
-        background-color: black;
-        -webkit-animation: colorchange 25s linear infinite alternate;
-        animation: colorchange 25s linear infinite alternate;
     }
 
     .inner.one {
