@@ -1,5 +1,12 @@
 # Changelog
 
+-   Version 1.8.3
+    -   Beautify tables
+    -   Componented padding bar
+-   Version 1.8.2
+    -   Ifx table bug
+-   Version 1.8.1
+    -   Update table format
 -   Version 1.8.0
     -   Add qrcode function
     -   thanks for qrgenerate js source code

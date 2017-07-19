@@ -2,9 +2,23 @@
     <div>
         <div class="content">
             <table class="center">
+                <tr>
+                    <td class="white"></td>
+                    <td v-for="j in src[0]" class="white">
+                    </td>
+                    <td class="white"></td>
+                </tr>
                 <tr v-for="i in src">
+                    <td class="white"></td>
                     <td v-for="j in i" :class="toClass(j)">
                     </td>
+                    <td class="white"></td>
+                </tr>
+                <tr>
+                    <td class="white"></td>
+                    <td v-for="j in src[0]" class="white">
+                    </td>
+                    <td class="white"></td>
                 </tr>
             </table>
         </div>
@@ -79,6 +93,7 @@
         margin: auto;
         margin-top: 138px;
         box-sizing: border-box;
-        border: 9px solid white;
+        border: 2px solid #b30000;
+        border-left: 11px solid #b30000;
     }
 </style>

@@ -6,7 +6,7 @@ adog UI library frame work on Vue
 
 ## Version
 
-- Version 1.4.1
+- Version 1.8.3
 
 ## Introduction
 
@@ -99,4 +99,24 @@ The Usage below is out of date, please check App.vue for examples
         top: "topIcon", //optional
         then: function () {},
     })
+```
+
+### Qrcode
+
+```javascript
+  flow('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+```
+
+### upload
+
+```javascript
+  upload("car", "123");
+```
+
+### navbar
+
+```javascript
+  nav("测试", () => {
+          console.log('test');
+  })
 ```
