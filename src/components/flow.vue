@@ -2,6 +2,9 @@
     <div class="main">
         <div class="padding-line">
         </div>
+        <div class="title">
+            <img src="./img/Atthis3.png">
+        </div>
         <div class="content" @click="goOut">
             <div>
                 <qrcode :content="content" v-if="mode=='qrcode'"></qrcode>
@@ -85,6 +88,18 @@
         background-color: black;
         -webkit-animation: colorchange 25s linear infinite alternate;
         animation: colorchange 25s linear infinite alternate;
+    }
+
+    img {
+        width: 80px;
+        -webkit-filter: drop-shadow(1px 1px 5px black);
+        filter: drop-shadow(1px 1px 5px black)
+    }
+
+    div.title {
+        position: fixed;
+        top: 16px;
+        left: 10px;
     }
 
     div.main {

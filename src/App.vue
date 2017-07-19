@@ -101,7 +101,7 @@
     mounted: function () {
       setTimeout(() => {
         this.cover = 'in';
-      }, 1);
+      }, 4500);
     },
     methods: {
       Qrcode: function () {

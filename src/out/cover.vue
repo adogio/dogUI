@@ -125,8 +125,8 @@
 
     .slots {
         pointer-events: none;
-        filter: blur(10px) grayscale(100%);
-        -webkit-filter: blur(10px) grayscale(100%);
+        filter: blur(15px) grayscale(100%);
+        -webkit-filter: blur(15px) grayscale(100%);
     }
 
     .fade-enter-active,

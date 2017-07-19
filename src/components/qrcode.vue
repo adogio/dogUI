@@ -7,9 +7,8 @@
                     </td>
                 </tr>
             </table>
-
         </div>
-        <div class="above"><img src="https://raw.githubusercontent.com/adogio/Flow.resource/master/Atthisicon.png"></div>
+        <div class="above"><img src="./img/Atthisicon.png"></div>
     </div>
 </template>
 
@@ -56,12 +55,15 @@
     img {
         width: 48px;
         height: 48px;
-        background-color: red;
+        background-color: rgba(216, 117, 0, 0.95);
+        border-radius: 20%;
+        padding: 5px;
+        pointer-events: none;
     }
 
     .above {
         position: fixed;
-        top: 258px;
+        top: 266px;
         text-align: center;
         width: 100%;
     }
