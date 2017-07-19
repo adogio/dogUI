@@ -1,0 +1,68 @@
+# Changelog
+
+-   Version 1.8.6
+    -   Perfect input margin size
+    -   Add money, pass, tel, email, date input functions
+    -   Add input signial to select panel
+-   Version 1.8.5
+    -   Add input hint for input and textarea
+    -   Fix testarea minor bugs
+-   Version 1.8.4
+    -   Fix white border bug
+-   Version 1.8.3
+    -   Beautify tables
+    -   Componented padding bar
+-   Version 1.8.2
+    -   Ifx table bug
+-   Version 1.8.1
+    -   Update table format
+-   Version 1.8.0
+    -   Add qrcode function
+    -   thanks for qrgenerate js source code
+-   Version 1.7.2
+    -   Fix input pre value bug
+-   Version 1.7.1
+    -   Add padding line to upload page
+    -   fix bugs
+-   Version 1.7.0
+    -   Add Uploading view
+    -   Add nav bar view
+    -   Fix bugs
+    -   Update cover view
+-   Version 1.6.1
+    -   Fix minor bugs
+    -   Fix border color
+-   Version 1.6.1
+    -   Fix minor bugs
+    -   Fix textarea bugs
+    -   Fix bounding bugs
+-   Version 1.6.0
+    -   Add Pictures view
+    -   Add Domb view
+-   Version 1.5.1
+    -   Fix minor bugs
+-   Version 1.5.0
+    -   Add Info view
+    -   Fix bugs
+-   Version 1.4.0
+    -   Add Cover view
+    -   Add loading view
+    -   Fix input bugs
+-   Version 1.3.0
+    -   Add Textarea view
+    -   Fix bugs
+-   Version 1.2.1
+    -   FIx minor bugs
+-   Version 1.2.0
+    -   Add Bar view
+    -   Add Search bar view
+-   Version 1.1.0
+    -   Add picture upload view
+    -   Add selector view
+    -   Fix bugs
+-   Version 1.0.0
+    -   Update to useable version
+    -   Input view
+    -   Block view
+    -   Title view
+    -   Cell view

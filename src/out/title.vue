@@ -7,10 +7,7 @@
                     <span v-text="title" class="shadow-dog"></span>
                 </div>
             </div>
-            <div class="row">
-                <div class="padding-line">
-                </div>
-            </div>
+            <padding-bar></padding-bar>
         </div>
         <div class="row">
             <div class="hint-bottom animated fadeIn">
@@ -21,9 +18,14 @@
 </template>
 
 <script>
+    import paddingbar from '../components/paddingbar.vue';
+
     export default {
         mounted: function () {
             this.combo = Math.floor(Math.random() * 100) % this.part.length;
+        },
+        components: {
+            "padding-bar": paddingbar
         },
         props: ['title', 'icon'],
         name: "dog-title",
@@ -45,50 +47,6 @@
 </script>
 
 <style scoped>
-    @keyframes colorchange {
-        0% {
-            background-color: #DEFFFC;
-        }
-
-        20% {
-            background-color: #EB5160;
-        }
-        40% {
-            background-color: #ED9B40;
-        }
-        60% {
-            background-color: #CBE896;
-        }
-        80% {
-            background-color: #8BAAAD;
-        }
-        100% {
-            background-color: #1FD4F9;
-        }
-    }
-
-    @-webkit-keyframes colorchange {
-        0% {
-            background-color: #DEFFFC;
-        }
-
-        20% {
-            background-color: #EB5160;
-        }
-        40% {
-            background-color: #ED9B40;
-        }
-        60% {
-            background-color: #CBE896;
-        }
-        80% {
-            background-color: #8BAAAD;
-        }
-        100% {
-            background-color: #1FD4F9;
-        }
-    }
-
     div {
         padding: 0px;
         margin: 0px;
@@ -112,12 +70,6 @@
         -webkit-animation-delay: 0.6s;
     }
 
-    div.padding-line {
-        height: 7px;
-        background-color: black;
-        -webkit-animation: colorchange 25s linear infinite alternate;
-        animation: colorchange 25s linear infinite alternate;
-    }
 
     div.left-bottom {
         font-size: 33px;

@@ -1,7 +1,6 @@
 <template>
     <div v-if="content">
-        <div class="padding-line">
-        </div>
+        <padding-bar></padding-bar>
         <div class="topper animated fadeIn">
             <i class="animated pulse infinite framee" :class="warnicon"></i>
         </div>
@@ -17,6 +16,7 @@
 
 <script>
     import button from '../out/button.vue';
+    import paddingbar from './paddingbar.vue';
 
     export default {
         data: function () {
@@ -55,7 +55,8 @@
         mounted: function () {},
         props: ['check'],
         components: {
-            "dog-button": button
+            "dog-button": button,
+            "padding-bar": paddingbar
         },
         methods: {
             confirms: function () {
@@ -86,57 +87,6 @@
     .framee {
         -webkit-animation-duration: 2.5s;
         animation-duration: 2.5s;
-    }
-
-    @keyframes colorchange {
-        0% {
-            background-color: #DEFFFC;
-        }
-
-        20% {
-            background-color: #EB5160;
-        }
-        40% {
-            background-color: #ED9B40;
-        }
-        60% {
-            background-color: #CBE896;
-        }
-        80% {
-            background-color: #8BAAAD;
-        }
-        100% {
-            background-color: #1FD4F9;
-        }
-    }
-
-    @-webkit-keyframes colorchange {
-        0% {
-            background-color: #DEFFFC;
-        }
-
-        20% {
-            background-color: #EB5160;
-        }
-        40% {
-            background-color: #ED9B40;
-        }
-        60% {
-            background-color: #CBE896;
-        }
-        80% {
-            background-color: #8BAAAD;
-        }
-        100% {
-            background-color: #1FD4F9;
-        }
-    }
-
-    div.padding-line {
-        height: 7px;
-        background-color: black;
-        -webkit-animation: colorchange 25s linear infinite alternate;
-        animation: colorchange 25s linear infinite alternate;
     }
 
     p {

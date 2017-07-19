@@ -1,5 +1,6 @@
 <template>
     <div>
+        <padding-bar></padding-bar>
         <div class="loader">
             <div class="text"><i :class="bindClass"></i></div>
             <div class="inner one"></div>
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+    import paddingbar from './paddingbar.vue';
     export default {
         data: function () {
             return {
@@ -29,7 +31,9 @@
         },
         mounted: function () {},
         props: [],
-        components: {},
+        components: {
+            "padding-bar": paddingbar
+        },
         methods: {}
     }
 </script>
@@ -70,21 +74,24 @@
         left: 0%;
         top: 0%;
         animation: rotate-one 1.8s linear infinite;
-        border-bottom: 5px solid firebrick;
+        border-right: 1px solid orange;
+        border-bottom: 15px solid firebrick;
     }
 
     .inner.two {
         right: 0%;
         top: 0%;
         animation: rotate-two 1.8s linear infinite;
-        border-right: 5px solid orange;
+        border-top: 1px solid blueviolet;
+        border-right: 15px solid orange;
     }
 
     .inner.three {
         right: 0%;
         bottom: 0%;
         animation: rotate-three 1.8s linear infinite;
-        border-top: 5px solid blueviolet;
+        border-left: 1px solid firebrick;
+        border-top: 15px solid blueviolet;
     }
 
     @keyframes rotate-one {

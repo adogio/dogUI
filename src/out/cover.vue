@@ -3,7 +3,12 @@
         <div v-show="!doublecheck">
             <transition name="fade" mode="out-in">
                 <component v-bind:is="view">
-                    <slot></slot>
+                    <div :class="slots">
+                        <slot></slot>
+                    </div>
+                    <div v-if="flotLoad" v-show="floting" :class="flows">
+                        <flow :mode="flow.mode" :content="flow.content">{{flow.text}}</flow>
+                    </div>
                 </component>
             </transition>
         </div>
@@ -18,6 +23,7 @@
     import dumb from '../components/dumb.vue';
     import dbcheck from '../components/doublecheck.vue';
     import uploading from '../components/uploading.vue';
+    import flow from '../components/flow.vue';
 
     export default {
         data: function () {
@@ -25,6 +31,15 @@
                 view: 'load',
                 doublecheck: false,
                 data: null,
+                floting: false,
+                flotLoad: false,
+                flow: {
+                    mode: 'qrcode',
+                    text: 'test',
+                    content: ''
+                },
+                slots: "slotun",
+                flows: "animated fadeIn",
                 upload: {
                     icon: "cloud-upload",
                     info: "Uploading"
@@ -40,6 +55,28 @@
             }
         },
         mounted: function () {
+            if (typeof this.addOn == 'object') {
+                for (let i = 0; i < this.addOn.length; i++) {
+                    if (this.addOn[i] == 'qrcode') {
+                        this.flotLoad = true;
+                        window.flow = (data, text) => {
+                            this.flow.mode = 'qrcode';
+                            this.flow.text = text;
+                            this.flow.content = data;
+                            this.floting = true;
+                            this.slots = "slotun slots";
+                            this.flows = "animated fadeIn";
+                            return true;
+                        }
+                        window.unflow = () => {
+                            this.floting = false;
+                            this.slots = "slotun";
+                            this.flows = "animated fadeOut";
+                            return true;
+                        }
+                    }
+                }
+            }
             window.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;
@@ -77,18 +114,29 @@
                 }
             }
         },
-        props: ['display', 'info', 'icon'],
+        props: ['display', 'info', 'icon', 'addOn'],
         components: {
             "load": loading,
             "in": dumb,
             "check": dbcheck,
-            "uploading": uploading
+            "uploading": uploading,
+            "flow": flow
         },
         methods: {}
     }
 </script>
 
 <style scoped>
+    .slotun {
+        transition: all 0.5s;
+    }
+
+    .slots {
+        pointer-events: none;
+        filter: blur(15px) grayscale(100%);
+        -webkit-filter: blur(15px) grayscale(100%);
+    }
+
     .fade-enter-active,
     .fade-leave-active {
         transition: opacity .3s
