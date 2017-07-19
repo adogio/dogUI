@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 1.8.4
+    -   Fix white border bug
 -   Version 1.8.3
     -   Beautify tables
     -   Componented padding bar

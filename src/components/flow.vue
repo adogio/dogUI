@@ -1,77 +1,77 @@
 <template>
-    <div class="main">
-        <padding-bar></padding-bar>
-        <div class="title">
-            <img src="./img/Atthis3.png">
-        </div>
-        <div class="content" @click="goOut">
-            <div>
-                <qrcode :content="content" v-if="mode=='qrcode'"></qrcode>
-            </div>
-            <div class="bottom">
-                <slot></slot>
-            </div>
-        </div>
-    </div>
+	<div class="main">
+		<padding-bar></padding-bar>
+		<div class="title">
+			<img src="./img/Atthis3.png">
+		</div>
+		<div class="content" @click="goOut">
+			<div>
+				<qrcode :content="content" v-if="mode=='qrcode'"></qrcode>
+			</div>
+			<div class="bottom">
+				<slot></slot>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-    import qrcode from './qrcode.vue';
-    import paddingbar from './paddingbar.vue';
+	import qrcode from './qrcode.vue';
+	import paddingbar from './paddingbar.vue';
 
-    export default {
-        data: function () {
-            return {}
-        },
-        computed: {
+	export default {
+		data: function () {
+			return {}
+		},
+		computed: {
 
-        },
-        mounted: function () {},
-        props: ['mode', 'content'],
-        components: {
-            "qrcode": qrcode,
-            "padding-bar": paddingbar
-        },
-        methods: {
-            goOut: function () {
-                window.unflow();
-            }
-        }
-    }
+		},
+		mounted: function () {},
+		props: ['mode', 'content'],
+		components: {
+			"qrcode": qrcode,
+			"padding-bar": paddingbar
+		},
+		methods: {
+			goOut: function () {
+				window.unflow();
+			}
+		}
+	}
 </script>
 
 <style scoped>
-    img {
-        width: 80px;
-        -webkit-filter: drop-shadow(1px 1px 5px black);
-        filter: drop-shadow(1px 1px 5px black)
-    }
+	img {
+		width: 80px;
+		-webkit-filter: drop-shadow(1px 1px 5px black);
+		filter: drop-shadow(1px 1px 5px black)
+	}
 
-    div.title {
-        position: fixed;
-        top: 16px;
-        left: 10px;
-    }
+	div.title {
+		position: fixed;
+		top: 16px;
+		left: 10px;
+	}
 
-    div.main {
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        text-align: center;
-        font-size: 30px;
-        font-family: 'ubuntu';
-        word-break: break-word;
-    }
+	div.main {
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		text-align: center;
+		font-size: 30px;
+		font-family: 'ubuntu';
+		word-break: break-word;
+	}
 
-    div.bottom {
-        padding-top: 20px;
-        word-break: break-word;
-    }
+	div.bottom {
+		padding-top: 20px;
+		word-break: break-word;
+	}
 
-    div.content {
-        text-align: center;
-        font-size: 30px;
-        font-family: 'ubuntu';
-        word-break: break-word;
-    }
+	div.content {
+		text-align: center;
+		font-size: 30px;
+		font-family: 'ubuntu';
+		word-break: break-word;
+	}
 </style>
