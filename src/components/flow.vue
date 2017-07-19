@@ -1,5 +1,7 @@
 <template>
     <div class="main">
+        <div class="padding-line">
+        </div>
         <div class="content" @click="goOut">
             <div>
                 <qrcode :content="content" v-if="mode=='qrcode'"></qrcode>
@@ -34,10 +36,60 @@
 </script>
 
 <style scoped>
+    @keyframes colorchange {
+        0% {
+            background-color: #DEFFFC;
+        }
+
+        20% {
+            background-color: #EB5160;
+        }
+        40% {
+            background-color: #ED9B40;
+        }
+        60% {
+            background-color: #CBE896;
+        }
+        80% {
+            background-color: #8BAAAD;
+        }
+        100% {
+            background-color: #1FD4F9;
+        }
+    }
+
+    @-webkit-keyframes colorchange {
+        0% {
+            background-color: #DEFFFC;
+        }
+
+        20% {
+            background-color: #EB5160;
+        }
+        40% {
+            background-color: #ED9B40;
+        }
+        60% {
+            background-color: #CBE896;
+        }
+        80% {
+            background-color: #8BAAAD;
+        }
+        100% {
+            background-color: #1FD4F9;
+        }
+    }
+
+    div.padding-line {
+        height: 7px;
+        background-color: black;
+        -webkit-animation: colorchange 25s linear infinite alternate;
+        animation: colorchange 25s linear infinite alternate;
+    }
+
     div.main {
         position: fixed;
-        top: 26%;
-        left: 0px;
+        top: 0px;
         width: 100%;
         text-align: center;
         font-size: 30px;

@@ -34,7 +34,7 @@
     "vue": "vue/dist/vue.common.js"
   },
   "dependencies": {
-    "doglib": "^1.0.0",
+    "doglib": "^1.0.3",
     "vue": "2.4.1"
   },
   "devDependencies": {

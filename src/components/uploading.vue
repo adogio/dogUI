@@ -123,6 +123,7 @@
         left: 0%;
         top: 0%;
         animation: rotate-one 1.8s linear infinite;
+        border-right: 1px solid orange;
         border-bottom: 15px solid firebrick;
     }
 
@@ -130,6 +131,7 @@
         right: 0%;
         top: 0%;
         animation: rotate-two 1.8s linear infinite;
+        border-top: 1px solid blueviolet;
         border-right: 15px solid orange;
     }
 
@@ -137,6 +139,7 @@
         right: 0%;
         bottom: 0%;
         animation: rotate-three 1.8s linear infinite;
+        border-left: 1px solid firebrick;
         border-top: 15px solid blueviolet;
     }
 
