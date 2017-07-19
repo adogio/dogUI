@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <dog-cover :display="cover" icon="paper-plane" info="Loading">
+    <dog-cover :display="cover" icon="paper-plane" info="Loading" :addOn="extend">
       <dog-title icon="comments" title="DOGUI DEMO">
         <dog-search placeholder="搜索框" @change="update"></dog-search>
         <dog-nav-bar>导航栏</dog-nav-bar>
@@ -84,6 +84,7 @@
         age: "",
         aDPS: "不为空时",
         seach: "",
+        extend: ['qrcode'],
         idselect: "",
         aDDD: "123",
         cover: 'uploading',
@@ -101,7 +102,7 @@
     mounted: function () {
       setTimeout(() => {
         this.cover = 'in';
-      }, 4500);
+      }, 1);
     },
     methods: {
       Qrcode: function () {

@@ -6,7 +6,7 @@
                     <div :class="slots">
                         <slot></slot>
                     </div>
-                    <div v-show="floting" :class="flows">
+                    <div v-if="flotLoad" v-show="floting" :class="flows">
                         <flow :mode="flow.mode" :content="flow.content">{{flow.text}}</flow>
                     </div>
                 </component>
@@ -32,6 +32,7 @@
                 doublecheck: false,
                 data: null,
                 floting: false,
+                flotLoad: false,
                 flow: {
                     mode: 'qrcode',
                     text: 'test',
@@ -54,24 +55,31 @@
             }
         },
         mounted: function () {
+            if (typeof this.addOn == 'object') {
+                for (let i = 0; i < this.addOn.length; i++) {
+                    if (this.addOn[i] == 'qrcode') {
+                        this.flotLoad = true;
+                        window.flow = (data, text) => {
+                            this.flow.mode = 'qrcode';
+                            this.flow.text = text;
+                            this.flow.content = data;
+                            this.floting = true;
+                            this.slots = "slotun slots";
+                            this.flows = "animated fadeIn";
+                            return true;
+                        }
+                        window.unflow = () => {
+                            this.floting = false;
+                            this.slots = "slotun";
+                            this.flows = "animated fadeOut";
+                            return true;
+                        }
+                    }
+                }
+            }
             window.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;
-                return true;
-            }
-            window.flow = (data, text) => {
-                this.flow.mode = 'qrcode';
-                this.flow.text = text;
-                this.flow.content = data;
-                this.floting = true;
-                this.slots = "slotun slots";
-                this.flows = "animated fadeIn";
-                return true;
-            }
-            window.unflow = () => {
-                this.floting = false;
-                this.slots = "slotun";
-                this.flows = "animated fadeOut";
                 return true;
             }
             window.upload = (icon, info) => {
@@ -106,7 +114,7 @@
                 }
             }
         },
-        props: ['display', 'info', 'icon'],
+        props: ['display', 'info', 'icon', 'addOn'],
         components: {
             "load": loading,
             "in": dumb,

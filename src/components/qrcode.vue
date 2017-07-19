@@ -30,7 +30,6 @@
         },
         mounted: function () {
             this.src = this.qrcode(this.content, 6);
-            console.log(this.src);
         },
         props: ['content'],
         components: {},
