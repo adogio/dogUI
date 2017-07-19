@@ -13,7 +13,7 @@
 					<dog-input v-model="tel" type="tel">电话</dog-input>
 					<dog-input v-model="password" type="password">密码</dog-input>
 					<dog-input v-model="money" type="money">智商的价格</dog-input>
-					<dog-input v-model="aDPS" type="date">有智商的日期</dog-input>
+					<dog-input v-model="aDPS" type="date" icon="calendar">有智商的日期</dog-input>
 					<dog-textarea v-model="aDDD">测试</dog-textarea>
 				</dog-block>
 				<dog-info info="INPUT测试">
