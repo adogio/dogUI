@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="type!='date'" class="description" :class="place" @click="ClickIn">
+        <div class="description" :class="place" @click="ClickIn">
             <span :class="unpin" class="placeh"><i :class="ifIcon"></i></span><strong><slot></slot></strong>
         </div>
         <transition name="fade">
@@ -20,14 +20,13 @@
                 v-focus="focusStatus">
             <input v-if="type=='password'" type="password" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn"
                 class="field" v-focus="focusStatus">
-            <date-picker v-if="type=='date'"></date-picker>
+            <input v-if="type=='date'" type="date" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="dates"
+                v-focus="focusStatus">
         </div>
     </div>
 </template>
 
 <script>
-    import datepicker from '../components/datepicker.vue';
-
     export default {
         data: function () {
             return {
@@ -37,9 +36,6 @@
                 cover: false,
                 focusStatus: false
             }
-        },
-        components: {
-            "date-picker": datepicker
         },
         directives: {
             focus: {
@@ -65,7 +61,11 @@
         },
         mounted: function () {
             this.inputed = this.value;
-            this.rePlaceHolder();
+            if (this.type == 'date') {
+                this.place = "smallPlaceholder";
+            } else {
+                this.rePlaceHolder();
+            }
         },
         props: ['type', 'value', 'icon'],
         methods: {
@@ -80,6 +80,9 @@
                     }
                     if (this.unpin == "grayier") {
                         this.unpin = "oranager";
+                    }
+                    if (this.type != "date") {
+                        this.place = "bigPlaceholder smallPlaceholder";
                     }
                 }
             },
@@ -176,6 +179,18 @@
 
     span.grayier {
         color: #e4e4e4;
+    }
+
+    .dates {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        padding-top: 9px;
+        padding-left: 10px;
+        color: #000;
+        background: #fff;
+        line-height: 12px;
+        border: 0px;
     }
 
     .field {

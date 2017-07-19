@@ -7,6 +7,7 @@
 		<div class="content" @click="goOut">
 			<div>
 				<qrcode :content="content" v-if="mode=='qrcode'"></qrcode>
+				<date-flow :content="content" v-if="mode=='date'"></date-flow>
 			</div>
 			<div class="bottom">
 				<slot></slot>
@@ -17,6 +18,7 @@
 
 <script>
 	import qrcode from './qrcode.vue';
+	import datepicker from './dateflow.vue';
 	import paddingbar from './paddingbar.vue';
 
 	export default {
@@ -30,11 +32,14 @@
 		props: ['mode', 'content'],
 		components: {
 			"qrcode": qrcode,
+			"date-flow": datepicker,
 			"padding-bar": paddingbar
 		},
 		methods: {
 			goOut: function () {
-				window.unflow();
+				if (this.mode == 'qrcode') {
+					window.unflow();
+				}
 			}
 		}
 	}
