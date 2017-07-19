@@ -20,8 +20,8 @@
                 v-focus="focusStatus">
             <input v-if="type=='password'" type="password" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn"
                 class="field" v-focus="focusStatus">
-            <input v-if="type=='date'" type="date" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="dates"
-                v-focus="focusStatus">
+            <input v-if="type=='date'" type="date" v-model="inputed" @input="onInput" class="invisiable" ref="area">
+            <button v-if="type=='date'" @click="ClickDate" class="field">123</button>
         </div>
     </div>
 </template>
@@ -98,6 +98,10 @@
                 if (this.type == 'money') {
                     this.cover = true;
                 }
+            },
+            ClickDate: function () {
+                console.log(this.$refs.area.click());
+                this.$refs.area.click();
             }
         }
     }
@@ -112,6 +116,10 @@
     .fade-enter-active,
     .fade-leave-active {
         transition: opacity .2s
+    }
+
+    .invisiable {
+        display: none;
     }
 
     .fade-enter,
@@ -132,7 +140,7 @@
 
     input.money {
         width: 100%;
-        height: 40px;
+        height: 50px;
         position: relative;
         padding-top: 9px;
         padding-left: 27px;
@@ -181,21 +189,23 @@
         color: #e4e4e4;
     }
 
-    input.dates {
+    .dates {
         width: 100%;
-        height: 40px;
+        height: 50px;
         position: relative;
         padding-top: 9px;
         padding-left: 10px;
+        font-size: 21px;
+        border: 0px;
+        text-indent: 0;
+        line-height: 12px;
         color: #000;
         background: #fff;
-        line-height: 12px;
-        border: 0px;
     }
 
     .field {
         width: 100%;
-        height: 40px;
+        height: 50px;
         position: relative;
         padding-top: 9px;
         padding-left: 11px;
