@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="description" :class="place">
-            <strong><slot></slot></strong>
+        <div class="description" :class="place" @click="ClickIn">
+            <span :class="unpin" class="placeh"><i class="fa fa-star fa-fw"></i></span><strong><slot></slot></strong>
         </div>
         <div class="borderer">
             <textarea ref="area" class="field" name="textarea" v-model="inputed" @click="ClickIn" @input="onInput" @blur="rePlaceHolder"
-                :style="autoHeight"></textarea>
+                :style="autoHeight" v-focus="focusStatus"></textarea>
         </div>
     </div>
 </template>
@@ -16,6 +16,8 @@
             return {
                 place: "bigPlaceholder smallPlaceholder",
                 inputed: "",
+                unpin: "redder",
+                focusStatus: false,
                 autoHeight: ""
             }
         },
@@ -32,12 +34,29 @@
         components: {
 
         },
+        directives: {
+            focus: {
+                update: (el, {
+                    value
+                }) => {
+                    if (value) {
+                        el.focus();
+                    }
+
+                }
+            }
+        },
         methods: {
             rePlaceHolder: function () {
                 this.focusStatus = false;
                 if (this.inputed.length > 0) {
                     this.place = "smallPlaceholder";
+                    this.unpin = "grayier";
                 } else {
+                    if (this.unpin == "grayier") {
+                        this.unpin = "oranager";
+
+                    }
                     this.place = "bigPlaceholder smallPlaceholder";
                 }
             },
@@ -52,7 +71,9 @@
                 }
             },
             ClickIn: function () {
+                this.unpin = "grayier";
                 this.place = "smallPlaceholder";
+                this.focusStatus = true;
             }
         }
     }
@@ -70,7 +91,7 @@
 
     .field {
         position: relative;
-        padding-top: 4px;
+        padding-top: 7px;
         padding-left: 10px;
         font-size: 21px;
         border: 0px;
@@ -82,6 +103,27 @@
         font-size: 21px!important;
         margin: 14px 5px 0 7px!important;
         white-space: nowrap;
+    }
+
+    span.placeh {
+        font-size: 12px;
+        vertical-align: text-top;
+    }
+
+    span {
+        transition: all 0.5s;
+    }
+
+    span.oranager {
+        color: orange;
+    }
+
+    span.redder {
+        color: #b30000;
+    }
+
+    span.grayier {
+        color: #e4e4e4;
     }
 
     .smallPlaceholder {

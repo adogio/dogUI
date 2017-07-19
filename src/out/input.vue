@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="description" :class="place" @click="ClickIn">
-            <strong><slot></slot></strong>
+            <span :class="unpin" class="placeh"><i class="fa fa-star fa-fw"></i></span><strong><slot></slot></strong>
         </div>
         <div class="outField">
             <input v-if="!type" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="field" v-focus="focusStatus">
@@ -19,6 +19,7 @@
             return {
                 inputed: "",
                 place: "bigPlaceholder smallPlaceholder",
+                unpin: "redder",
                 focusStatus: false
             }
         },
@@ -51,7 +52,12 @@
                 this.focusStatus = false;
                 if (this.inputed.length > 0) {
                     this.place = "smallPlaceholder";
+                    this.unpin = "grayier";
                 } else {
+                    if (this.unpin == "grayier") {
+                        this.unpin = "oranager";
+
+                    }
                     this.place = "bigPlaceholder smallPlaceholder";
                 }
             },
@@ -61,6 +67,7 @@
                 this.focusStatus = false;
             },
             ClickIn: function () {
+                this.unpin = "grayier";
                 this.place = "smallPlaceholder";
                 this.focusStatus = true;
             }
@@ -90,11 +97,32 @@
         border-left: 5px solid #b30000;
     }
 
+    span.placeh {
+        font-size: 12px;
+        vertical-align: text-top;
+    }
+
+    span {
+        transition: all 0.5s;
+    }
+
+    span.oranager {
+        color: orange;
+    }
+
+    span.redder {
+        color: #b30000;
+    }
+
+    span.grayier {
+        color: #e4e4e4;
+    }
+
     .field {
         width: 100%;
         height: 40px;
         position: relative;
-        padding-top: 4px;
+        padding-top: 7px;
         padding-left: 10px;
         font-size: 21px;
         border: 0px;
@@ -106,7 +134,7 @@
 
     .bigPlaceholder {
         font-size: 21px!important;
-        margin: 14px 5px 0 7px!important;
+        margin: 8px 5px 0 7px!important;
         white-space: nowrap;
     }
 </style>

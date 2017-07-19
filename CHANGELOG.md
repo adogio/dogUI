@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 1.8.5
+    -   Add input hint for input and textarea
+    -   Fix testarea minor bugs
 -   Version 1.8.4
     -   Fix white border bug
 -   Version 1.8.3
