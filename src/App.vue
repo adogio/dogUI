@@ -4,6 +4,7 @@
 			<dog-title icon="comments" title="DOGUI DEMO">
 				<dog-search placeholder="搜索框" @change="update"></dog-search>
 				<dog-nav-bar>导航栏</dog-nav-bar>
+				<dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
 				<dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
 				<dog-block icon="car" info="输入框">
 					<dog-input v-model="name">姓名</dog-input>
