@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="description" :class="place" @click="ClickIn">
-            <span :class="unpin" class="placeh"><i class="fa fa-star fa-fw"></i></span><strong><slot></slot></strong>
+            <span :class="unpin" class="placeh"><i :class="ifIcon"></i></span><strong><slot></slot></strong>
         </div>
         <div class="borderer">
             <textarea ref="area" class="field" name="textarea" v-model="inputed" @click="ClickIn" @input="onInput" @blur="rePlaceHolder"
@@ -24,16 +24,19 @@
         directives: {},
         name: "dog-textarea",
         computed: {
-
+            ifIcon: function () {
+                if (this.icon) {
+                    return "fa fa-" + this.icon + " fa-fw";
+                } else {
+                    return "fa fa-star fa-fw";
+                }
+            }
         },
         mounted: function () {
             this.inputed = this.value;
             this.rePlaceHolder();
         },
-        props: ['value'],
-        components: {
-
-        },
+        props: ['value', 'icon'],
         directives: {
             focus: {
                 update: (el, {

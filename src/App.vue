@@ -8,14 +8,22 @@
 				<dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
 				<dog-block icon="car" info="输入框">
 					<dog-input v-model="name">姓名</dog-input>
-					<dog-input v-model="age">年龄</dog-input>
-					<dog-input v-model="aDPS">智商</dog-input>
+					<dog-input v-model="age" type="number">年龄</dog-input>
+					<dog-input v-model="email" type="email">邮箱</dog-input>
+					<dog-input v-model="tel" type="tel">电话</dog-input>
+					<dog-input v-model="password" type="password">密码</dog-input>
+					<dog-input v-model="money" type="money">智商的价格</dog-input>
+					<dog-input v-model="aDPS" type="date">有智商的日期</dog-input>
 					<dog-textarea v-model="aDDD">测试</dog-textarea>
 				</dog-block>
 				<dog-info info="INPUT测试">
 					这里显示上面输入的信息
 					<br> 姓名:{{name}}
+					<br> 邮箱: {{email}}
+					<br> 密码: {{password}}
+					<br> 电话: {{tel}}
 					<br> 年龄:{{age}}
+					<br> 价格: {{money}}
 					<br> 智商:{{aDPS}}
 					<br> 大框: {{aDDD}}
 				</dog-info>
@@ -80,10 +88,14 @@
 		},
 		data: function () {
 			return {
-				name: "",
+				name: "一个姓名",
 				age: "",
-				aDPS: "不为空时",
+				aDPS: "",
 				seach: "",
+				email: "",
+				money: "",
+				tel: "",
+				password: "",
 				extend: ['qrcode'],
 				idselect: "",
 				aDDD: "123",

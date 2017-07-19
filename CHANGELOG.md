@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 1.8.6
+    -   Perfect input margin size
+    -   Add money, pass, tel, email, date input functions
+    -   Add input signial to select panel
 -   Version 1.8.5
     -   Add input hint for input and textarea
     -   Fix testarea minor bugs
