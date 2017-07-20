@@ -20,7 +20,7 @@
                 v-focus="focusStatus">
             <input v-if="type=='password'" type="password" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn"
                 class="field" v-focus="focusStatus">
-            <input v-if="type=='date'" type="date" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="dates"
+            <input v-if="type=='date'" type="date" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="upondates"
                 v-focus="focusStatus">
         </div>
     </div>
@@ -61,11 +61,11 @@
         },
         mounted: function () {
             this.inputed = this.value;
-            if (this.type == 'date') {
-                this.place = "smallPlaceholder";
-            } else {
-                this.rePlaceHolder();
-            }
+            // if (this.type == 'date') {
+            //     this.place = "smallPlaceholder";
+            // } else {
+            this.rePlaceHolder();
+            // }
         },
         props: ['type', 'value', 'icon'],
         methods: {
@@ -80,9 +80,6 @@
                     }
                     if (this.unpin == "grayier") {
                         this.unpin = "oranager";
-                    }
-                    if (this.type != "date") {
-                        this.place = "bigPlaceholder smallPlaceholder";
                     }
                 }
             },
@@ -126,7 +123,7 @@
         position: absolute;
         z-index: 4;
         font-size: 18px!important;
-        margin: 15px 3px 0 16px!important;
+        margin: 13px 3px 0 16px!important;
         white-space: nowrap;
     }
 
@@ -181,16 +178,19 @@
         color: #e4e4e4;
     }
 
-    input.dates {
+    .upondates {
         width: 100%;
         height: 40px;
         position: relative;
         padding-top: 9px;
         padding-left: 10px;
         color: #000;
-        background: #fff;
+        background-color: transparent;
+        -moz-appearance: none;
+        -webkit-appearance: none;
         line-height: 12px;
         border: 0px;
+        font-size: 21px;
     }
 
     .field {
