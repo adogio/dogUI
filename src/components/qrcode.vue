@@ -30,7 +30,7 @@
     export default {
         data: function () {
             return {
-                qrcode: require('../../../dogLib/src/main').qrtable,
+                qrcode: require('doglib').qrtable,
                 src: ""
             }
         },
