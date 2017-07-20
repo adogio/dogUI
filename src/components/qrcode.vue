@@ -27,10 +27,12 @@
 </template>
 
 <script>
+    import {
+        qrtable
+    } from 'doglib';
     export default {
         data: function () {
             return {
-                qrcode: require('../../../dogLib/src/main').qrtable,
                 src: ""
             }
         },
@@ -39,11 +41,11 @@
         },
         watch: {
             content: function () {
-                this.src = this.qrcode(this.content, 6);
+                this.src = qrtable(this.content, 6);
             }
         },
         mounted: function () {
-            this.src = this.qrcode(this.content, 6);
+            this.src = qrtable(this.content, 6);
         },
         props: ['content'],
         components: {},
