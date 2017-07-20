@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 1.8.9
+    -   Fix input issue
 -   Version 1.8.8
     -   Update size
     -   Fix issue
