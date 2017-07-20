@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="type!='date'" class="description" :class="place" @click="ClickIn">
+        <div class="description" :class="place" @click="ClickIn">
             <span :class="unpin" class="placeh"><i :class="ifIcon"></i></span><strong><slot></slot></strong>
         </div>
         <transition name="fade">
@@ -20,18 +20,13 @@
                 v-focus="focusStatus">
             <input v-if="type=='password'" type="password" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn"
                 class="field" v-focus="focusStatus">
-            <date-picker v-if="type=='date'"></date-picker>
-            <input v-if="type=='date'" type="date" v-model="inputed" @input="onInput" class="invisiable" ref="area">
-            <button v-if="type=='date'" @click="ClickDate" class="field">123</button>
-            <input v-if="type=='date'" type="date" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="upondates"
+            <input v-if="type=='date'" type="date" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="dates"
                 v-focus="focusStatus">
         </div>
     </div>
 </template>
 
 <script>
-    import datepicker from '../components/datepicker.vue';
-
     export default {
         data: function () {
             return {
@@ -41,9 +36,6 @@
                 cover: false,
                 focusStatus: false
             }
-        },
-        components: {
-            "date-picker": datepicker
         },
         directives: {
             focus: {
@@ -69,11 +61,11 @@
         },
         mounted: function () {
             this.inputed = this.value;
-            // if (this.type == 'date') {
-            //     this.place = "smallPlaceholder";
-            // } else {
-            this.rePlaceHolder();
-            // }
+            if (this.type == 'date') {
+                this.place = "smallPlaceholder";
+            } else {
+                this.rePlaceHolder();
+            }
         },
         props: ['type', 'value', 'icon'],
         methods: {
@@ -89,6 +81,9 @@
                     if (this.unpin == "grayier") {
                         this.unpin = "oranager";
                     }
+                    if (this.type != "date") {
+                        this.place = "bigPlaceholder smallPlaceholder";
+                    }
                 }
             },
             onInput: function () {
@@ -103,10 +98,6 @@
                 if (this.type == 'money') {
                     this.cover = true;
                 }
-            },
-            ClickDate: function () {
-                console.log(this.$refs.area.click());
-                this.$refs.area.click();
             }
         }
     }
@@ -123,10 +114,6 @@
         transition: opacity .2s
     }
 
-    .invisiable {
-        display: none;
-    }
-
     .fade-enter,
     .fade-leave-to {
         opacity: 0
@@ -139,13 +126,13 @@
         position: absolute;
         z-index: 4;
         font-size: 18px!important;
-        margin: 18px 3px 0 16px!important;
+        margin: 15px 3px 0 16px!important;
         white-space: nowrap;
     }
 
     input.money {
         width: 100%;
-        height: 50px;
+        height: 40px;
         position: relative;
         padding-top: 9px;
         padding-left: 27px;
@@ -194,32 +181,21 @@
         color: #e4e4e4;
     }
 
-
     .dates {
-    .upondates {
-storage
         width: 100%;
-        height: 50px;
+        height: 40px;
         position: relative;
         padding-top: 9px;
         padding-left: 10px;
-        font-size: 21px;
-        border: 0px;
-        text-indent: 0;
-        line-height: 12px;
         color: #000;
         background: #fff;
-        background-color: transparent;
-        -moz-appearance: none;
-        -webkit-appearance: none;
         line-height: 12px;
         border: 0px;
-        font-size: 21px;
     }
 
     .field {
         width: 100%;
-        height: 50px;
+        height: 40px;
         position: relative;
         padding-top: 9px;
         padding-left: 11px;

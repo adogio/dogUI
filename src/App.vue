@@ -18,13 +18,13 @@
 				</dog-block>
 				<dog-info info="INPUT测试">
 					这里显示上面输入的信息
-					<br> 姓名:{{name}}
+					<br> 姓名: {{name}}
 					<br> 邮箱: {{email}}
 					<br> 密码: {{password}}
 					<br> 电话: {{tel}}
-					<br> 年龄:{{age}}
+					<br> 年龄: {{age}}
 					<br> 价格: {{money}}
-					<br> 智商:{{aDPS}}
+					<br> 智商: {{aDPS}}
 					<br> 大框: {{aDDD}}
 				</dog-info>
 				<dog-block icon="picture-o" info="图片预览">
@@ -96,7 +96,7 @@
 				money: "",
 				tel: "",
 				password: "",
-				extend: ['qrcode'],
+				extend: ['qrcode', 'date'],
 				idselect: "",
 				aDDD: "123",
 				cover: 'uploading',
@@ -118,7 +118,7 @@
 		},
 		methods: {
 			Qrcode: function () {
-				window.flow('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+				window.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
 			},
 			update: function (info) {
 				this.seach = info;

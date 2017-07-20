@@ -56,10 +56,16 @@
         },
         mounted: function () {
             if (typeof this.addOn == 'object') {
+                window.unflow = () => {
+                    this.floting = false;
+                    this.slots = "slotun";
+                    this.flows = "animated fadeOut";
+                    return true;
+                }
+                this.flotLoad = true;
                 for (let i = 0; i < this.addOn.length; i++) {
                     if (this.addOn[i] == 'qrcode') {
-                        this.flotLoad = true;
-                        window.flow = (data, text) => {
+                        window.qrcode = (data, text) => {
                             this.flow.mode = 'qrcode';
                             this.flow.text = text;
                             this.flow.content = data;
@@ -68,10 +74,14 @@
                             this.flows = "animated fadeIn";
                             return true;
                         }
-                        window.unflow = () => {
-                            this.floting = false;
-                            this.slots = "slotun";
-                            this.flows = "animated fadeOut";
+                    } else if (this.addOn[i] == 'date') {
+                        window.datepicker = (text, fun) => {
+                            this.flow.mode = 'date';
+                            this.flow.text = text;
+                            this.flow.content = fun;
+                            this.floting = true;
+                            this.slots = "slotun slots";
+                            this.flows = "animated fadeIn";
                             return true;
                         }
                     }
