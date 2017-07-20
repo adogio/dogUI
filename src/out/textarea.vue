@@ -94,7 +94,7 @@
 
     .field {
         position: relative;
-        padding-top: 9px;
+        padding-top: 13px;
         padding-left: 10px;
         font-size: 21px;
         border: 0px;
