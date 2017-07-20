@@ -75,6 +75,7 @@
                     this.place = "smallPlaceholder";
                     this.unpin = "grayier";
                 } else {
+                    this.place = "bigPlaceholder smallPlaceholder";
                     if (this.type == 'money') {
                         this.cover = false;
                     }
@@ -180,7 +181,7 @@
 
     .upondates {
         width: 100%;
-        height: 50px;
+        height: 65px;
         position: relative;
         padding-top: 9px;
         padding-left: 10px;
