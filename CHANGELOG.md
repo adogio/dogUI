@@ -1,5 +1,11 @@
 # Changelog
 
+-   Version 1.8.8
+    -   Update size
+    -   Fix issue
+-   Version 1.8.7
+    -   Fix date input issue
+    -   Fix dollar icon issue
 -   Version 1.8.6
     -   Perfect input margin size
     -   Add money, pass, tel, email, date input functions
