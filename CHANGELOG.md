@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 1.8.8
+    -   Update size
+    -   Fix issue
 -   Version 1.8.7
     -   Fix date input issue
     -   Fix dollar icon issue

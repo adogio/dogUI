@@ -123,13 +123,13 @@
         position: absolute;
         z-index: 4;
         font-size: 18px!important;
-        margin: 13px 3px 0 16px!important;
+        margin: 18px 3px 0 16px!important;
         white-space: nowrap;
     }
 
     input.money {
         width: 100%;
-        height: 40px;
+        height: 50px;
         position: relative;
         padding-top: 9px;
         padding-left: 27px;
@@ -180,7 +180,7 @@
 
     .upondates {
         width: 100%;
-        height: 40px;
+        height: 50px;
         position: relative;
         padding-top: 9px;
         padding-left: 10px;
@@ -195,7 +195,7 @@
 
     .field {
         width: 100%;
-        height: 40px;
+        height: 50px;
         position: relative;
         padding-top: 9px;
         padding-left: 11px;
