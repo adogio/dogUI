@@ -2,7 +2,7 @@
     <div>
         <div class="row">
             <div class="larger-text col-xs-4">
-                {{left}}
+                {{info}}
             </div>
             <div class="larger-text col-xs-8">
                 <slot></slot>
@@ -14,7 +14,7 @@
 <script>
     export default {
         name: "dog-cell",
-        props: ['left']
+        props: ['info']
     }
 </script>
 

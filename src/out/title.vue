@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="left-bottom" v-bind:style="titleColor">
                     <i class="animated pulse infinite framee" v-bind:class="parsedicon"></i>
-                    <span v-text="title" class="shadow-dog"></span>
+                    <span v-text="info" class="shadow-dog"></span>
                 </div>
             </div>
             <padding-bar></padding-bar>
@@ -27,7 +27,7 @@
         components: {
             "padding-bar": paddingbar
         },
-        props: ['title', 'icon'],
+        props: ['info', 'icon'],
         name: "dog-title",
         data: function () {
             return {

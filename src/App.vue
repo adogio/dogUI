@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
-		<dog-cover :display="cover" icon="paper-plane" info="Loading" :addOn="extend">
-			<dog-title icon="comments" title="DOGUI DEMO">
+		<dog-cover icon="paper-plane" info="Loading" :addOn="extend">
+			<dog-title icon="comments" info="DOGUI DEMO">
 				<dog-search placeholder="搜索框" @change="update"></dog-search>
 				<dog-nav-bar>导航栏</dog-nav-bar>
 				<dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
@@ -35,8 +35,8 @@
 					<dog-upload icon="car" quality="40" @change="testf(0, $event)" color="blue" preview="right">有预览</dog-upload>
 				</dog-block>
 				<dog-block icon="podcast" info="表格框">
-					<dog-cell left="Cell">测试Cell</dog-cell>
-					<dog-cell left="搜索框:">{{seach}}</dog-cell>
+					<dog-cell info="Cell">测试Cell</dog-cell>
+					<dog-cell info="搜索框:">{{seach}}</dog-cell>
 				</dog-block>
 				<dog-block icon="rss" info="选择框">
 					<dog-select :list="test" v-model="idselect">是不是Gay</dog-select>
@@ -99,7 +99,6 @@
 				extend: ['qrcode'],
 				idselect: "",
 				aDDD: "123",
-				cover: 'uploading',
 				test: [{
 						name: "我的ID是1",
 						id: 1
@@ -113,8 +112,8 @@
 		},
 		mounted: function () {
 			setTimeout(() => {
-				this.cover = 'in';
-			}, 1);
+				unload();
+			}, 4500);
 		},
 		methods: {
 			Qrcode: function () {

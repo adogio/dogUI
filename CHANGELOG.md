@@ -1,5 +1,10 @@
 # Changelog
 
+-   Version 1.9.0
+    -   Change all displaying info to 'info'
+    -   Make animate of loading shorter
+    -   Fix minor bugs
+    -   Using latest doglib
 -   Version 1.8.9
     -   Fix input issue
 -   Version 1.8.8

@@ -46,14 +46,6 @@
                 }
             }
         },
-        computed: {
-
-        },
-        watch: {
-            display: function () {
-                this.view = this.display;
-            }
-        },
         mounted: function () {
             if (typeof this.addOn == 'object') {
                 for (let i = 0; i < this.addOn.length; i++) {
@@ -92,10 +84,10 @@
                 this.view = 'uploading';
                 setTimeout(() => {
                     this.doublecheck = false;
-                }, 150);
+                }, 80);
                 return true;
             }
-            window.unupload = () => {
+            window.unload = () => {
                 this.view = 'in';
                 return true;
             }
@@ -114,7 +106,7 @@
                 }
             }
         },
-        props: ['display', 'info', 'icon', 'addOn'],
+        props: ['info', 'icon', 'addOn'],
         components: {
             "load": loading,
             "in": dumb,

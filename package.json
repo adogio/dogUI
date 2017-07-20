@@ -1,6 +1,6 @@
 {
   "name": "dogui",
-  "version": "1.8.9",
+  "version": "1.8.10",
   "description": "A dog UI library for Vuejs",
   "main": "src/import.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "vue": "vue/dist/vue.common.js"
   },
   "dependencies": {
-    "doglib": "^1.0.3",
+    "doglib": "^1.0.6",
     "vue": "2.4.1"
   },
   "devDependencies": {
