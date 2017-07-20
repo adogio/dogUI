@@ -20,6 +20,8 @@
                 v-focus="focusStatus">
             <input v-if="type=='password'" type="password" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn"
                 class="field" v-focus="focusStatus">
+            <input v-if="type=='date'" type="date" v-model="inputed" @input="onInput" class="invisiable" ref="area">
+            <button v-if="type=='date'" @click="ClickDate" class="field">123</button>
             <input v-if="type=='date'" type="date" v-model="inputed" @blur="rePlaceHolder" @input="onInput" @click="ClickIn" class="upondates"
                 v-focus="focusStatus">
         </div>
@@ -95,6 +97,10 @@
                 if (this.type == 'money') {
                     this.cover = true;
                 }
+            },
+            ClickDate: function () {
+                console.log(this.$refs.area.click());
+                this.$refs.area.click();
             }
         }
     }
@@ -109,6 +115,10 @@
     .fade-enter-active,
     .fade-leave-active {
         transition: opacity .2s
+    }
+
+    .invisiable {
+        display: none;
     }
 
     .fade-enter,
@@ -178,13 +188,20 @@
         color: #e4e4e4;
     }
 
+    .dates {
     .upondates {
+storage
         width: 100%;
         height: 50px;
         position: relative;
         padding-top: 9px;
         padding-left: 10px;
+        font-size: 21px;
+        border: 0px;
+        text-indent: 0;
+        line-height: 12px;
         color: #000;
+        background: #fff;
         background-color: transparent;
         -moz-appearance: none;
         -webkit-appearance: none;
