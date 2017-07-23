@@ -1,4 +1,5 @@
 # dogUI
+
 [![npm version](https://badge.fury.io/js/dogui.svg)](https://badge.fury.io/js/dogui)
 ![downloads](https://img.shields.io/npm/dm/dogui.svg)
 
@@ -6,7 +7,7 @@ adog UI library frame work on Vue
 
 ## Version
 
-- Version 1.8.11
+-   Version 1.9.0
 
 ## Introduction
 
@@ -27,11 +28,13 @@ Font Awesome 4
 ```bash
 npm i dogUI
 ```
+
 ### Import
 
 ```js
 import dogUI from 'dogUI'
 ```
+
 ### CDNS and Meta for phone
 
 ```html
@@ -121,6 +124,7 @@ The Usage below is out of date, please check App.vue for examples
 ```javascript
   upload("car", "123");
 ```
+
 ### finishLoading
 
 ```javascript
