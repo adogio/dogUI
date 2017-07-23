@@ -1,6 +1,9 @@
 # Changelog
 
--   Version 1.9.0
+-   Version 1.8.11
+    -   fix minor bugs
+    -   Make nav abr works more smoothly
+-   Version 1.8.10
     -   Change all displaying info to 'info'
     -   Make animate of loading shorter
     -   Fix minor bugs

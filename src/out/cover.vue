@@ -51,7 +51,7 @@
                 for (let i = 0; i < this.addOn.length; i++) {
                     if (this.addOn[i] == 'qrcode') {
                         this.flotLoad = true;
-                        window.flow = (data, text) => {
+                        window.qrocde = (data, text) => {
                             this.flow.mode = 'qrcode';
                             this.flow.text = text;
                             this.flow.content = data;

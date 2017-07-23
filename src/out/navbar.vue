@@ -24,10 +24,11 @@
                     name: name,
                     fun: fun
                 });
+                fun();
                 return true;
             }
         },
-        name: "dog-nav-bar",
+        name: "dog-nav",
         components: {
 
         },
