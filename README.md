@@ -15,6 +15,13 @@ dogUI is required bootstrap and fontAwesome
 
 ## Install
 
+### Cdn requirments
+
+Bootstrap  
+Buttons.css  
+Animate.css  
+Font Awesome 4
+
 ### npm install
 
 ```bash
