@@ -4,16 +4,17 @@
             <transition name="fade" mode="out-in">
                 <component v-bind:is="view">
                     <div :class="slots">
+                        <dog-alert></dog-alert>
                         <slot></slot>
                     </div>
                     <div v-if="flotLoad" v-show="floting" :class="flows">
-                        <flow :mode="flow.mode" :content="flow.content">{{flow.text}}</flow>
+                        <dog-flow :mode="flow.mode" :content="flow.content">{{flow.text}}</dog-flow>
                     </div>
                 </component>
             </transition>
-        </div>
-        <div v-show="doublecheck">
-            <check :check="data"></check>
+            <div v-show="doublecheck">
+                <dog-check :check="data"></dog-check>
+            </div>
         </div>
     </div>
 </template>
@@ -24,6 +25,7 @@
     import dbcheck from '../components/doublecheck.vue';
     import uploading from '../components/uploading.vue';
     import flow from '../components/flow.vue';
+    import dogalert from '../components/alertManager.vue';
 
     export default {
         data: function () {
@@ -47,11 +49,12 @@
             }
         },
         mounted: function () {
+            window.dog = {};
             if (typeof this.addOn == 'object') {
                 for (let i = 0; i < this.addOn.length; i++) {
                     if (this.addOn[i] == 'qrcode') {
                         this.flotLoad = true;
-                        window.qrocde = (data, text) => {
+                        window.dog.qrcode = (data, text) => {
                             this.flow.mode = 'qrcode';
                             this.flow.text = text;
                             this.flow.content = data;
@@ -60,7 +63,7 @@
                             this.flows = "animated fadeIn";
                             return true;
                         }
-                        window.unflow = () => {
+                        window.dog.unflow = () => {
                             this.floting = false;
                             this.slots = "slotun";
                             this.flows = "animated fadeOut";
@@ -69,12 +72,12 @@
                     }
                 }
             }
-            window.check = (data) => {
+            window.dog.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;
                 return true;
             }
-            window.upload = (icon, info) => {
+            window.dog.upload = (icon, info) => {
                 if (icon) {
                     this.upload.icon = icon;
                 }
@@ -87,11 +90,11 @@
                 }, 80);
                 return true;
             }
-            window.unload = () => {
+            window.dog.unload = () => {
                 this.view = 'in';
                 return true;
             }
-            window.back = () => {
+            window.dog.back = () => {
                 if (getURLVar('environment')) {
                     webkit.messageHandlers.IOS.postMessage("done");
                     return "ios";
@@ -110,9 +113,10 @@
         components: {
             "load": loading,
             "in": dumb,
-            "check": dbcheck,
+            "dog-check": dbcheck,
             "uploading": uploading,
-            "flow": flow
+            "dog-flow": flow,
+            "dog-alert": dogalert
         },
         methods: {}
     }

@@ -1,0 +1,65 @@
+<template>
+    <div>
+        <div class="notification" :style="styler" :class="classer">
+            <div class="icon col-xs-1">
+                <dog-icon :icon="icon"></dog-icon>
+            </div>
+            <div class="info col-xs-11">
+                <span class="info">{{info}}</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import icon from './icon.vue';
+    export default {
+        data: function () {
+            return {
+                classer: 'animated fadeInUp'
+            }
+        },
+        computed: {
+            styler: function () {
+                return 'bottom: ' + this.bottom + "px;";
+            }
+        },
+        mounted: function () {
+            setTimeout(() => {
+                this.classer = 'animated fadeOutDown'
+            }, this.timeout - 300);
+        },
+        props: ['bottom', 'icon', 'info', 'timeout'],
+        components: {
+            "dog-icon": icon
+        },
+        methods: {}
+    }
+</script>
+
+<style scoped>
+    div.info {
+        color: rgb(0, 4, 129);
+    }
+
+    div.icon {
+        padding-left: 10px;
+        color: azure;
+    }
+
+    div.notification {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        transition: all 0.3s;
+        position: fixed;
+        left: 0px;
+        z-index: 7;
+        background-color: rgba(100%, 50%, 50%, 0.75);
+        border-left: 9px solid rgb(0, 152, 255);
+        width: 100%;
+        font-family: 'ubuntu';
+        font-size: 21px;
+        height: 65px;
+        word-wrap: break-word;
+    }
+</style>

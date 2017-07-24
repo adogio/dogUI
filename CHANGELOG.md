@@ -1,5 +1,15 @@
 # Changelog
 
+-   Version 2.1.1
+    -   Fix alert bugs
+    -   Fix auto option bugs from selector
+    -   Update example case
+-   Version 2.1.0
+    -   Add alert module
+-   Version 2.0.0
+    -   Change window calling methods
+    -   Now all window function changed to window.dog
+    -   Fix bugs
 -   Version 1.8.11
     -   fix minor bugs
     -   Make nav abr works more smoothly

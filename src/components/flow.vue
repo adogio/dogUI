@@ -34,7 +34,7 @@
 		},
 		methods: {
 			goOut: function () {
-				window.unflow();
+				window.dog.unflow();
 			}
 		}
 	}

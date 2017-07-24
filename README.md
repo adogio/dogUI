@@ -1,4 +1,5 @@
 # dogUI
+
 [![npm version](https://badge.fury.io/js/dogui.svg)](https://badge.fury.io/js/dogui)
 ![downloads](https://img.shields.io/npm/dm/dogui.svg)
 
@@ -6,7 +7,7 @@ adog UI library frame work on Vue
 
 ## Version
 
-- Version 1.8.11
+-   Version 1.9.0
 
 ## Introduction
 
@@ -15,16 +16,25 @@ dogUI is required bootstrap and fontAwesome
 
 ## Install
 
+### Cdn requirments
+
+Bootstrap  
+Buttons.css  
+Animate.css  
+Font Awesome 4
+
 ### npm install
 
 ```bash
 npm i dogUI
 ```
+
 ### Import
 
 ```js
 import dogUI from 'dogUI'
 ```
+
 ### CDNS and Meta for phone
 
 ```html
@@ -37,8 +47,6 @@ import dogUI from 'dogUI'
 ```
 
 ## Usage
-
-The Usage below is out of date, please check App.vue for examples
 
 ```html
 <template>
@@ -106,24 +114,31 @@ The Usage below is out of date, please check App.vue for examples
 ### Qrcode
 
 ```javascript
-  window.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+  dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
 ```
 
 ### upload
 
 ```javascript
-  upload("car", "123");
+  dog.upload("car", "123");
 ```
+
 ### finishLoading
 
 ```javascript
-	window.unload();
+	dog.unload();
 ```
 
 ### navbar
 
 ```javascript
-  nav("测试", () => {
+  dog.nav("测试", () => {
           console.log('test');
   })
+```
+
+### alert
+
+```javascript
+  dog.alert('icon', 'info')
 ```

@@ -23,12 +23,16 @@
         watch: {
             list: function () {
                 this.fixList();
+            },
+            value: function () {
+                this.vmodel = this.value;
             }
         },
         mounted: function () {
+
             this.fixList();
         },
-        props: ["list", 'icon'],
+        props: ["list", 'icon', 'value'],
         computed: {
             ifIcon: function () {
                 if (this.icon) {

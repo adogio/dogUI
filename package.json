@@ -1,6 +1,6 @@
 {
   "name": "dogui",
-  "version": "1.8.11",
+  "version": "2.1.1",
   "description": "A dog UI library for Vuejs",
   "main": "src/import.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "ADog"
   ],
   "author": "WMXPY",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/adogio/dogUI/issues"
   },
