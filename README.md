@@ -116,25 +116,25 @@ The Usage below is out of date, please check App.vue for examples
 ### Qrcode
 
 ```javascript
-  window.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+  dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
 ```
 
 ### upload
 
 ```javascript
-  upload("car", "123");
+  dog.upload("car", "123");
 ```
 
 ### finishLoading
 
 ```javascript
-	window.unload();
+	dog.unload();
 ```
 
 ### navbar
 
 ```javascript
-  nav("测试", () => {
+  dog.nav("测试", () => {
           console.log('test');
   })
 ```

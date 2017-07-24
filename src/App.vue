@@ -5,6 +5,7 @@
         <dog-search placeholder="搜索框" @change="update"></dog-search>
         <dog-nav>导航栏</dog-nav>
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
+        <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
         <dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
         <dog-block icon="car" info="输入框">
           <dog-input v-model="name">姓名</dog-input>
@@ -112,27 +113,30 @@
     },
     mounted: function () {
       setTimeout(() => {
-        unload();
-      }, 4500);
+        dog.unload();
+      }, 1);
     },
     methods: {
       Qrcode: function () {
-        window.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+        dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+      },
+      notification: function () {
+        dog.alert("car", "test");
       },
       update: function (info) {
         this.seach = info;
       },
       addNav: function () {
-        window.nav("测试", () => {
+        dog.nav("测试", () => {
           console.log('test');
         })
-        window.nav("测试1", () => {
+        dog.nav("测试1", () => {
           console.log('test');
         })
-        window.nav("测试2", () => {
+        dog.nav("测试2", () => {
           console.log('test');
         })
-        window.nav("测试3", () => {
+        dog.nav("测试3", () => {
           console.log('test');
         })
       },
@@ -146,7 +150,7 @@
           bcolor: "backButtonColor", //optional
           top: "topIcon", //optional
           then: function () {
-            window.upload("car", "123");
+            dog.upload("car", "123");
           },
         })
       },

@@ -47,11 +47,12 @@
             }
         },
         mounted: function () {
+            window.dog = {};
             if (typeof this.addOn == 'object') {
                 for (let i = 0; i < this.addOn.length; i++) {
                     if (this.addOn[i] == 'qrcode') {
                         this.flotLoad = true;
-                        window.qrocde = (data, text) => {
+                        window.dog.qrcode = (data, text) => {
                             this.flow.mode = 'qrcode';
                             this.flow.text = text;
                             this.flow.content = data;
@@ -60,7 +61,7 @@
                             this.flows = "animated fadeIn";
                             return true;
                         }
-                        window.unflow = () => {
+                        window.dog.unflow = () => {
                             this.floting = false;
                             this.slots = "slotun";
                             this.flows = "animated fadeOut";
@@ -69,12 +70,15 @@
                     }
                 }
             }
-            window.check = (data) => {
+            window.dog.alert = (icon, content) => {
+                console.log(icon, content);
+            }
+            window.dog.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;
                 return true;
             }
-            window.upload = (icon, info) => {
+            window.dog.upload = (icon, info) => {
                 if (icon) {
                     this.upload.icon = icon;
                 }
@@ -87,11 +91,11 @@
                 }, 80);
                 return true;
             }
-            window.unload = () => {
+            window.dog.unload = () => {
                 this.view = 'in';
                 return true;
             }
-            window.back = () => {
+            window.dog.back = () => {
                 if (getURLVar('environment')) {
                     webkit.messageHandlers.IOS.postMessage("done");
                     return "ios";

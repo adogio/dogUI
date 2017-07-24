@@ -19,7 +19,7 @@
         },
         props: [],
         mounted: function () {
-            window.nav = (name, fun) => {
+            window.dog.nav = (name, fun) => {
                 this.stacks.push({
                     name: name,
                     fun: fun
