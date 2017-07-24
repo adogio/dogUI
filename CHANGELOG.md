@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 2.0.0
+    -   Change window calling methods
+    -   Now all window function changed to window.dog
+    -   Fix bugs
 -   Version 1.8.11
     -   fix minor bugs
     -   Make nav abr works more smoothly
