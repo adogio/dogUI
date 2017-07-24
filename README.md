@@ -48,8 +48,6 @@ import dogUI from 'dogUI'
 
 ## Usage
 
-The Usage below is out of date, please check App.vue for examples
-
 ```html
 <template>
   <div id="app">

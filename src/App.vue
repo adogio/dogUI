@@ -7,7 +7,7 @@
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
         <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
         <dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
-        <dog-block icon="car" info="输入框">
+        <dog-block icon="pencil" info="输入框">
           <dog-input v-model="name">姓名</dog-input>
           <dog-input v-model="age" type="number">年龄</dog-input>
           <dog-input v-model="email" type="email">邮箱</dog-input>
@@ -40,8 +40,8 @@
           <dog-cell info="搜索框:">{{seach}}</dog-cell>
         </dog-block>
         <dog-block icon="rss" info="选择框">
-          <dog-select :list="test" v-model="idselect">是不是Gay</dog-select>
-          <dog-select :list="test" v-model="idselect">是不是Gay</dog-select>
+          <dog-select :list="test" v-model="idselect">选择1</dog-select>
+          <dog-select :list="test" v-model="idselect">选择2</dog-select>
         </dog-block>
         <dog-info info="SELECT测试">
           这里显示上面选择的内容的ID

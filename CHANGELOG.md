@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 2.1.1
+    -   Fix alert bugs
+    -   Fix auto option bugs from selector
+    -   Update example case
 -   Version 2.1.0
     -   Add alert module
 -   Version 2.0.0

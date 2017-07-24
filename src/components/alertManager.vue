@@ -18,7 +18,7 @@
         },
         mounted: function () {
             window.dog.alert = (icon, content, timeout) => {
-                const bottom = this.stack.length * 32 + 2;
+                const bottom = this.stack.length * 67 + 2;
                 const timmer = timeout ? timeout : 4500;
                 this.stack.push({
                     icon: icon,

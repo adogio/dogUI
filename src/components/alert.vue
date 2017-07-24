@@ -1,8 +1,12 @@
 <template>
     <div>
         <div class="notification" :style="styler" :class="classer">
-            <dog-icon :icon="icon"></dog-icon>
-            <span class="info">{{info}}</span>
+            <div class="icon col-xs-1">
+                <dog-icon :icon="icon"></dog-icon>
+            </div>
+            <div class="info col-xs-11">
+                <span class="info">{{info}}</span>
+            </div>
         </div>
     </div>
 </template>
@@ -34,8 +38,13 @@
 </script>
 
 <style scoped>
-    span.info {
+    div.info {
         color: rgb(0, 4, 129);
+    }
+
+    div.icon {
+        padding-left: 10px;
+        color: azure;
     }
 
     div.notification {
@@ -45,10 +54,12 @@
         position: fixed;
         left: 0px;
         z-index: 7;
-        background-color: rgba(255, 143, 92, 0.6);
+        background-color: rgba(100%, 50%, 50%, 0.75);
         border-left: 9px solid rgb(0, 152, 255);
         width: 100%;
         font-family: 'ubuntu';
         font-size: 21px;
+        height: 65px;
+        word-wrap: break-word;
     }
 </style>
