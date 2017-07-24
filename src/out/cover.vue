@@ -4,16 +4,17 @@
             <transition name="fade" mode="out-in">
                 <component v-bind:is="view">
                     <div :class="slots">
+                        <dog-alert></dog-alert>
                         <slot></slot>
                     </div>
                     <div v-if="flotLoad" v-show="floting" :class="flows">
-                        <flow :mode="flow.mode" :content="flow.content">{{flow.text}}</flow>
+                        <dog-flow :mode="flow.mode" :content="flow.content">{{flow.text}}</dog-flow>
                     </div>
                 </component>
             </transition>
-        </div>
-        <div v-show="doublecheck">
-            <check :check="data"></check>
+            <div v-show="doublecheck">
+                <dog-check :check="data"></dog-check>
+            </div>
         </div>
     </div>
 </template>
@@ -24,6 +25,7 @@
     import dbcheck from '../components/doublecheck.vue';
     import uploading from '../components/uploading.vue';
     import flow from '../components/flow.vue';
+    import dogalert from '../components/alertManager.vue';
 
     export default {
         data: function () {
@@ -70,9 +72,6 @@
                     }
                 }
             }
-            window.dog.alert = (icon, content) => {
-                console.log(icon, content);
-            }
             window.dog.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;
@@ -114,9 +113,10 @@
         components: {
             "load": loading,
             "in": dumb,
-            "check": dbcheck,
+            "dog-check": dbcheck,
             "uploading": uploading,
-            "flow": flow
+            "dog-flow": flow,
+            "dog-alert": dogalert
         },
         methods: {}
     }

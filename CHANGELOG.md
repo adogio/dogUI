@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 2.1.0
+    -   Add alert module
 -   Version 2.0.0
     -   Change window calling methods
     -   Now all window function changed to window.dog

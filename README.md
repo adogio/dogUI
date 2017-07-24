@@ -138,3 +138,9 @@ The Usage below is out of date, please check App.vue for examples
           console.log('test');
   })
 ```
+
+### alert
+
+```javascript
+  dog.alert('icon', 'info')
+```
