@@ -29,7 +29,6 @@
             }
         },
         mounted: function () {
-
             this.fixList();
         },
         props: ["list", 'icon', 'value'],
@@ -61,6 +60,7 @@
             },
             onChange: function () {
                 this.$emit('input', this.vmodel);
+                this.$emit('change', this.vmodel);
             }
         }
     }
