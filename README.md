@@ -56,8 +56,9 @@ import dogUI from 'dogUI'
         <dog-search placeholder="搜索框" @change="update"></dog-search>
         <dog-nav>导航栏</dog-nav>
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
+        <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
         <dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
-        <dog-block icon="car" info="输入框">
+        <dog-block icon="pencil" info="输入框">
           <dog-input v-model="name">姓名</dog-input>
           <dog-input v-model="age" type="number">年龄</dog-input>
           <dog-input v-model="email" type="email">邮箱</dog-input>
@@ -69,6 +70,14 @@ import dogUI from 'dogUI'
         </dog-block>
         <dog-info info="INPUT测试">
           这里显示上面输入的信息
+          <br> 姓名:{{name}}
+          <br> 邮箱: {{email}}
+          <br> 密码: {{password}}
+          <br> 电话: {{tel}}
+          <br> 年龄:{{age}}
+          <br> 价格: {{money}}
+          <br> 智商:{{aDPS}}
+          <br> 大框: {{aDDD}}
         </dog-info>
         <dog-block icon="picture-o" info="图片预览">
           <dog-view :srcs="['http://img.wxcha.com/file/201703/15/af183778a2.jpg']">长按图片下载</dog-view>
@@ -82,12 +91,14 @@ import dogUI from 'dogUI'
           <dog-cell info="搜索框:">{{seach}}</dog-cell>
         </dog-block>
         <dog-block icon="rss" info="选择框">
-          <dog-select :list="test" v-model="idselect">是不是Gay</dog-select>
-          <dog-select :list="test" v-model="idselect">是不是Gay</dog-select>
+          <dog-select :list="test" v-model="idselect">同步选择1</dog-select>
+          <dog-select :list="test" v-model="idselect">同步选择2</dog-select>
+          <dog-select :list="test" v-model="idselecttest">预选择1</dog-select>
         </dog-block>
         <dog-info info="SELECT测试">
           这里显示上面选择的内容的ID
           <br> 你选择了:{{idselect}}
+          <br> 预选择了:{{idselecttest}}
         </dog-info>
         <dog-button icon="user-o" @click="tocheck" size="large" color="red">检查</dog-button>
       </dog-title>
