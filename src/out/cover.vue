@@ -73,7 +73,6 @@
                 }
             }
             window.dog.check = (data) => {
-                console.log(this);
                 this.data = data;
                 this.doublecheck = true;
                 return true;

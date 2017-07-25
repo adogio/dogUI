@@ -40,12 +40,14 @@
           <dog-cell info="搜索框:">{{seach}}</dog-cell>
         </dog-block>
         <dog-block icon="rss" info="选择框">
-          <dog-select :list="test" v-model="idselect">选择1</dog-select>
-          <dog-select :list="test" v-model="idselect">选择2</dog-select>
+          <dog-select :list="test" v-model="idselect">同步选择1</dog-select>
+          <dog-select :list="test" v-model="idselect">同步选择2</dog-select>
+          <dog-select :list="test" v-model="idselecttest">预选择1</dog-select>
         </dog-block>
         <dog-info info="SELECT测试">
           这里显示上面选择的内容的ID
           <br> 你选择了:{{idselect}}
+          <br> 预选择了:{{idselecttest}}
         </dog-info>
         <dog-button icon="user-o" @click="tocheck" size="large" color="red">检查</dog-button>
       </dog-title>
@@ -99,6 +101,7 @@
         password: "",
         extend: ['qrcode'],
         idselect: "",
+        idselecttest: 2,
         aDDD: "123",
         test: [{
             name: "我的ID是1",
