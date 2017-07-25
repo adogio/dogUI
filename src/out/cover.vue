@@ -12,9 +12,9 @@
                     </div>
                 </component>
             </transition>
-            <div v-show="doublecheck">
-                <dog-check :check="data"></dog-check>
-            </div>
+        </div>
+        <div v-show="doublecheck">
+            <dog-check :check="data"></dog-check>
         </div>
     </div>
 </template>

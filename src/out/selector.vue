@@ -19,17 +19,16 @@
                 statlist: this.list
             }
         },
-        name: "dog-block",
+        name: "dog-select",
         watch: {
             list: function () {
                 this.fixList();
             },
             value: function () {
-                this.vmodel = this.value;
+                this.valueLooker();
             }
         },
         mounted: function () {
-
             this.fixList();
         },
         props: ["list", 'icon', 'value'],
@@ -56,11 +55,24 @@
                 } else {
                     this.statlist = this.list;
                 }
-                this.vmodel = this.statlist[0].id;
-                this.onChange();
+                if (!this.valueLooker()) {
+                    this.vmodel = this.statlist[0].id;
+                    this.onChange();
+                }
+            },
+            valueLooker: function () {
+                outlooper: for (let i = 0; i < this.list.length; i++) {
+                    if (this.list[i].id == this.value) {
+                        this.vmodel = this.value;
+                        this.onChange();
+                        return true;
+                    }
+                }
+                return false;
             },
             onChange: function () {
                 this.$emit('input', this.vmodel);
+                this.$emit('change', this.vmodel);
             }
         }
     }
