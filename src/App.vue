@@ -141,7 +141,7 @@
         })
       },
       tocheck: function () {
-        check({
+        dog.check({
           icon: "buttonIcon", //optional
           message: "message",
           next: "buttonText",

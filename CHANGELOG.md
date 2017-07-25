@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 2.1.2
+    -   Fix minor bugs
 -   Version 2.1.1
     -   Fix alert bugs
     -   Fix auto option bugs from selector

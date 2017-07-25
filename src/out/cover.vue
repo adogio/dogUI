@@ -12,9 +12,9 @@
                     </div>
                 </component>
             </transition>
-            <div v-show="doublecheck">
-                <dog-check :check="data"></dog-check>
-            </div>
+        </div>
+        <div v-show="doublecheck">
+            <dog-check :check="data"></dog-check>
         </div>
     </div>
 </template>
@@ -73,6 +73,7 @@
                 }
             }
             window.dog.check = (data) => {
+                console.log(this);
                 this.data = data;
                 this.doublecheck = true;
                 return true;
