@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 2.2.1
+    -   Fix life line error
+    -   Fix minor bugs
 -   Version 2.2.0
     -   Update readme
     -   Make block content appear faster

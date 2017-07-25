@@ -115,9 +115,10 @@
       }
     },
     mounted: function () {
+      dog.alert("flask", "test");
       setTimeout(() => {
         dog.unload();
-      }, 1);
+      }, 1000);
     },
     methods: {
       Qrcode: function () {
