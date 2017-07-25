@@ -1,5 +1,14 @@
 # Changelog
 
+-   Version 2.2.0
+    -   Update readme
+    -   Make block content appear faster
+    -   Update loading animations
+    -   Fix minor bugs
+    -   Clean codes
+    -   Add config file
+    -   Fix textarea bugs
+    -   Add color collection
 -   Version 2.1.4
     -   Fix minor bug
     -   Fix display bugs

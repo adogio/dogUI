@@ -19,6 +19,7 @@
 
 <script>
     import paddingbar from '../components/paddingbar.vue';
+    import config from '../config/config';
 
     export default {
         mounted: function () {
@@ -31,7 +32,7 @@
         name: "dog-title",
         data: function () {
             return {
-                part: ["7FB3D5", "A569BD", "EC7063", "AF7AC5", "45B39D", "F4D03F", "E59866", "B2BABB", "F0B27A"],
+                part: config.parts,
                 combo: 0
             }
         },
