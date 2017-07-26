@@ -66,6 +66,7 @@
     td {
         height: 8px;
         width: 8px;
+        border: 0px;
     }
 
     img {

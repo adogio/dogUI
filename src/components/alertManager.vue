@@ -6,7 +6,11 @@
 
 <script>
     import notification from './alert.vue';
+
     export default {
+        components: {
+            "dog-alert": notification
+        },
         data: function () {
             return {
                 timeouter: 0,
@@ -16,9 +20,9 @@
         computed: {
 
         },
-        mounted: function () {
+        created: function () {
             window.dog.alert = (icon, content, timeout) => {
-                const bottom = this.stack.length * 67 + 2;
+                const bottom = this.stack.length * 67;
                 const timmer = timeout ? timeout : 4500;
                 this.stack.push({
                     icon: icon,
@@ -32,9 +36,6 @@
                 }, timmer);
                 return true;
             }
-        },
-        components: {
-            "dog-alert": notification
         },
         methods: {}
     }

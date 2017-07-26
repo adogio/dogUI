@@ -7,7 +7,7 @@ adog UI library frame work on Vue
 
 ## Version
 
--   Version 2.2.4
+-   Version 2.2.5
 
 ## Introduction
 

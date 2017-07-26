@@ -1,11 +1,13 @@
 <template>
     <div>
         <div class="notification" :style="styler" :class="classer">
-            <div class="icon col-xs-1">
-                <dog-icon :icon="icon"></dog-icon>
-            </div>
-            <div class="info col-xs-11">
-                <span class="info">{{info}}</span>
+            <div class="row">
+                <div class="icon col-xs-1">
+                    <dog-icon :icon="icon"></dog-icon>
+                </div>
+                <div class="info col-xs-11">
+                    <span class="info">{{info}}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -13,6 +15,7 @@
 
 <script>
     import icon from './icon.vue';
+
     export default {
         data: function () {
             return {
@@ -40,11 +43,12 @@
 <style scoped>
     div.info {
         color: rgb(0, 4, 129);
+        text-align: left;
     }
 
     div.icon {
-        padding-left: 10px;
         color: azure;
+        text-align: center;
     }
 
     div.notification {

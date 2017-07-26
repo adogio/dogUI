@@ -29,7 +29,9 @@
             }
         },
         mounted: function () {
-            this.mount();
+            if (this.mount) {
+                this.mount();
+            }
         },
         name: "dog-nav",
         components: {

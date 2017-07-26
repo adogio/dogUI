@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 2.2.5
+    -   Fix minor bugs
+    -   Remove bottom white bar
+    -   Fix ugly colors
 -   Version 2.2.4
     -   Fix late nav bar bugs
 -   Version 2.2.3
