@@ -73,7 +73,9 @@
             }
         },
         created: function () {
-            window.dog = {};
+            if(!window.dog){
+                window.dog = {};
+            }
             window.dog.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;

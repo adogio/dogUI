@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 2.2.3
+    -   Fix cover bug
+    -   Fix ugly colors again
 -   Version 2.2.2
     -   Fix ugly colors
 -   Version 2.2.1
