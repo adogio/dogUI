@@ -3,7 +3,8 @@
 [![npm version](https://badge.fury.io/js/dogui.svg)](https://badge.fury.io/js/dogui)
 ![downloads](https://img.shields.io/npm/dm/dogui.svg)
 
-adog UI library frame work on Vue
+adog UI library frame work on Vue  
+Every dogui component can work individually without any other dogui component.
 
 ## Version
 
