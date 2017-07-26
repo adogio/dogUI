@@ -1,5 +1,11 @@
 # Changelog
 
+-   Version 3.0.0
+    -   Create desktop version of dogui
+    -   Analysis import methods
+    -   Fix minor bugs
+    -   Update colors
+    -   Add gitkeepers dumb file
 -   Version 2.2.5
     -   Fix minor bugs
     -   Remove bottom white bar
