@@ -17,8 +17,8 @@
                 stacks: []
             }
         },
-        props: [],
-        mounted: function () {
+        props: ['mount'],
+        created: function () {
             window.dog.nav = (name, fun) => {
                 this.stacks.push({
                     name: name,
@@ -27,6 +27,9 @@
                 fun();
                 return true;
             }
+        },
+        mounted: function () {
+            this.mount();
         },
         name: "dog-nav",
         components: {
