@@ -4,7 +4,6 @@
             <transition name="fade" mode="out-in">
                 <component v-bind:is="view">
                     <div :class="slots">
-                        <dog-alert></dog-alert>
                         <slot></slot>
                     </div>
                     <div v-if="flotLoad" v-show="floting" :class="flows">
@@ -16,6 +15,7 @@
         <div v-show="doublecheck">
             <dog-check :check="data"></dog-check>
         </div>
+        <dog-alert></dog-alert>
     </div>
 </template>
 
@@ -49,7 +49,6 @@
             }
         },
         mounted: function () {
-            window.dog = {};
             if (typeof this.addOn == 'object') {
                 for (let i = 0; i < this.addOn.length; i++) {
                     if (this.addOn[i] == 'qrcode') {
@@ -72,6 +71,9 @@
                     }
                 }
             }
+        },
+        created: function () {
+            window.dog = {};
             window.dog.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;

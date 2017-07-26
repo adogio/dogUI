@@ -9,6 +9,7 @@
 
 <script>
     import infoTab from '../components/tab.vue';
+    import config from '../config/config';
 
     export default {
         components: {
@@ -28,11 +29,8 @@
         props: ['icon', 'info'],
         computed: {
             bgColor: function () {
-                const colorList = [
-                    "EE6C4D", "F38D68", "662C91", "17A398", "33312E", "1FD4F9", "FA4A4C", "52489C",
-                    "4062BB", "59C3C3"
-                ]
-                let timeDelay = Math.floor(Math.random() * 100) % 15;
+                const colorList = config.colorList;
+                let timeDelay = Math.floor(Math.random() * 100) % 6;
                 let color = "#" + colorList[Math.floor(Math.random() * 100) % colorList.length];
                 return "border-left: 9px solid " + color + ";" + "animation-delay:" + (timeDelay * 0.1) + "s;" +
                     "-webkit-animation-delay:" + (timeDelay * 0.1) +

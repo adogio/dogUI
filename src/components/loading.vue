@@ -31,21 +31,22 @@
 
 <style scoped>
     .align {
-        padding-top: 10%;
+        padding-top: 8px;
         vertical-align: middle;
+        color: #323232;
     }
 
     .center {
         font-family: 'ubuntu';
         text-align: center;
         width: 100%;
-        font-size: 45px;
+        font-size: 50px;
     }
 
     .main-circle {
         background-color: #40bfff;
-        width: 86px;
-        height: 86px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         margin: auto;
         margin-top: 185px;
