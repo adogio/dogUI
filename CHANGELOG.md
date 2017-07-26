@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 2.2.2
+    -   Fix ugly colors
 -   Version 2.2.1
     -   Fix life line error
     -   Fix minor bugs
