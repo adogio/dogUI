@@ -6,7 +6,7 @@
                     <dog-icon :icon="icon"></dog-icon>
                 </div>
                 <div class="info col-xs-11">
-                    <span class="info">{{info}}</span>
+                    <span class="info" v-html="info"></span>
                 </div>
             </div>
         </div>
@@ -52,13 +52,13 @@
     }
 
     div.notification {
-        animation-duration: 0.3s;
-        -webkit-animation-duration: 0.3s;
-        transition: all 0.3s;
+        animation-duration: 0.4s;
+        -webkit-animation-duration: 0.4s;
+        transition: all 0.4s;
         position: fixed;
         left: 0px;
         z-index: 7;
-        background-color: rgba(100%, 50%, 50%, 0.75);
+        background-color: rgba(100%, 50%, 50%, 0.7);
         border-left: 9px solid rgb(0, 152, 255);
         width: 100%;
         font-family: 'ubuntu';

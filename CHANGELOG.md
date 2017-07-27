@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 2.2.6
+    -   Support html in alert
 -   Version 2.2.5
     -   Fix minor bugs
     -   Remove bottom white bar

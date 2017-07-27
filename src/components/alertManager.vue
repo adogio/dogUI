@@ -22,7 +22,7 @@
         },
         created: function () {
             window.dog.alert = (icon, content, timeout) => {
-                const bottom = this.stack.length * 67;
+                const bottom = this.stack.length * 68;
                 const timmer = timeout ? timeout : 4500;
                 this.stack.push({
                     icon: icon,
