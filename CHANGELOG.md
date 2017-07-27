@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 3.0.1
+    -   Support html tags in alert
 -   Version 3.0.0
     -   Create desktop version of dogui
     -   Analysis import methods
