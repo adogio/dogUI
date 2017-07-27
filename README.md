@@ -8,7 +8,7 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 2.2.6
+-   Version 3.0.0
 
 ## Introduction
 
@@ -33,7 +33,7 @@ npm i dogUI
 ### Import
 
 ```js
-import dogUI from 'dogUI'
+import dogUI from 'dogui'
 ```
 
 ### CDNS and Meta for phone
