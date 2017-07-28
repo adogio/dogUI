@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 3.0.2
+    -   Going to add react version of dogui
+    -   Fix minor bug
 -   Version 3.0.1
     -   Support html tags in alert
 -   Version 3.0.0

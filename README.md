@@ -8,7 +8,7 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 3.0.1
+-   Version 3.0.2
 
 ## Introduction
 
