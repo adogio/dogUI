@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 3.1.1
+    -   Update calling function of qrcode
+    -   Make qrcode avaiable with text
 -   Version 3.1.0
     -   Third and forth argument of dog.qrcode for center and topper picture
     -   Fix minorbug

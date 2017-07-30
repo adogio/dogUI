@@ -7,7 +7,7 @@
                         <slot></slot>
                     </div>
                     <div v-if="flotLoad" v-show="floting" :class="flows">
-                        <dog-flow :mode="flow.mode" :content="flow.content" :imgTopper="flow.imgTopper" :imgCenter="flow.imgCenter">{{flow.text}}</dog-flow>
+                        <dog-flow :mode="flow.mode" :content="flow.content" :imgSetting="flow.imgSetting">{{flow.text}}</dog-flow>
                     </div>
                 </component>
             </transition>
@@ -55,12 +55,11 @@
                 for (let i = 0; i < this.addOn.length; i++) {
                     if (this.addOn[i] == 'qrcode') {
                         this.flotLoad = true;
-                        window.dog.qrcode = (data, text, imgCenter, imgTopper) => {
+                        window.dog.qrcode = (data, text, imgSetting) => {
                             this.flow.mode = 'qrcode';
                             this.flow.text = text;
                             this.flow.content = data;
-                            this.flow.imgCenter = imgCenter;
-                            this.flow.imgTopper = imgTopper;
+                            this.flow.imgSetting = imgSetting;
                             this.floting = true;
                             this.slots = "slotun slots";
                             this.flows = "animated fadeIn";

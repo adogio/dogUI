@@ -8,7 +8,7 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 3.0.2
+-   Version 3.1.1
 
 ## Introduction
 
@@ -126,7 +126,11 @@ import dogUI from 'dogui'
 ### Qrcode
 
 ```javascript
-  dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+  dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站',{
+    mode:"image",
+    topper: "",
+    center: ""}
+  );
 ```
 
 ### upload

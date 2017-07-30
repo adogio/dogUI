@@ -118,14 +118,19 @@
       dog.alert("flask", "test");
       setTimeout(() => {
         dog.unload();
-      }, 1000);
+      }, 1);
     },
     methods: {
       Qrcode: function () {
-        dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站',
-          'https://s.gravatar.com/avatar/ece41b74abb11ffc0188780941bee190?size=50&default=retro',
-          "https://s.gravatar.com/avatar/ece41b74abb11ffc0188780941bee190?size=50&default=retro"
-        );
+        // dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站',
+        //   'https://s.gravatar.com/avatar/ece41b74abb11ffc0188780941bee190?size=50&default=retro',
+        //   "https://s.gravatar.com/avatar/ece41b74abb11ffc0188780941bee190?size=50&default=retro"
+        // );
+        dog.qrcode("123", "123", {
+          mode: "text",
+          topper: 1,
+          center: 1
+        })
       },
       notification: function () {
         dog.alert("car", "test");
