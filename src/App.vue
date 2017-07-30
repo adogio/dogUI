@@ -122,7 +122,10 @@
     },
     methods: {
       Qrcode: function () {
-        dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站');
+        dog.qrcode('http://dogui.adog.io', '这是一个二维码生成测试,生成的二维码是dogUI的DEMO网站',
+          'https://s.gravatar.com/avatar/ece41b74abb11ffc0188780941bee190?size=50&default=retro',
+          "https://s.gravatar.com/avatar/ece41b74abb11ffc0188780941bee190?size=50&default=retro"
+        );
       },
       notification: function () {
         dog.alert("car", "test");

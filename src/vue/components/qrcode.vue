@@ -22,7 +22,7 @@
                 </tr>
             </table>
         </div>
-        <div class="above"><img src="./img/Atthisicon.png"></div>
+        <div class="above"><img v-if="imgCenter" :src="imgCenter"></div>
     </div>
 </template>
 
@@ -47,7 +47,7 @@
         mounted: function () {
             this.src = qrtable(this.content, 6);
         },
-        props: ['content'],
+        props: ['content', 'imgCenter'],
         components: {},
         methods: {
             toClass: function (ingo) {
