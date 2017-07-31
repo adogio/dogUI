@@ -91,7 +91,7 @@
       dog.alert("flask", "test");
       setTimeout(() => {
         dog.unload();
-      }, 1);
+      }, 4500);
     },
     methods: {
       Qrcode: function () {
@@ -101,8 +101,8 @@
         // );
         dog.qrcode("123", "123", {
           mode: "text",
-          topper: 1,
-          center: 1
+          topper: '星星',
+          center: '<i class="fa fa-star fa-fw"></i>'
         })
       },
       notification: function () {
