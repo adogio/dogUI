@@ -3,6 +3,10 @@
     <dog-cover icon="paper-plane" info="Loading" :addOn="extend">
       <dog-title icon="comments" info="DOGUI DEMO">
         <dog-search placeholder="搜索框" @change="update"></dog-search>
+        <dog-static icon="arrow-right">欢迎浏览 DogUI.
+          <br> 这个 demo 是用 Vue.js 的组件构建而成, 包括这段话本身都使用了 dogUI 的组件.
+          <br> 随意在这个表单上输入查看 DogUI 的效果吧.
+        </dog-static>
         <dog-nav>导航栏</dog-nav>
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
         <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
@@ -49,7 +53,8 @@
           <br> 你选择了:{{idselect}}
           <br> 预选择了:{{idselecttest}}
         </dog-info>
-        <dog-button icon="user-o" @click="tocheck" size="large" color="red">检查</dog-button>
+        <dog-button icon="plus" @click="tocheck" size="large" color="red">DOUBLE CHECK</dog-button>
+        <dog-credit></dog-credit>
       </dog-title>
     </dog-cover>
   </div>
