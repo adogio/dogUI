@@ -110,6 +110,7 @@
     .icons.right {
         left: 73%;
     }
+
     div.switcher {
         height: 50px;
         border-left: 5px solid #b30000;
@@ -129,10 +130,10 @@
         border-radius: 5px;
         margin-top: 8px;
         padding-top: 4px;
-        height: 34px;
-        width: 100%;
         padding-right: 5px;
         padding-left: 5%;
+        height: 34px;
+        width: 100%;
         transition: all 0.3s;
         font-size: 20px;
     }
@@ -165,13 +166,15 @@
     .opened {
         left: 5%;
     }
-    .middled{
+
+    .middled {
         left: 30%;
     }
+
     .field {
         width: 100%;
         position: relative;
-        padding-top: 25px;
+        padding-top: 28px;
         padding-left: 11px;
         font-size: 21px;
         line-height: 12px;

@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.2.1
+    -   Fix minor bugs
+    -   Small modiified margein and pedding
+    -   Beautify
 -   Version 4.2.0
     -   Add switch button module
     -   Fix minor bugs
