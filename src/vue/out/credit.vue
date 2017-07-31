@@ -1,6 +1,7 @@
 <template>
-    <div>
-    </div>
+    <component v-bind:is="view">
+        <slot></slot>
+    </component>
 </template>
 
 <script>
@@ -9,37 +10,19 @@
 
     export default {
         name: "dog-credit",
-        mounted: function(){
-            console.log(this);
-        },
         props: ['icon'],
-        computed: {
-            ifIcon: function () {
-                if (this.icon) {
-                    return this.icon;
-                } else {
-                    return 'info-circle';
-                }
+        components: {
+            "dog-unstatic": credit,
+            "dog-static": creditStatic
+        },
+        data: function () {
+            return {
+                view: dog.credit ? "dog-static" : "dog-unstatic"
             }
         }
     }
 </script>
 
 <style scoped>
-    .icons {
-        color: #cc2626;
-    }
 
-    .slotContent {
-        background-color: rgba(69.1%, 100%, 80.3%, 0.3);
-        border-left: 9px solid #5ee2ff;
-        padding-left: 3px;
-        word-wrap: break-word;
-    }
-
-    .seprate {
-        font-size: 23px;
-        padding-top: 3px;
-        font-family: 'Ubuntu';
-    }
 </style>

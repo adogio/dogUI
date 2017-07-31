@@ -18,6 +18,14 @@ import {
 
 export default {
     install: function (Vue, options) {
+        window.dog = {};
+        outer: for (let i in options) {
+            inner: switch (i) {
+                case "credit":
+                    dog.credit = options[i];
+                    break inner;
+            }
+        }
         Vue.component('dog-cover', cover);
         Vue.component('dog-title', title);
         Vue.component('dog-block', block);

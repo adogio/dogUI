@@ -2,6 +2,9 @@
 
 -   Version 4.1.0
     -   Add dog-static module
+    -   Add Credit module
+    -   Use addOn to inital dog variable
+    -   Add interface settings
 -   Version 4.0.0
     -   Now dogui import both part component and interface
     -   Use Vue.use(dogui.vue) or Vue.use(vue) to import it

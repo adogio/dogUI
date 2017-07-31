@@ -7,7 +7,9 @@ import {
   vue
 } from './import'
 
-Vue.use(vue);
+Vue.use(vue, {
+  credit: "那个谁"
+});
 
 new Vue({ // eslint-disable-line no-new
   el: '#app',

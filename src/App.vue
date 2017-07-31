@@ -54,7 +54,7 @@
           <br> 预选择了:{{idselecttest}}
         </dog-info>
         <dog-button icon="plus" @click="tocheck" size="large" color="red">DOUBLE CHECK</dog-button>
-        <dog-credit></dog-credit>
+        <dog-credit>放羊</dog-credit>
       </dog-title>
     </dog-cover>
   </div>

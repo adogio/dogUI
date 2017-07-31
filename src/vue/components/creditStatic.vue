@@ -1,7 +1,8 @@
 <template>
     <div class="seprate" v-once>
         <div class="slotContent">
-            <anicon :icon="ifIcon" class="icons"></anicon><slot></slot>
+            {{text}}&nbsp;<span class="smallSpan">with</span><anicon icon="heart" :style="bgColor" class="animated pulse infinite framee"></anicon>
+            <span class="smallSpan">By</span>&nbsp;{{credit}}
         </div>
     </div>
 </template>
@@ -14,37 +15,41 @@
         components: {
             "anicon": anicon
         },
-        mounted: function(){
-            console.log(this);
+        created: function () {
+            if (this.$slots.default) {
+                this.text = this.$slots.default[0].text;
+            }
         },
-        props: ['icon'],
+        data: function () {
+            return {
+                credit: dog.credit,
+                text: "Code"
+            }
+        },
         computed: {
-            ifIcon: function () {
-                if (this.icon) {
-                    return this.icon;
-                } else {
-                    return 'info-circle';
-                }
+            bgColor: function () {
+                const colorList = config.colorList;
+                let color = "#" + colorList[Math.floor(Math.random() * 100) % colorList.length];
+                return "color: " + color + ";";
             }
         }
     }
 </script>
 
 <style scoped>
-    .icons {
-        color: #cc2626;
-    }
-
-    .slotContent {
-        background-color: rgba(69.1%, 100%, 80.3%, 0.3);
-        border-left: 9px solid #5ee2ff;
-        padding-left: 3px;
-        word-wrap: break-word;
-    }
-
     .seprate {
-        font-size: 23px;
-        padding-top: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #5e5e5e;
         font-family: 'Ubuntu';
+    }
+    .smallSpan{
+        vertical-align: middle;
+        font-size: 10px;
+    }
+    .framee {
+        font-size: 11px;
+        -webkit-animation-duration: 2.5s;
+        animation-duration: 2.5s;
     }
 </style>
