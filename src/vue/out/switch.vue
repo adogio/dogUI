@@ -29,6 +29,11 @@
                 status: this.value
             }
         },
+        watch: {
+            value: function () {
+                this.status = this.value;
+            }
+        },
         props: ['value', 'true', 'false', 'null'],
         computed: {
             floatClass: function () {
@@ -104,11 +109,11 @@
     }
 
     .icons.left {
-        left: 7%;
+        left: 4%;
     }
 
     .icons.right {
-        left: 73%;
+        right: 4%;
     }
 
     div.switcher {

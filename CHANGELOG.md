@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.2.2
+    -   Add watch of switch button
+    -   Fix outlanding
+    -   Fix minor bugs
 -   Version 4.2.1
     -   Fix minor bugs
     -   Small modiified margein and pedding
