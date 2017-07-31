@@ -12,7 +12,8 @@ import {
     textarea,
     cover,
     navBar,
-    statics
+    statics,
+    credit
 } from './import';
 
 export default {
@@ -31,5 +32,6 @@ export default {
         Vue.component('dog-textarea', textarea);
         Vue.component('dog-nav', navBar);
         Vue.component('dog-static', statics);
+        Vue.component('dog-credit', credit);
     }
 }

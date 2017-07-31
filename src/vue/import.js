@@ -28,3 +28,4 @@ export const textarea = dog_textarea;
 export const cover = dog_cover;
 export const navBar = dog_navBar;
 export const statics = dog_static;
+export const credit = dog_credit;

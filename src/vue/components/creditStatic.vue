@@ -1,14 +1,19 @@
 <template>
-    <div>
+    <div class="seprate" v-once>
+        <div class="slotContent">
+            <anicon :icon="ifIcon" class="icons"></anicon><slot></slot>
+        </div>
     </div>
 </template>
 
 <script>
-    import credit from '../components/credit.vue';
-    import creditStatic from '../components/creditStatic.vue';
+    import anicon from './icon.vue';
+    import config from '../config/config';
 
     export default {
-        name: "dog-credit",
+        components: {
+            "anicon": anicon
+        },
         mounted: function(){
             console.log(this);
         },
