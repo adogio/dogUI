@@ -13,6 +13,7 @@ import dog_cover from './out/cover.vue';
 import dog_navBar from './out/navbar.vue';
 import dog_static from './out/static.vue';
 import dog_credit from './out/credit.vue';
+import dog_switch from './out/switch.vue';
 
 export const title = dog_title;
 export const block = dog_block;
@@ -29,3 +30,4 @@ export const cover = dog_cover;
 export const navBar = dog_navBar;
 export const statics = dog_static;
 export const credit = dog_credit;
+export const switcher = dog_switch;

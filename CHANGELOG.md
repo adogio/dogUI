@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.2.0
+    -   Add switch button module
+    -   Fix minor bugs
 -   Version 4.1.0
     -   Add dog-static module
     -   Add Credit module
