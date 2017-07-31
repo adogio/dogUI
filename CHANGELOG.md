@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.0.0
+    -   Now dogui import both part component and interface
+    -   Use Vue.use(dogui.vue) or Vue.use(vue) to import it
 -   Version 3.1.1
     -   Update calling function of qrcode
     -   Make qrcode avaiable with text

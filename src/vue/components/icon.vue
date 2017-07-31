@@ -4,6 +4,9 @@
 
 <script>
     export default {
+        render: function (h) {
+            
+        },
         props: ['icon'],
         computed: {
             faicon: function () {

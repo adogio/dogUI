@@ -56,39 +56,7 @@
 </template>
 
 <script>
-  import {
-    block,
-    title,
-    cell,
-    button,
-    search,
-    upload,
-    input,
-    select,
-    info,
-    view,
-    textarea,
-    cover,
-    navBar
-  } from './import';
-
   export default {
-    name: 'app',
-    components: {
-      "dog-block": block,
-      "dog-title": title,
-      "dog-cell": cell,
-      "dog-button": button,
-      "dog-search": search,
-      "dog-upload": upload,
-      "dog-input": input,
-      "dog-select": select,
-      "dog-info": info,
-      "dog-view": view,
-      "dog-textarea": textarea,
-      "dog-cover": cover,
-      "dog-nav": navBar
-    },
     data: function () {
       return {
         name: "一个姓名",

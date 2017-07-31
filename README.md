@@ -8,7 +8,7 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 3.1.1
+-   Version 4.0.0
 
 ## Introduction
 
@@ -33,7 +33,11 @@ npm i dogUI
 ### Import
 
 ```js
-import dogUI from 'dogui'
+  import {vue} from 'dogui';
+  Vue.use(vue);
+  //or
+  import dogui from 'dogui';
+  Vue.use(dogui.vue);
 ```
 
 ### CDNS and Meta for phone
