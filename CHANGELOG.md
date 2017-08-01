@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.3.2
+    -   Fixed differnet plantform have different view of switch issue
+    -   Fix minor bugs
+    -   Clean codes
 -   Version 4.3.1
     -   Fix issue of switch
     -   Fix padding bugs

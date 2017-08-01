@@ -92,9 +92,12 @@
 <style scoped>
     .row {
         width: 100%;
+        padding: 0px;
+        margin: 0px;
     }
 
     div.lefter {
+        padding: 0px;
         font-size: 21px;
     }
 
@@ -178,7 +181,6 @@
 
     .field {
         width: 100%;
-        position: relative;
         padding-top: 28px;
         padding-left: 11px;
         font-size: 21px;
