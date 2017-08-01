@@ -98,7 +98,7 @@
       dog.alert("flask", "test");
       setTimeout(() => {
         dog.unload();
-      }, 1);
+      }, 4500);
     },
     methods: {
       Qrcode: function () {

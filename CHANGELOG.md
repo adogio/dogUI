@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.3.3
+    -   Move back function to addon interface
+    -   Fix minor bugs
+    -   Add ester eggs
 -   Version 4.3.2
     -   Fixed differnet plantform have different view of switch issue
     -   Fix minor bugs

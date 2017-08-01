@@ -21,6 +21,7 @@
 
 <script>
     import loading from '../components/loading.vue';
+    import loadingegg from '../components/esteregg.vue';
     import dumb from '../components/dumb.vue';
     import dbcheck from '../components/doublecheck.vue';
     import uploading from '../components/uploading.vue';
@@ -76,6 +77,10 @@
             }
         },
         created: function () {
+            if (dog.egg) {
+                const viewConfigerer = Math.floor(Math.random() * 100);
+                this.view = (viewConfigerer <= dog.egg) ? 'load' : 'egg';
+            }
             window.dog.check = (data) => {
                 this.data = data;
                 this.doublecheck = true;
@@ -98,20 +103,6 @@
                 this.view = 'in';
                 return true;
             }
-            window.dog.back = () => {
-                if (getURLVar('environment')) {
-                    webkit.messageHandlers.IOS.postMessage("done");
-                    return "ios";
-                } else {
-                    alert("Close");
-                    return "normal";
-                }
-
-                function getURLVar(string) {
-                    return decodeURIComponent((new RegExp('[?|&]' + string + '=' + '([^&;]+?)(&|#|;|$)').exec(
-                        location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-                }
-            }
         },
         props: ['info', 'icon', 'addOn'],
         components: {
@@ -120,7 +111,8 @@
             "dog-check": dbcheck,
             "uploading": uploading,
             "dog-flow": flow,
-            "dog-alert": dogalert
+            "dog-alert": dogalert,
+            "egg": loadingegg
         },
         methods: {}
     }

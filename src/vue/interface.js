@@ -20,11 +20,31 @@ import {
 
 export default {
     install: function (Vue, options) {
-        window.dog = {};
+        window.dog = {
+            egg: 95,
+            back: () => {
+                if (getURLVar('environment')) {
+                    webkit.messageHandlers.IOS.postMessage("done");
+                    return "ios";
+                } else {
+                    alert("Close");
+                    return "normal";
+                }
+
+                function getURLVar(string) {
+                    return decodeURIComponent((new RegExp('[?|&]' + string + '=' + '([^&;]+?)(&|#|;|$)').exec(
+                        location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+                }
+
+            }
+        };
         outer: for (let i in options) {
             inner: switch (i) {
                 case "credit":
                     dog.credit = options[i];
+                    break inner;
+                case "egg":
+                    dog.egg = options[i];
                     break inner;
             }
         }

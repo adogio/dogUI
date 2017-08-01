@@ -1,14 +1,14 @@
 # dogUI
 
 [![npm version](https://badge.fury.io/js/dogui.svg)](https://badge.fury.io/js/dogui)
-![downloads](https://img.shields.io/npm/dm/dogui.svg)
+[![downloads](https://img.shields.io/npm/dm/dogui.svg)](https://badge.fury.io/js/dogui)
 
 adog UI library frame work on Vue  
 Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 4.3.2
+-   Version 4.3.3
 
 ## Introduction
 
@@ -19,6 +19,8 @@ dogUI is required bootstrap and fontAwesome
 
 ### Cdn requirments
 
+> I'm working on stop dependence on these requirments dogui
+
 Bootstrap  
 Buttons.css  
 Animate.css  
@@ -27,7 +29,7 @@ Font Awesome 4
 ### npm install
 
 ```bash
-npm i dogUI
+  npm i dogui --save
 ```
 
 ### Import
@@ -43,8 +45,11 @@ npm i dogUI
 ### Options (All options are optional)
 
 ```js
+  //All options are optional
+  //All options are optional
   const options = {
-    credit: "Your Name"
+    credit: "Your Name",
+    egg: number // percentage of NORMAL loading view, 100 for no ester egg
   }
 ```
 
