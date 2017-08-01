@@ -1,7 +1,7 @@
 <template>
     <div class="switcher">
         <div class="row">
-            <div class="lefter col-xs-9">
+            <div class="lefter col-xs-8">
                 <div class="description">
                     <span class="greener placeh"><i :class="ifIcon"></i></span><strong><slot></slot></strong>
                 </div>
@@ -9,7 +9,7 @@
                     {{whichone}}
                 </div>
             </div>
-            <div class="righter col-xs-3" @click="switchthis">
+            <div class="righter col-xs-4" @click="switchthis">
                 <div class="outerbox" :class="outerClass">
                     <i class="fa fa-times icons left"></i>
                     <i class="fa fa-check icons right"></i>
@@ -99,7 +99,7 @@
     }
 
     div.righter {
-        padding: 0px;
+        padding: 5px;
     }
 
     .icons {
@@ -109,11 +109,11 @@
     }
 
     .icons.left {
-        left: 4%;
+        left: 6%;
     }
 
     .icons.right {
-        right: 4%;
+        right: 6%;
     }
 
     div.switcher {
@@ -165,15 +165,15 @@
     }
 
     .closed {
-        left: 55%;
+        left: 64%;
     }
 
     .opened {
-        left: 5%;
+        left: 6%;
     }
 
     .middled {
-        left: 30%;
+        left: 35%;
     }
 
     .field {
@@ -195,7 +195,7 @@
         position: absolute;
         border-radius: 5px;
         height: 26px;
-        width: 40%;
+        width: 30%;
         font-size: 18px;
         background-color: white;
         transition: all 0.3s;

@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.3.1
+    -   Fix issue of switch
+    -   Fix padding bugs
+    -   Fix minor bugs
 -   Version 4.3.0
     -   Add fold block Use slot name for dwo divitions
     -   Fix minor bugs
