@@ -20,6 +20,9 @@ import {
 
 export default {
     install: function (Vue, options) {
+        let dog_temp = {
+            mode: 'normal'
+        }
         window.dog = {
             egg: 95,
             back: () => {
@@ -46,24 +49,47 @@ export default {
                 case "egg":
                     dog.egg = options[i];
                     break inner;
+                case "sample":
+                    if (options.sample == true) dog_temp.mode = 'sample';
+                    break inner;
             }
         }
-        Vue.component('dog-cover', cover);
-        Vue.component('dog-title', title);
-        Vue.component('dog-block', block);
-        Vue.component('dog-cell', cell);
-        Vue.component('dog-search', search);
-        Vue.component('dog-upload', upload);
-        Vue.component('dog-input', input);
-        Vue.component('dog-select', select);
-        Vue.component('dog-button', button);
-        Vue.component('dog-info', info);
-        Vue.component('dog-view', view);
-        Vue.component('dog-textarea', textarea);
-        Vue.component('dog-nav', navBar);
-        Vue.component('dog-static', statics);
-        Vue.component('dog-credit', credit);
-        Vue.component('dog-switch', switcher);
-        Vue.component('dog-fold', fold);
+        if (dog_temp.mode === 'normal') {
+            Vue.component('dog-cover', cover);
+            Vue.component('dog-title', title);
+            Vue.component('dog-block', block);
+            Vue.component('dog-cell', cell);
+            Vue.component('dog-search', search);
+            Vue.component('dog-upload', upload);
+            Vue.component('dog-input', input);
+            Vue.component('dog-select', select);
+            Vue.component('dog-button', button);
+            Vue.component('dog-info', info);
+            Vue.component('dog-view', view);
+            Vue.component('dog-textarea', textarea);
+            Vue.component('dog-nav', navBar);
+            Vue.component('dog-static', statics);
+            Vue.component('dog-credit', credit);
+            Vue.component('dog-switch', switcher);
+            Vue.component('dog-fold', fold);
+        } else {
+            Vue.component('cov', cover);
+            Vue.component('tit', title);
+            Vue.component('blo', block);
+            Vue.component('cel', cell);
+            Vue.component('sea', search);
+            Vue.component('upl', upload);
+            Vue.component('inp', input);
+            Vue.component('sel', select);
+            Vue.component('but', button);
+            Vue.component('inf', info);
+            Vue.component('vie', view);
+            Vue.component('tex', textarea);
+            Vue.component('nab', navBar);
+            Vue.component('sta', statics);
+            Vue.component('cre', credit);
+            Vue.component('swi', switcher);
+            Vue.component('fol', fold);
+        }
     }
 }

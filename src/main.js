@@ -8,7 +8,8 @@ import {
 } from './import'
 
 Vue.use(vue, {
-  credit: "那个谁"
+  credit: "那个谁",
+  sample: true
 });
 
 new Vue({ // eslint-disable-line no-new

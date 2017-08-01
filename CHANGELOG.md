@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.3.4
+    -   Add sample mode
+    -   Fix minor bugs
 -   Version 4.3.3
     -   Move back function to addon interface
     -   Fix minor bugs
