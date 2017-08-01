@@ -14,7 +14,8 @@ import {
     navBar,
     statics,
     credit,
-    switcher
+    switcher,
+    fold
 } from './import';
 
 export default {
@@ -43,5 +44,6 @@ export default {
         Vue.component('dog-static', statics);
         Vue.component('dog-credit', credit);
         Vue.component('dog-switch', switcher);
+        Vue.component('dog-fold', fold);
     }
 }

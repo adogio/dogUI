@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.3.0
+    -   Add fold block Use slot name for dwo divitions
+    -   Fix minor bugs
+    -   Fix font bugs
 -   Version 4.2.2
     -   Add watch of switch button
     -   Fix outlanding

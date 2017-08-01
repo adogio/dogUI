@@ -1,9 +1,10 @@
 <template>
     <div>
         <div class="right" :style="outColor">
-            <div :style="bgColor">
+            <div :style="bgColor" @click="emitClick">
                 <anicon class="icon" v-bind:icon="icon"></anicon>
                 <span class="spans" v-text="info"></span>
+                <anicon v-if="right" class="fa fa-caret-down righticon" :class="arrowClass"></anicon>
             </div>
         </div>
     </div>
@@ -17,12 +18,35 @@
         components: {
             "anicon": anicon
         },
-        props: ['icon', 'info', 'outColor'],
+        props: ['icon', 'info', 'outColor', 'right'],
         data: function () {
-            return {}
+            return {
+                arrowStatus: false
+            }
+        },
+        watch: {
+            right: function () {
+                if (this.right == "down") {
+                    this.arrowStatus = false;
+                } else {
+                    this.arrowStatus = true;
+                }
+            }
+        },
+        methods: {
+            emitClick: function () {
+                this.$emit('click');
+            }
         },
         name: "dog-tab",
         computed: {
+            arrowClass: function () {
+                if (this.arrowStatus) {
+                    return "down";
+                } else {
+                    return "upper";
+                }
+            },
             ouside: function () {
                 if (this.outColor) {
                     return this.outColor;
@@ -40,6 +64,20 @@
 </script>
 
 <style scoped>
+    .righticon {
+        float: right;
+        margin-right: 10px;
+        transition: all 0.5s;
+    }
+
+    .righticon.upper {
+        transform: rotate(0deg);
+    }
+
+    .righticon.down {
+        transform: rotate(180deg);
+    }
+
     .icon {
         font-size: 21px;
         padding-left: 7px;

@@ -8,6 +8,10 @@
           <br> 随意在这个表单上输入查看 DogUI 的效果吧.
         </dog-static>
         <dog-nav>导航栏</dog-nav>
+        <dog-fold info="折叠框" icon="bars">
+          <div slot="half">FULL</div>
+          <div slot="full">FULL<br>FULL<br>FULL</div>
+        </dog-fold>
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
         <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
         <dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
@@ -56,7 +60,7 @@
           <br> 预选择了:{{idselecttest}}
         </dog-info>
         <dog-button icon="plus" @click="tocheck" size="large" color="red">DOUBLE CHECK</dog-button>
-        <dog-credit>放羊</dog-credit>
+        <dog-credit>干架</dog-credit>
       </dog-title>
     </dog-cover>
   </div>
@@ -94,7 +98,7 @@
       dog.alert("flask", "test");
       setTimeout(() => {
         dog.unload();
-      }, 4500);
+      }, 1);
     },
     methods: {
       Qrcode: function () {
