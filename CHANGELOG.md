@@ -1,5 +1,10 @@
 # Changelog
 
+-   Version 4.4.1
+    -   Make default draw view to right for not replaced by mostly app's motion
+    -   Fix interfaces bugs
+    -   Fix minor bugs
+    -   Add typo fixer for extends and interfaces
 -   Version 4.4.0
     -   Update fold calling function
         -   Now use slot=half and normally slot to use it

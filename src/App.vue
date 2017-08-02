@@ -108,7 +108,7 @@
       }
     },
     mounted: function () {
-      dog.alert("external-link-square", "从屏幕最左侧开始滑动试试看!!!");
+      dog.alert("external-link-square", "从屏幕最右侧开始滑动试试看!!!");
       setTimeout(() => {
         dog.unload();
       }, 1);
@@ -139,7 +139,7 @@
         })
       },
       notification: function () {
-        dog.alert("flask", "测试提示, 现在测试提示的大小十分灵活, 这是一句很长的话");
+        dog.alert("flask", "这是一条测试提示, 现在测试提示的大小十分灵活, 这是一句很长的话");
         setTimeout(function () {
           dog.alert("anchor", "这是一句很短的话");
         }, 50);
