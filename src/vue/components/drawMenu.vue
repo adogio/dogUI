@@ -11,12 +11,21 @@
         },
         computed: {
             positions: function () {
-                let realPosition = Math.min(this.status.position - 265, 0);
-                let styler = "left: " + realPosition + "px;";
-                if (!this.status.triggered) {
-                    styler += "transition: all .8s;";
+                if (this.$dog.draw === "right") {
+                    let realPosition = Math.min(this.status.position - 290, 0);
+                    let styler = "right: " + realPosition + "px;";
+                    if (!this.status.triggered) {
+                        styler += "transition: all .8s;";
+                    }
+                    return styler;
+                } else {
+                    let realPosition = Math.min(this.status.position - 290, 0);
+                    let styler = "left: " + realPosition + "px;";
+                    if (!this.status.triggered) {
+                        styler += "transition: all .8s;";
+                    }
+                    return styler;
                 }
-                return styler;
             }
         },
         name: "dog-draw",
@@ -37,7 +46,7 @@
         z-index: 6;
         background-color: rgba(75.3%, 84.2%, 100%, 0.8);
         height: 100%;
-        width: 265px;
+        width: 290px;
         -webkit-animation: leftChange 25s linear infinite alternate-reverse;
         animation: leftChange 25s linear infinite alternate-reverse;
     }

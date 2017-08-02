@@ -32,12 +32,16 @@ export default {
         }
         let $dog = {
             egg: 95,
-            alertLength: 0
+            alertLength: 0,
+            draw: "right",
+            extend: []
         }
         window.dog = {
             back: () => {
                 if (getURLVar('environment')) {
-                    webkit.messageHandlers.IOS.postMessage("done");
+                    if (getURLVar('environment') !== "android") {
+                        webkit.messageHandlers.IOS.postMessage("done");
+                    }
                     return "ios";
                 } else {
                     alert("Close");
@@ -51,7 +55,11 @@ export default {
             }
         };
         outer: for (let i in options) {
-            inner: switch (i) {
+            inner: switch (i.toLowerCase()) {
+                case "extend":
+                case "extends":
+                    $dog.extend = options[i];
+                    break inner;
                 case "credit":
                     $dog.credit = options[i];
                     break inner;
@@ -61,6 +69,11 @@ export default {
                 case "sample":
                     if (options.sample == true) dog_temp.mode = 'sample';
                     break inner;
+                case "drawmenu":
+                case "draw":
+                    $dog.draw = options[i];
+                case "end":
+                    break outer;
             }
         }
         Vue.prototype.$dog = $dog;

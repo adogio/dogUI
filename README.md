@@ -34,23 +34,38 @@ Font Awesome 4
 
 ### Import
 
-```js
+```javascript
   import {vue} from 'dogui';
   Vue.use(vue, options);
-  //or
+  // or
   import dogui from 'dogui';
   Vue.use(dogui.vue, options);
+  // or
+  Vue.use(require('dogui').vue, options);
+```
+
+> Make sure Vue.use before ~~new Vue~~
+
+### Extend
+
+```javascript
+  // extends you want to use
+  let extend = ['qrcode', 'drawMenu'];
+  // qrcode -> Qrcode display see dog.qrcode()
+  // drawMenu -> Pop drawMenu see dog.draw()
 ```
 
 ### Options (All options are optional)
 
-```js
+```javascript
   // All options are optional
   // All options are optional
   const options = {
     credit: "Your Name",
     egg: number, // percentage of NORMAL loading view, 100 for no ester egg
     sample: true, // if true, turn on sample mode (recommand)
+    draw: "left", // set draw menu to left, default right
+    extends: entend //set extends that you want to use
   }
 ```
 
@@ -78,6 +93,8 @@ Font Awesome 4
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
         <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>
         <but icon="bell" @click="notification" size="small" color="blue">调用提醒</but>
+        <sta>抽屉菜单也可以用按钮打开关闭</sta>
+        <but icon="bars" @click="draw(false)" size="normal" color="purple">开启/关闭 抽屉</but>
         <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你也可以将credits放在这里</sma>
         <cre></cre>
       </div>
@@ -94,6 +111,8 @@ Font Awesome 4
           <!-- Update, no more div slot=full -->
           FULL<br>FULL<br>FULL
         </fol>
+        <sta>抽屉菜单也可以用按钮打开关闭</sta>
+        <but icon="bars" @click="draw(true)" size="normal" color="purple">开启/关闭 抽屉</but>
         <but icon="compass" @click="addNav" size="normal" color="red">添加导航</but>
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
         <but icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</but>
@@ -155,12 +174,14 @@ Font Awesome 4
   <div id="app">
     <dog-cover icon="paper-plane" info="Loading" :addOn="extend">
       <div slot="draw">
-        <sta>在这个区域里可以使用任意的模块组件</sta>
-        <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
-        <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>
-        <but icon="bell" @click="notification" size="small" color="blue">调用提醒</but>
-        <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你也可以将credits放在这里</sma>
-        <cre></cre>
+        <dog-static>在这个区域里可以使用任意的模块组件</dog-static>
+        <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
+        <dog-static>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</dog-static>
+        <dog-button icon="bell" @click="notification" size="small" color="blue">调用提醒</dog-button>
+        <dog-static>抽屉菜单也可以用按钮打开关闭</dog-static>
+        <dog-button icon="bars" @click="draw(false)" size="normal" color="purple">开启/关闭 抽屉</dog-button>
+        <dog-small>你看, 调用提醒的时候, 也不会被遮挡<br>你也可以将credits放在这里</dog-small>
+        <dog-credit></dog-credit>
       </div>
       <dog-title icon="comments" info="DOGUI DEMO">
         <dog-search placeholder="搜索框" @change="update"></dog-search>
@@ -175,6 +196,8 @@ Font Awesome 4
           <!-- Update, no more div slot=full -->
           FULL<br>FULL<br>FULL
         </dog-fold>
+        <dog-static>抽屉菜单也可以用按钮打开关闭</dog-static>
+        <dog-button icon="bars" @click="draw(true)" size="normal" color="purple">开启/关闭 抽屉</dog-button>
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
         <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
         <dog-button icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</dog-button>
@@ -229,26 +252,22 @@ Font Awesome 4
   </div>
 </template>
 ```
-### Extend
-
-```js
-  //extend
-  let extend = ['qrcode', 'drawMenu'];
-```
 
 ### DoubleCheck
 
 ```javascript
   check({
-        icon: "buttonIcon", //optional
-        message: "message",
-        next: "buttonText",
-        back: "backButtonText",
-        color: "buttonColor",
-        bcolor: "backButtonColor", //optional
-        top: "topIcon", //optional
-        then: function () {},
-    });
+    icon: "buttonIcon", //optional
+    message: "message",
+    next: "buttonText",
+    back: "backButtonText",
+    color: "buttonColor",
+    bcolor: "backButtonColor", //optional
+    top: "topIcon", //optional
+    then: function () {
+      // do something after click next button
+    }
+  });
 ```
 
 ### Qrcode
@@ -270,7 +289,7 @@ Font Awesome 4
 ### finishLoading
 
 ```javascript
-	dog.unload();
+  dog.unload();
 ```
 
 ### navbar
@@ -285,4 +304,11 @@ Font Awesome 4
 
 ```javascript
   dog.alert('icon', 'info');
+```
+
+### drawMenu
+
+```javascript
+  dog.draw();
+  dog.draw(true); //for not trigger when menu is already poped
 ```

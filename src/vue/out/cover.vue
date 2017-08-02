@@ -3,7 +3,7 @@
         <div v-show="!doublecheck">
             <transition name="fade" mode="out-in">
                 <component v-bind:is="view">
-                    <div v-if="drawStatus.engaged" @touchstart="drawStart" @touchmove="test" @touchend="drawEnd">
+                    <div v-if="drawStatus.engaged" @touchstart="drawStart" @touchmove="test" @touchend="drawEnd" ref="main">
                         <draw-menu :status="drawStatus">
                             <slot name="draw"></slot>
                         </draw-menu>
@@ -56,7 +56,7 @@
                 },
                 drawStatus: {
                     engaged: false,
-                    position: -265,
+                    position: -290,
                     triggered: false,
                     opened: false
                 },
@@ -69,37 +69,43 @@
             }
         },
         mounted: function () {
-            if (typeof this.addOn == 'object') {
-                for (let i = 0; i < this.addOn.length; i++) {
-                    switch (this.addOn[i]) {
-                        case "QRcode":
-                        case "qrCode":
-                        case "QRCode":
-                        case "qrcode":
-                            this.flotLoad = true;
-                            window.dog.qrcode = (data, text, imgSetting) => {
-                                this.flow.mode = 'qrcode';
-                                this.flow.text = text;
-                                this.flow.content = data;
-                                this.flow.imgSetting = imgSetting;
-                                this.floting = true;
-                                this.slots = "slotun slots";
-                                this.flows = "animated fadeIn";
+            for (let i = 0; i < this.$dog.extend.length; i++) {
+                switch (this.$dog.extend[i].toLowerCase()) {
+                    case "qrcode":
+                        this.flotLoad = true;
+                        window.dog.qrcode = (data, text, imgSetting) => {
+                            this.flow.mode = 'qrcode';
+                            this.flow.text = text;
+                            this.flow.content = data;
+                            this.flow.imgSetting = imgSetting;
+                            this.floting = true;
+                            this.slots = "slotun slots";
+                            this.flows = "animated fadeIn";
+                            return true;
+                        }
+                        window.dog.unflow = () => {
+                            this.floting = false;
+                            this.slots = "slotun";
+                            this.flows = "animated fadeOut";
+                            return true;
+                        }
+                        break;
+                    case "draw":
+                    case "drawmenu":
+                        this.drawStatus.engaged = true;
+                        window.dog.draw = (outside) => {
+                            if (this.drawStatus.opened) {
+                                if (outside) return false;
+                                this.drawStatus.position = -290;
+                                this.drawStatus.opened = false;
+                                return false;
+                            } else {
+                                this.drawStatus.position = 290;
+                                this.drawStatus.opened = true;
                                 return true;
                             }
-                            window.dog.unflow = () => {
-                                this.floting = false;
-                                this.slots = "slotun";
-                                this.flows = "animated fadeOut";
-                                return true;
-                            }
-                            break;
-                        case "draw":
-                        case "drawmenu":
-                        case "drawMenu":
-                            this.drawStatus.engaged = true;
-                            break;
-                    }
+                        }
+                        break;
                 }
             }
         },
@@ -131,7 +137,7 @@
                 return true;
             }
         },
-        props: ['info', 'icon', 'addOn'],
+        props: ['info', 'icon'],
         components: {
             "load": loading,
             "in": dumb,
@@ -146,32 +152,56 @@
             drawEnd: function (a) {
                 let endPosition = this.drawStatus.position;
                 this.drawStatus.triggered = false;
-                if (endPosition > 125) {
-                    this.drawStatus.position = 265;
+                if (endPosition > 185) {
+                    this.drawStatus.position = 290;
                     this.drawStatus.opened = true;
                 } else {
-                    this.drawStatus.position = -265;
+                    this.drawStatus.position = -290;
                 }
             },
             test: function (a) {
-                if (this.drawStatus.triggered) {
-                    let client = a.touches[0].clientX;
-                    this.drawStatus.position = client;
+                if (this.$dog.draw === "right") {
+                    if (this.drawStatus.triggered) {
+                        let client = a.touches[0].clientX;
+                        this.drawStatus.position = this.$dog.clientWidth -
+                            client;
+                    }
+                } else {
+                    if (this.drawStatus.triggered) {
+                        let client = a.touches[0].clientX;
+                        this.drawStatus.position = client;
+                    }
                 }
             },
             drawStart: function (a) {
-                let client = a.touches[0].clientX;
-                if (this.drawStatus.opened) {
-                    if (client > 265) {
-                        this.drawStatus.position = -265;
+                if (this.$dog.draw === "right") {
+                    this.$dog.clientWidth = this.$refs.main.clientWidth;
+                    let client = a.touches[0].clientX;
+                    if (this.drawStatus.opened) {
+                        if (client < this.$dog.clientWidth - 300) {
+                            this.drawStatus.position = -290;
+                        } else if (client < this.$dog.clientWidth - 280) {
+                            this.drawStatus.triggered = true;
+                        }
                         this.drawStatus.opened = false;
-                    } else if (client > 255) {
-                        this.drawStatus.triggered = true;
-                        this.drawStatus.opened = false;
+                    } else {
+                        if (client > this.$dog.clientWidth - 16) {
+                            this.drawStatus.triggered = true;
+                        }
                     }
                 } else {
-                    if (client < 10) {
-                        this.drawStatus.triggered = true;
+                    let client = a.touches[0].clientX;
+                    if (this.drawStatus.opened) {
+                        if (client > 300) {
+                            this.drawStatus.position = -290;
+                        } else if (client > 280) {
+                            this.drawStatus.triggered = true;
+                        }
+                        this.drawStatus.opened = false;
+                    } else {
+                        if (client < 16) {
+                            this.drawStatus.triggered = true;
+                        }
                     }
                 }
             }

@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <cov icon="paper-plane" info="Loading" :addOn="extend">
+    <cov icon="paper-plane" info="Loading">
       <div slot="draw">
         <sta>在这个区域里可以使用任意的模块组件</sta>
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
         <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>
         <but icon="bell" @click="notification" size="small" color="blue">调用提醒</but>
-        <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你也可以将credits放在这里</sma>
+        <sta>抽屉菜单也可以用按钮打开关闭</sta>
+        <but icon="bars" @click="draw(false)" size="normal" color="purple">开启/关闭 抽屉</but>
+        <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你还可以将credits放在这里</sma>
         <cre></cre>
       </div>
       <tit icon="comments" info="DOGUI DEMO">
@@ -21,6 +23,8 @@
           <div slot="half">FULL</div>
           FULL<br>FULL<br>FULL
         </fol>
+        <sta>抽屉菜单也可以用按钮打开关闭</sta>
+        <but icon="bars" @click="draw(true)" size="normal" color="purple">开启/关闭 抽屉</but>
         <but icon="compass" @click="addNav" size="normal" color="red">添加导航</but>
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
         <but icon="qrcode" @click="Qrcode" size="normal" color="orange">生成二维码</but>
@@ -86,9 +90,9 @@
         seach: "",
         email: "",
         money: "",
+        drawS: false,
         tel: "",
         password: "",
-        extend: ['qrcode', 'draw'],
         idselect: "",
         idselecttest: 2,
         aDDD: "123",
@@ -107,9 +111,25 @@
       dog.alert("external-link-square", "从屏幕最左侧开始滑动试试看!!!");
       setTimeout(() => {
         dog.unload();
-      }, 4500);
+      }, 1);
     },
     methods: {
+      draw: function (isIn) {
+        if (isIn) {
+          if (this.drawS) {
+            dog.alert("hand-peace-o",
+              "你可能注意到在抽屉菜单打开时, 点击主体中的按钮抽屉菜单会鬼畜的晃悠一下, \
+              这是因为同时触发了按钮和点击外侧关闭抽屉菜单, \
+              想避免这种情况可以在外侧按钮的方法中调用dog.draw(true)而不是dog.draw()来避免!",
+              20000
+            )
+          } else {
+            this.drawS = true;
+          }
+        }
+        dog.draw();
+
+      },
       Qrcode: function () {
         dog.qrcode("123", "123", {
           mode: "text",

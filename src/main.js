@@ -9,7 +9,9 @@ import {
 
 Vue.use(vue, {
   credit: "那个谁",
-  sample: true
+  sample: true,
+  draw: "left",
+  extend: ['qrcode', 'draw']
 });
 
 new Vue({ // eslint-disable-line no-new
