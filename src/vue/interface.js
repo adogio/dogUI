@@ -30,11 +30,11 @@ export default {
         let dog_temp = {
             mode: 'normal'
         }
-        Vue.prototype.$dog = {
+        let $dog = {
+            egg: 95,
             alertLength: 0
         }
         window.dog = {
-            egg: 95,
             back: () => {
                 if (getURLVar('environment')) {
                     webkit.messageHandlers.IOS.postMessage("done");
@@ -53,16 +53,17 @@ export default {
         outer: for (let i in options) {
             inner: switch (i) {
                 case "credit":
-                    dog.credit = options[i];
+                    $dog.credit = options[i];
                     break inner;
                 case "egg":
-                    dog.egg = options[i];
+                    $dog.egg = options[i];
                     break inner;
                 case "sample":
                     if (options.sample == true) dog_temp.mode = 'sample';
                     break inner;
             }
         }
+        Vue.prototype.$dog = $dog;
         if (dog_temp.mode === 'normal') {
             Vue.component('dog-cover', cover);
             Vue.component('dog-title', title);

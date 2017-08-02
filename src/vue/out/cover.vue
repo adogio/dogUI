@@ -3,8 +3,18 @@
         <div v-show="!doublecheck">
             <transition name="fade" mode="out-in">
                 <component v-bind:is="view">
-                    <div :class="slots">
-                        <slot></slot>
+                    <div v-if="drawStatus.engaged" @touchstart="drawStart" @touchmove="test" @touchend="drawEnd">
+                        <draw-menu :status="drawStatus">
+                            <slot name="draw"></slot>
+                        </draw-menu>
+                        <div :class="slots">
+                            <slot></slot>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div :class="slots">
+                            <slot></slot>
+                        </div>
                     </div>
                     <div v-if="flotLoad" v-show="floting" :class="flows">
                         <dog-flow :mode="flow.mode" :content="flow.content" :imgSetting="flow.imgSetting">{{flow.text}}</dog-flow>
@@ -27,6 +37,7 @@
     import uploading from '../components/uploading.vue';
     import flow from '../components/flow.vue';
     import dogalert from '../components/alertManager.vue';
+    import drawMenu from '../components/drawMenu.vue';
 
     export default {
         data: function () {
@@ -43,6 +54,12 @@
                     imgCenter: '',
                     imgTopper: ''
                 },
+                drawStatus: {
+                    engaged: false,
+                    position: -265,
+                    triggered: false,
+                    opened: false
+                },
                 slots: "slotun",
                 flows: "animated fadeIn",
                 upload: {
@@ -54,32 +71,42 @@
         mounted: function () {
             if (typeof this.addOn == 'object') {
                 for (let i = 0; i < this.addOn.length; i++) {
-                    if (this.addOn[i] == 'qrcode') {
-                        this.flotLoad = true;
-                        window.dog.qrcode = (data, text, imgSetting) => {
-                            this.flow.mode = 'qrcode';
-                            this.flow.text = text;
-                            this.flow.content = data;
-                            this.flow.imgSetting = imgSetting;
-                            this.floting = true;
-                            this.slots = "slotun slots";
-                            this.flows = "animated fadeIn";
-                            return true;
-                        }
-                        window.dog.unflow = () => {
-                            this.floting = false;
-                            this.slots = "slotun";
-                            this.flows = "animated fadeOut";
-                            return true;
-                        }
+                    switch (this.addOn[i]) {
+                        case "QRcode":
+                        case "qrCode":
+                        case "QRCode":
+                        case "qrcode":
+                            this.flotLoad = true;
+                            window.dog.qrcode = (data, text, imgSetting) => {
+                                this.flow.mode = 'qrcode';
+                                this.flow.text = text;
+                                this.flow.content = data;
+                                this.flow.imgSetting = imgSetting;
+                                this.floting = true;
+                                this.slots = "slotun slots";
+                                this.flows = "animated fadeIn";
+                                return true;
+                            }
+                            window.dog.unflow = () => {
+                                this.floting = false;
+                                this.slots = "slotun";
+                                this.flows = "animated fadeOut";
+                                return true;
+                            }
+                            break;
+                        case "draw":
+                        case "drawmenu":
+                        case "drawMenu":
+                            this.drawStatus.engaged = true;
+                            break;
                     }
                 }
             }
         },
         created: function () {
-            if (dog.egg) {
+            if (this.$dog.egg) {
                 const viewConfigerer = Math.floor(Math.random() * 100);
-                this.view = (viewConfigerer <= dog.egg) ? 'load' : 'egg';
+                this.view = (viewConfigerer <= this.$dog.egg) ? 'load' : 'egg';
             }
             window.dog.check = (data) => {
                 this.data = data;
@@ -112,9 +139,43 @@
             "uploading": uploading,
             "dog-flow": flow,
             "dog-alert": dogalert,
-            "egg": loadingegg
+            "egg": loadingegg,
+            "draw-menu": drawMenu
         },
-        methods: {}
+        methods: {
+            drawEnd: function (a) {
+                let endPosition = this.drawStatus.position;
+                this.drawStatus.triggered = false;
+                if (endPosition > 125) {
+                    this.drawStatus.position = 265;
+                    this.drawStatus.opened = true;
+                } else {
+                    this.drawStatus.position = -265;
+                }
+            },
+            test: function (a) {
+                if (this.drawStatus.triggered) {
+                    let client = a.touches[0].clientX;
+                    this.drawStatus.position = client;
+                }
+            },
+            drawStart: function (a) {
+                let client = a.touches[0].clientX;
+                if (this.drawStatus.opened) {
+                    if (client > 265) {
+                        this.drawStatus.position = -265;
+                        this.drawStatus.opened = false;
+                    } else if (client > 255) {
+                        this.drawStatus.triggered = true;
+                        this.drawStatus.opened = false;
+                    }
+                } else {
+                    if (client < 10) {
+                        this.drawStatus.triggered = true;
+                    }
+                }
+            }
+        }
     }
 </script>
 

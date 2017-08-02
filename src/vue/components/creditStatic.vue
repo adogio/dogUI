@@ -1,7 +1,8 @@
 <template>
     <div class="seprate" v-once>
         <div class="slotContent">
-            {{text}}&nbsp;<span class="smallSpan">with</span><anicon icon="heart" :style="bgColor" class="animated pulse infinite framee"></anicon>
+            {{text}}&nbsp;<span class="smallSpan">with</span>
+            <anicon icon="heart" :style="bgColor" class="animated pulse infinite framee"></anicon>
             <span class="smallSpan">By</span>&nbsp;{{credit}}
         </div>
     </div>
@@ -22,7 +23,7 @@
         },
         data: function () {
             return {
-                credit: dog.credit,
+                credit: this.$dog.credit,
                 text: "Code"
             }
         },
@@ -43,10 +44,12 @@
         color: #5e5e5e;
         font-family: 'Ubuntu';
     }
-    .smallSpan{
+
+    .smallSpan {
         vertical-align: middle;
         font-size: 10px;
     }
+
     .framee {
         font-size: 11px;
         -webkit-animation-duration: 2.5s;

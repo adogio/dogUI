@@ -24,7 +24,6 @@
     div {
         padding: 0px;
         margin: 0px;
-        min-height: 100%;
     }
 
     div.padding-line {

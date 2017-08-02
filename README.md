@@ -8,7 +8,7 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 4.3.7
+-   Version 4.4.0
 
 ## Introduction
 
@@ -73,6 +73,14 @@ Font Awesome 4
 <template>
   <div id="app">
     <cov icon="paper-plane" info="Loading" :addOn="extend">
+      <div slot="draw">
+        <sta>在这个区域里可以使用任意的模块组件</sta>
+        <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
+        <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>
+        <but icon="bell" @click="notification" size="small" color="blue">调用提醒</but>
+        <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你也可以将credits放在这里</sma>
+        <cre></cre>
+      </div>
       <tit icon="comments" info="DOGUI DEMO">
         <sea placeholder="搜索框" @change="update"></sea>
         <sma>小字版本也可以</sma>
@@ -83,7 +91,8 @@ Font Awesome 4
         <nab>导航栏</nab>
         <fol info="折叠框" icon="bars">
           <div slot="half">FULL</div>
-          <div slot="full">FULL<br>FULL<br>FULL</div>
+          <!-- Update, no more div slot=full -->
+          FULL<br>FULL<br>FULL
         </fol>
         <but icon="compass" @click="addNav" size="normal" color="red">添加导航</but>
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
@@ -145,6 +154,14 @@ Font Awesome 4
 <template>
   <div id="app">
     <dog-cover icon="paper-plane" info="Loading" :addOn="extend">
+      <div slot="draw">
+        <sta>在这个区域里可以使用任意的模块组件</sta>
+        <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
+        <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>
+        <but icon="bell" @click="notification" size="small" color="blue">调用提醒</but>
+        <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你也可以将credits放在这里</sma>
+        <cre></cre>
+      </div>
       <dog-title icon="comments" info="DOGUI DEMO">
         <dog-search placeholder="搜索框" @change="update"></dog-search>
         <dog-small>小字版本也可以</dog-small>
@@ -155,7 +172,8 @@ Font Awesome 4
         <dog-nav>导航栏</dog-nav>
         <dog-fold info="折叠框" icon="bars">
           <div slot="half">FULL</div>
-          <div slot="full">FULL<br>FULL<br>FULL</div>
+          <!-- Update, no more div slot=full -->
+          FULL<br>FULL<br>FULL
         </dog-fold>
         <dog-button icon="compass" @click="addNav" size="normal" color="red">添加导航</dog-button>
         <dog-button icon="bell" @click="notification" size="normal" color="blue">调用提醒</dog-button>
@@ -211,6 +229,12 @@ Font Awesome 4
   </div>
 </template>
 ```
+### Extend
+
+```js
+  //extend
+  let extend = ['qrcode', 'drawMenu'];
+```
 
 ### DoubleCheck
 
@@ -224,7 +248,7 @@ Font Awesome 4
         bcolor: "backButtonColor", //optional
         top: "topIcon", //optional
         then: function () {},
-    })
+    });
 ```
 
 ### Qrcode
@@ -260,5 +284,5 @@ Font Awesome 4
 ### alert
 
 ```javascript
-  dog.alert('icon', 'info')
+  dog.alert('icon', 'info');
 ```

@@ -17,7 +17,7 @@
         },
         data: function () {
             return {
-                view: dog.credit ? "dog-static" : "dog-unstatic"
+                view: this.$dog.credit ? "dog-static" : "dog-unstatic"
             }
         }
     }

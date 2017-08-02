@@ -1,5 +1,16 @@
 # Changelog
 
+-   Version 4.4.0
+    -   Update fold calling function
+        -   Now use slot=half and normally slot to use it
+    -   Add draw menu
+        -   Add draw to extend to use it
+        -   Use div slot=draw in cover to input content in it
+    -   Make vue plug in more elegant
+    -   Ester egg now have 96 percent default percentage
+    -   Update tiny document in readme
+    -   Fix bugs in cover vue
+    -   Fix minor bugs
 -   Version 4.3.7
     -   Add small version of static
         -   Use dog-small or sampler version of sma to use it

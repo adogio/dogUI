@@ -6,7 +6,7 @@
                 <slot name="half"></slot>
             </div>
             <div v-show="textStatus">
-                <slot name="full"></slot>
+                <slot></slot>
             </div>
         </div>
     </div>

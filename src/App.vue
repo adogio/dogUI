@@ -1,6 +1,14 @@
 <template>
   <div id="app">
     <cov icon="paper-plane" info="Loading" :addOn="extend">
+      <div slot="draw">
+        <sta>在这个区域里可以使用任意的模块组件</sta>
+        <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
+        <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>
+        <but icon="bell" @click="notification" size="small" color="blue">调用提醒</but>
+        <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你也可以将credits放在这里</sma>
+        <cre></cre>
+      </div>
       <tit icon="comments" info="DOGUI DEMO">
         <sea placeholder="搜索框" @change="update"></sea>
         <sta icon="arrow-right">欢迎浏览 DogUI.
@@ -11,7 +19,7 @@
         <nab>导航栏</nab>
         <fol info="折叠框" icon="bars">
           <div slot="half">FULL</div>
-          <div slot="full">FULL<br>FULL<br>FULL</div>
+          FULL<br>FULL<br>FULL
         </fol>
         <but icon="compass" @click="addNav" size="normal" color="red">添加导航</but>
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
@@ -80,7 +88,7 @@
         money: "",
         tel: "",
         password: "",
-        extend: ['qrcode'],
+        extend: ['qrcode', 'draw'],
         idselect: "",
         idselecttest: 2,
         aDDD: "123",
@@ -96,7 +104,7 @@
       }
     },
     mounted: function () {
-      dog.alert("flask", "test");
+      dog.alert("external-link-square", "从屏幕最左侧开始滑动试试看!!!");
       setTimeout(() => {
         dog.unload();
       }, 4500);
@@ -110,7 +118,10 @@
         })
       },
       notification: function () {
-        dog.alert("car", "test");
+        dog.alert("flask", "测试提示, 现在测试提示的大小十分灵活, 这是一句很长的话");
+        setTimeout(function () {
+          dog.alert("anchor", "这是一句很短的话");
+        }, 50);
       },
       update: function (info) {
         this.seach = info;
