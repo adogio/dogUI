@@ -7,6 +7,7 @@
           <br> 这个 demo 是用 Vue.js 的组件构建而成, 包括这段话本身都使用了 dogUI 的组件.
           <br> 随意在这个表单上输入查看 DogUI 的效果吧.
         </sta>
+        <sma>小字版本也可以</sma>
         <nab>导航栏</nab>
         <fol info="折叠框" icon="bars">
           <div slot="half">FULL</div>

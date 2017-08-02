@@ -15,7 +15,8 @@ import {
     statics,
     credit,
     switcher,
-    fold
+    fold,
+    small
 } from './import';
 
 export default {
@@ -80,6 +81,7 @@ export default {
             Vue.component('dog-credit', credit);
             Vue.component('dog-switch', switcher);
             Vue.component('dog-fold', fold);
+            Vue.component('dog-small', small);
         } else {
             Vue.component('cov', cover);
             Vue.component('tit', title);
@@ -98,6 +100,7 @@ export default {
             Vue.component('cre', credit);
             Vue.component('swi', switcher);
             Vue.component('fol', fold);
+            Vue.component('sma', small);
         }
     }
 }

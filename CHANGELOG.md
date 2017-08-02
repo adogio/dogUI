@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.3.7
+    -   Add small version of static
+        -   Use dog-small or sampler version of sma to use it
 -   Version 4.3.6
     -   Alert not competable with any langth of information
     -   Fix minor bugs
