@@ -1,5 +1,6 @@
 <template>
     <div>
+        <padding-bar></padding-bar>
         <div class='main-circle circle-auto'>
             <div class='center'>
                 <dog-icon v-if='icon' class='align' :icon='icon'></dog-icon>
@@ -11,6 +12,7 @@
 
 <script>
     import icon from './icon.vue';
+    import paddingbar from './paddingbar.vue';
 
     export default {
         data: function () {
@@ -23,7 +25,8 @@
         mounted: function () {},
         props: [],
         components: {
-            "dog-icon": icon
+            "dog-icon": icon,
+            "padding-bar": paddingbar
         },
         methods: {}
     }

@@ -1,5 +1,97 @@
 # Changelog
 
+-   Version 4.4.1
+    -   Make default draw view to right for not replaced by mostly app's motion
+    -   Fix interfaces bugs
+    -   Fix minor bugs
+    -   Add typo fixer for extends and interfaces
+-   Version 4.4.0
+    -   Update fold calling function
+        -   Now use slot=half and normally slot to use it
+    -   Add draw menu
+        -   Add draw to extend to use it
+        -   Use div slot=draw in cover to input content in it
+    -   Make vue plug in more elegant
+    -   Ester egg now have 96 percent default percentage
+    -   Update tiny document in readme
+    -   Fix bugs in cover vue
+    -   Fix minor bugs
+-   Version 4.3.7
+    -   Add small version of static
+        -   Use dog-small or sampler version of sma to use it
+-   Version 4.3.6
+    -   Alert not competable with any langth of information
+    -   Fix minor bugs
+-   Version 4.3.5
+    -   Fix switch hidden bug
+    -   Fix nav bar example issue
+    -   Add description of plugin
+-   Version 4.3.4
+    -   Add sample mode
+    -   Fix minor bugs
+-   Version 4.3.3
+    -   Move back function to addon interface
+    -   Fix minor bugs
+    -   Add ester eggs
+-   Version 4.3.2
+    -   Fixed differnet plantform have different view of switch issue
+    -   Fix minor bugs
+    -   Clean codes
+-   Version 4.3.1
+    -   Fix issue of switch
+    -   Fix padding bugs
+    -   Fix minor bugs
+-   Version 4.3.0
+    -   Add fold block Use slot name for dwo divitions
+    -   Fix minor bugs
+    -   Fix font bugs
+-   Version 4.2.2
+    -   Add watch of switch button
+    -   Fix outlanding
+    -   Fix minor bugs
+-   Version 4.2.1
+    -   Fix minor bugs
+    -   Small modiified margein and pedding
+    -   Beautify
+-   Version 4.2.0
+    -   Add switch button module
+    -   Fix minor bugs
+-   Version 4.1.0
+    -   Add dog-static module
+    -   Add Credit module
+    -   Use addOn to inital dog variable
+    -   Add interface settings
+-   Version 4.0.0
+    -   Now dogui import both part component and interface
+    -   Use Vue.use(dogui.vue) or Vue.use(vue) to import it
+-   Version 3.1.1
+    -   Update calling function of qrcode
+    -   Make qrcode avaiable with text
+-   Version 3.1.0
+    -   Third and forth argument of dog.qrcode for center and topper picture
+    -   Fix minorbug
+-   Version 3.0.2
+    -   Going to add react version of dogui
+    -   Fix minor bug
+-   Version 3.0.1
+    -   Support html tags in alert
+-   Version 3.0.0
+    -   Create desktop version of dogui
+    -   Analysis import methods
+    -   Fix minor bugs
+    -   Update colors
+    -   Add gitkeepers dumb file
+-   Version 2.2.5
+    -   Fix minor bugs
+    -   Remove bottom white bar
+    -   Fix ugly colors
+-   Version 2.2.4
+    -   Fix late nav bar bugs
+-   Version 2.2.3
+    -   Fix cover bug
+    -   Fix ugly colors again
+-   Version 2.2.2
+    -   Fix ugly colors
 -   Version 2.2.1
     -   Fix life line error
     -   Fix minor bugs

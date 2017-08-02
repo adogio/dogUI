@@ -1,12 +1,13 @@
 <template>
 	<div class="main">
 		<padding-bar></padding-bar>
-		<div class="title">
-			<img src="./img/Atthis3.png">
+		<div v-if="imgSetting" class="title">
+			<img v-if="imgSetting.mode=='image'" :src="imgSetting.topper">
+			<span v-if="imgSetting.mode=='text'" v-html="imgSetting.topper"></span>
 		</div>
 		<div class="content" @click="goOut">
 			<div>
-				<qrcode :content="content" v-if="mode=='qrcode'"></qrcode>
+				<qrcode :content="content" v-if="mode=='qrcode'" :imgSetting="imgSetting"></qrcode>
 			</div>
 			<div class="bottom">
 				<slot></slot>
@@ -26,8 +27,9 @@
 		computed: {
 
 		},
+		watch: {},
 		mounted: function () {},
-		props: ['mode', 'content'],
+		props: ['mode', 'content', 'imgSetting'],
 		components: {
 			"qrcode": qrcode,
 			"padding-bar": paddingbar
