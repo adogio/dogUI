@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.3.5
+    -   Fix switch hidden bug
+    -   Fix nav bar example issue
+    -   Add description of plugin
 -   Version 4.3.4
     -   Add sample mode
     -   Fix minor bugs

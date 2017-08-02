@@ -24,13 +24,14 @@
             upOrDown: function () {
                 this.nbColor = "height: auto;";
                 if (this.arrowStatus == "down") {
+                    clearTimeout(this.timmer);
                     this.textStatus = true;
                     this.arrowStatus = "upper";
                     this.nbColor = "height: " + this.higherStorage + "px;";
                 } else {
                     this.arrowStatus = "down";
                     this.nbColor = "height: " + this.storage + "px;";
-                    setTimeout(() => {
+                    this.timmer = setTimeout(() => {
                         this.textStatus = false;
                     }, 300);
                 }
@@ -51,7 +52,8 @@
                 textStatus: true,
                 nbColor: "",
                 storage: "",
-                higherStorage: ""
+                higherStorage: "",
+                timmer: ""
             }
         },
         props: ['icon', 'info'],

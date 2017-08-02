@@ -112,11 +112,11 @@
     }
 
     .icons.left {
-        left: 6%;
+        left: 9%;
     }
 
     .icons.right {
-        right: 6%;
+        right: 9%;
     }
 
     div.switcher {
@@ -168,11 +168,11 @@
     }
 
     .closed {
-        left: 64%;
+        left: 62%;
     }
 
     .opened {
-        left: 6%;
+        left: 8%;
     }
 
     .middled {

@@ -19,6 +19,12 @@ import {
 } from './import';
 
 export default {
+    /**
+     * Initall this interface to Vue: Vue
+     * 
+     * @param {Vue} Vue 
+     * @param {object} options 
+     */
     install: function (Vue, options) {
         let dog_temp = {
             mode: 'normal'

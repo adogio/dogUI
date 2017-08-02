@@ -8,7 +8,7 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 4.3.4
+-   Version 4.3.5
 
 ## Introduction
 
@@ -79,7 +79,7 @@ Font Awesome 4
           <br> 这个 demo 是用 Vue.js 的组件构建而成, 包括这段话本身都使用了 dogUI 的组件.
           <br> 随意在这个表单上输入查看 DogUI 的效果吧.
         </sta>
-        <nav>导航栏</nav>
+        <nab>导航栏</nab>
         <fol info="折叠框" icon="bars">
           <div slot="half">FULL</div>
           <div slot="full">FULL<br>FULL<br>FULL</div>
