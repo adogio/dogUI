@@ -22,7 +22,7 @@
         },
         created: function () {
             window.dog.alert = (icon, content, timeout) => {
-                const bottom = this.stack.length * 68;
+                const bottom = this.$dog.alertLength;
                 const timmer = timeout ? timeout : 4500;
                 this.stack.push({
                     icon: icon,
@@ -33,6 +33,7 @@
                 clearTimeout(this.timeouter);
                 this.timeouter = setTimeout(() => {
                     this.stack = [];
+                    this.$dog.alertLength = 0;
                 }, timmer);
                 return true;
             }

@@ -29,6 +29,9 @@ export default {
         let dog_temp = {
             mode: 'normal'
         }
+        Vue.prototype.$dog = {
+            alertLength: 0
+        }
         window.dog = {
             egg: 95,
             back: () => {
@@ -44,7 +47,6 @@ export default {
                     return decodeURIComponent((new RegExp('[?|&]' + string + '=' + '([^&;]+?)(&|#|;|$)').exec(
                         location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
                 }
-
             }
         };
         outer: for (let i in options) {

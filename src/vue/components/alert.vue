@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="notification" :style="styler" :class="classer">
+        <div class="notification" :style="styler" :class="classer" ref="alert">
             <div class="row">
                 <div class="icon col-xs-1">
                     <dog-icon :icon="icon"></dog-icon>
@@ -28,6 +28,7 @@
             }
         },
         mounted: function () {
+            this.$dog.alertLength += this.$refs.alert.clientHeight + 2;
             setTimeout(() => {
                 this.classer = 'animated fadeOutDown'
             }, this.timeout - 300);
@@ -63,7 +64,7 @@
         width: 100%;
         font-family: 'ubuntu';
         font-size: 21px;
-        height: 65px;
+        height: auto;
         word-wrap: break-word;
     }
 </style>

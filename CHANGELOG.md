@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.3.6
+    -   Alert not competable with any langth of information
+    -   Fix minor bugs
 -   Version 4.3.5
     -   Fix switch hidden bug
     -   Fix nav bar example issue
