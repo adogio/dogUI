@@ -90,7 +90,7 @@
         seach: "",
         email: "",
         money: "",
-        drawS: false,
+        drawS: 0,
         tel: "",
         password: "",
         idselect: "",
@@ -116,15 +116,16 @@
     methods: {
       draw: function (isIn) {
         if (isIn) {
-          if (this.drawS) {
+          if (this.drawS === 2) {
             dog.alert("hand-peace-o",
               "你可能注意到在抽屉菜单打开时, 点击主体中的按钮抽屉菜单会鬼畜的晃悠一下, \
               这是因为同时触发了按钮和点击外侧关闭抽屉菜单, \
               想避免这种情况可以在外侧按钮的方法中调用dog.draw(true)而不是dog.draw()来避免!",
               20000
             )
+            this.drawS++;
           } else {
-            this.drawS = true;
+            this.drawS++;
           }
         }
         dog.draw();

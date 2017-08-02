@@ -72,6 +72,7 @@ export default {
                 case "drawmenu":
                 case "draw":
                     $dog.draw = options[i];
+                    break inner;
                 case "end":
                     break outer;
             }
