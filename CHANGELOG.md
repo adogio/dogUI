@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 4.4.2
+    -   Fix minor bugs (Minor bug horriable)
 -   Version 4.4.1
     -   Make default draw view to right for not replaced by mostly app's motion
     -   Fix interfaces bugs
