@@ -2,26 +2,30 @@
 
 ## Table of Contents
 
--   [API](#api)
-    -   [Table of Contents](#table-of-contents)
-    -   [Components](#components)
-        -   [cover](#cover)
-        -   [title](#title)
-        -   [block](#block)
-        -   [input](#input)
-        -   [textarea](#textarea)
-        -   [button](#button)
-        -   [cell](#cell)
-        -   [info](#info)
-        -   [select](#select)
-        -   [picture view](#picture-view)
-        -   [search bar](#search-bar)
-    -   [Effects](#effects)
-        -   [alert](#alert)
-        -   [loading](#loading)
-        -   [uploading](#uploading)
-        -   [double check](#double-check)
-        -   [qrcode](#qrcode)
+- [API](#api)
+    - [Table of Contents](#table-of-contents)
+    - [Components](#components)
+        - [cover](#cover)
+        - [title](#title)
+        - [block](#block)
+        - [input](#input)
+        - [textarea](#textarea)
+        - [button](#button)
+        - [cell](#cell)
+        - [info](#info)
+        - [static](#static)
+        - [small](#small)
+        - [select](#select)
+        - [picture view](#picture-view)
+        - [search bar](#search-bar)
+        - [Fold block](#fold-block)
+    - [Effects](#effects)
+        - [alert](#alert)
+        - [loading](#loading)
+        - [uploading](#uploading)
+        - [double check](#double-check)
+        - [qrcode](#qrcode)
+        - [draw menu](#draw-menu)
 
 ## Components
 
@@ -129,10 +133,38 @@
         -   Sample -> inf
 -   Props
     -   Info: String -> the title that displayed on block's top.
-    -   Icon: String -> the font awesome icon that displayed on left site of info.
+    -   Icon: String -> the font awesome icon that displayed on left site of info. (optional)
         -   If no icon proped will appear with default infotmation-o of font awesome
 -   Slots
     -   Content of information
+
+### static
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-static
+        -   Sample -> sta
+-   Props
+    -   Icon: String -> the font awesome icon that displayed on left site of info. (optional)
+        -   If no icon proped will appear with default arraw-right of font awesome
+-   Slots
+    -   Content of static information
+-   Warning
+    -   This component only render once, content will never change after mounted
+
+### small
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-small
+        -   Sample -> sma
+-   Props
+    -   Icon: String -> the font awesome icon that displayed on left site of info. (optional)
+        -   If no icon proped will appear with default arraw-right of font awesome
+-   Slots
+    -   Content of static information
+-   Warning
+    -   This component only render once, content will never change after mounted
 
 ### select
 
@@ -197,7 +229,7 @@
 -   Function 
     -   dog.alert(icon, content);
 -   Arguments
-    -   icon: string -> the icon that will be poped up with alert
+    -   icon: string -> the icon that will be poped up with alert (optional)
     -   content: string -> the content that will be poped up with alert
 -   Effect
     -   Popup a alert from buttom
