@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.4.4
+    -   Upade documents
+    -   Fix minor bugs
 -   Version 4.4.3
     -   Initiallize angular components
     -   Will move to version 5 after angular completed
