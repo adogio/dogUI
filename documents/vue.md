@@ -1,5 +1,27 @@
 # Dogui for Vue
 
+## Table of Contents
+
+-   [Dogui for Vue](#dogui-for-vue)
+    -   [Table of Contents](#table-of-contents)
+    -   [Install](#install)
+        -   [Cdn requirments](#cdn-requirments)
+        -   [npm install](#npm-install)
+        -   [Import](#import)
+        -   [Extend](#extend)
+        -   [Options (All options are optional)](#options-all-options-are-optional)
+        -   [CDNS and Meta for phone](#cdns-and-meta-for-phone)
+    -   [Usage](#usage)
+        -   [Sample mode (recommanded)](#sample-mode-recommanded)
+        -   [Regular mode](#regular-mode)
+        -   [DoubleCheck](#doublecheck)
+        -   [Qrcode](#qrcode)
+        -   [upload](#upload)
+        -   [finishLoading](#finishloading)
+        -   [navbar](#navbar)
+        -   [alert](#alert)
+        -   [drawMenu](#drawmenu)
+
 ## Install
 
 ### Cdn requirments
@@ -64,6 +86,9 @@ Font Awesome 4
 <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 ```
+## Api
+
+See [Api of dogui Vue](https://github.com/adogio/dogUI/wiki/Vue-api)
 
 ## Usage
 
@@ -154,6 +179,7 @@ Font Awesome 4
 ```
 
 ### Regular mode
+
 ```html
 <template>
   <div id="app">

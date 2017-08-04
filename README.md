@@ -24,4 +24,5 @@ dogUI is a UI library
 
 ## Documents
 
-- [dogui for Vue](https://github.com/adogio/dogUI/wiki/Vue)
+- [Wiki of dogui Vue](https://github.com/adogio/dogUI/wiki/Vue)
+- [Api of dogui Vue](https://github.com/adogio/dogUI/wiki/Vue-api)
