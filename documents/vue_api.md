@@ -1,8 +1,31 @@
 # API
 
+## Table of Contents
+- [API](#api)
+    - [Table of Contents](#table-of-contents)
+    - [Components](#components)
+        - [cover](#cover)
+        - [title](#title)
+        - [block](#block)
+        - [input](#input)
+        - [textarea](#textarea)
+        - [button](#button)
+        - [cell](#cell)
+        - [info](#info)
+        - [select](#select)
+        - [picture view](#picture-view)
+        - [file upload](#file-upload)
+        - [search bar](#search-bar)
+    - [Effect](#effect)
+        - [alert](#alert)
+        - [loading](#loading)
+        - [uploading](#uploading)
+        - [double check](#double-check)
+        - [qrcode](#qrcode)
+
 ## Components
 
-#### cover
+### cover
 
 -   Component
     -   Tag name
@@ -14,7 +37,7 @@
 -   Slots
     -   Things going to show after loading.
 
-#### title
+### title
 
 -   Component
     -   Tag name
@@ -26,7 +49,7 @@
 -   Slots
     -   Things going to show inside title.
 
-#### block
+### block
 
 -   Component
     -   Tag name
@@ -38,7 +61,7 @@
 -   Slots
     -   Things going to show inside the block.
 
-#### input
+### input
 
 -   Component
     -   Tag name
@@ -50,7 +73,7 @@
 -   Slots
     -   The title of input.
 
-#### textarea
+### textarea
 
 -   Component
     -   Tag name
@@ -62,7 +85,7 @@
 -   Slots
     -   The title of input.
 
-#### button
+### button
 
 -   Component
     -   Tag name
@@ -86,7 +109,7 @@
 -   Slots
     -   Button content
 
-#### cell
+### cell
 
 -   Component
     -   Tag name
@@ -97,7 +120,7 @@
 -   Slots
     -   Content that display on the right of cell
 
-#### info
+### info
 
 -   Component
     -   Tag name
@@ -110,7 +133,7 @@
 -   Slots
     -   Content of information
 
-#### select
+### select
 
 -   Component
     -   Tag name
@@ -128,20 +151,20 @@
 -   Slots
     -   The title of select.
 
-#### picture view
+### picture view
 
-#### file upload
+### file upload
 
-#### search bar
+### search bar
 
 ## Effect
 
-#### alert
+### alert
 
-#### loading
+### loading
 
-#### uploading
+### uploading
 
-#### double check
+### double check
 
-#### qrcode
+### qrcode
