@@ -1,6 +1,7 @@
 # API
 
 ## Table of Contents
+
 - [API](#api)
     - [Table of Contents](#table-of-contents)
     - [Components](#components)
@@ -12,16 +13,19 @@
         - [button](#button)
         - [cell](#cell)
         - [info](#info)
+        - [static](#static)
+        - [small](#small)
         - [select](#select)
         - [picture view](#picture-view)
-        - [file upload](#file-upload)
         - [search bar](#search-bar)
-    - [Effect](#effect)
+        - [Fold block](#fold-block)
+    - [Effects](#effects)
         - [alert](#alert)
         - [loading](#loading)
         - [uploading](#uploading)
         - [double check](#double-check)
         - [qrcode](#qrcode)
+        - [draw menu](#draw-menu)
 
 ## Components
 
@@ -36,6 +40,7 @@
     -   Icon: String -> the font awesome icon name in the middle  of the loading screen.
 -   Slots
     -   Things going to show after loading.
+    -   (slot="draw") content that display in draw table (only working with extend draw triggired)
 
 ### title
 
@@ -128,10 +133,38 @@
         -   Sample -> inf
 -   Props
     -   Info: String -> the title that displayed on block's top.
-    -   Icon: String -> the font awesome icon that displayed on left site of info.
+    -   Icon: String -> the font awesome icon that displayed on left site of info. (optional)
         -   If no icon proped will appear with default infotmation-o of font awesome
 -   Slots
     -   Content of information
+
+### static
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-static
+        -   Sample -> sta
+-   Props
+    -   Icon: String -> the font awesome icon that displayed on left site of info. (optional)
+        -   If no icon proped will appear with default arraw-right of font awesome
+-   Slots
+    -   Content of static information
+-   Warning
+    -   This component only render once, content will never change after mounted
+
+### small
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-small
+        -   Sample -> sma
+-   Props
+    -   Icon: String -> the font awesome icon that displayed on left site of info. (optional)
+        -   If no icon proped will appear with default arraw-right of font awesome
+-   Slots
+    -   Content of static information
+-   Warning
+    -   This component only render once, content will never change after mounted
 
 ### select
 
@@ -153,18 +186,103 @@
 
 ### picture view
 
-### file upload
+-   Component
+    -   Tag name
+        -   Regular -> dog-view
+        -   Sample -> vie
+-   Props
+    -   pictures: array of string -> A array of picture url (either url or base 64) that in display
+-   Slots
+    -   Title of picture block
 
 ### search bar
 
-## Effect
+-   Component
+    -   Tag name
+        -   Regular -> dog-search
+        -   Sample -> sea
+-   Props
+    -   placeholder: string -> the place holder of search bar
+    -   @change: function(event) -> when input in search bar, call this function with input event
+-   Slots
+    -   Nothing.
+
+### Fold block
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-fold
+        -   Sample -> fol
+-   Props
+    -   Info: String -> the title that displayed on block's top.
+    -   Icon: String -> the font awesome icon that displayed on left site of info.
+-   Slots
+    -   The full content of fold block that will be folded
+    -   (slot="half") the half content that will be aleways displayed
+
+## Effects
 
 ### alert
 
+-   Effect area
+    -   In dog cover
+-   Function 
+    -   dog.alert(icon, content);
+-   Arguments
+    -   icon: string -> the icon that will be poped up with alert (optional)
+    -   content: string -> the content that will be poped up with alert
+-   Effect
+    -   Popup a alert from buttom
+-   Warning
+    -   Use settimeout for more then 5 ms bewteen two alerts to avoid issue.
+
 ### loading
+
+-   Effect area
+    -   In dog cover
+-   Function 
+    -   dog.unload();
+-   Effect
+    -   Stop loading screen of dog cover
 
 ### uploading
 
+-   Effect area
+    -   In dog cover
+-   Function 
+    -   dog.upload();
+-   Effect
+    -   Switch the page display to upload page
+
 ### double check
 
+-   In development
+
 ### qrcode
+
+-   Effect area
+    -   In dog cover
+    -   Select extend qrcode
+-   Function 
+    -   dog.qrcode(url, content, settings);
+-   Arguments
+    -   url: string -> the qrcode pointing url or a sentence
+    -   content: string -> the content that will display under qrcode
+    -   settings: object (optional)
+        -   mode: string -> image for image mode, text for text mode
+        -   topper: string -> display strings's image or text itself on the top of page
+        -   center: string -> display strings's image or text itself on the center of qrcode
+-   Effect
+    -   Popup a qrcode page that contain a qrcode.
+
+### draw menu
+
+-   Effect area
+    -   In dog cover
+    -   Select extend draw
+-   Function 
+    -   dog.draw(status);
+-   Arguments
+    -   status: boolean -> if true, only working with draw table closed
+-   Effect
+    -   Popup a draw table.
