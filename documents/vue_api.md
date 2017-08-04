@@ -1,27 +1,27 @@
 # API
 
 ## Table of Contents
-- [API](#api)
-    - [Table of Contents](#table-of-contents)
-    - [Components](#components)
-        - [cover](#cover)
-        - [title](#title)
-        - [block](#block)
-        - [input](#input)
-        - [textarea](#textarea)
-        - [button](#button)
-        - [cell](#cell)
-        - [info](#info)
-        - [select](#select)
-        - [picture view](#picture-view)
-        - [file upload](#file-upload)
-        - [search bar](#search-bar)
-    - [Effect](#effect)
-        - [alert](#alert)
-        - [loading](#loading)
-        - [uploading](#uploading)
-        - [double check](#double-check)
-        - [qrcode](#qrcode)
+
+-   [API](#api)
+    -   [Table of Contents](#table-of-contents)
+    -   [Components](#components)
+        -   [cover](#cover)
+        -   [title](#title)
+        -   [block](#block)
+        -   [input](#input)
+        -   [textarea](#textarea)
+        -   [button](#button)
+        -   [cell](#cell)
+        -   [info](#info)
+        -   [select](#select)
+        -   [picture view](#picture-view)
+        -   [search bar](#search-bar)
+    -   [Effects](#effects)
+        -   [alert](#alert)
+        -   [loading](#loading)
+        -   [uploading](#uploading)
+        -   [double check](#double-check)
+        -   [qrcode](#qrcode)
 
 ## Components
 
@@ -153,11 +153,30 @@
 
 ### picture view
 
-### file upload
+-   Component
+    -   Tag name
+        -   Regular -> dog-view
+        -   Sample -> vie
+-   Props
+    -   pictures: array of string -> A array of picture url (either url or base 64) that in display
+-   Slots
+    -   Title of picture block
 
 ### search bar
 
-## Effect
+-   Component
+    -   Tag name
+        -   Regular -> dog-search
+        -   Sample -> sea
+-   Props
+    -   placeholder: string -> the place holder of search bar
+    -   @change: function(event) -> when input in search bar, call this function with input event
+-   Slots
+    -   Nothing.
+
+### Fold block
+
+## Effects
 
 ### alert
 
