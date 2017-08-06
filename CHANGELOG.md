@@ -1,5 +1,20 @@
 # Changelog
 
+-   Version 4.4.6
+    -   Make import faster
+    -   Add angular description to documents
+-   Version 4.4.5
+    -   Fix version numbers on NPM
+    -   Fix dependence bugs
+-   Version 4.4.4
+    -   Upade documents
+    -   Fix minor bugs
+-   Version 4.4.3
+    -   Initiallize angular components
+    -   Will move to version 5 after angular completed
+    -   Fix minor bugs
+-   Version 4.4.2
+    -   Fix minor bugs (Minor bug horriable)
 -   Version 4.4.1
     -   Make default draw view to right for not replaced by mostly app's motion
     -   Fix interfaces bugs
@@ -122,83 +137,83 @@
     -   Change window calling methods
     -   Now all window function changed to window.dog
     -   Fix bugs
--   Version 1.8.11
+-   Version 1.8.11 (removed)
     -   fix minor bugs
     -   Make nav abr works more smoothly
--   Version 1.8.10
+-   Version 1.8.10 (removed)
     -   Change all displaying info to 'info'
     -   Make animate of loading shorter
     -   Fix minor bugs
     -   Using latest doglib
--   Version 1.8.9
+-   Version 1.8.9 (removed)
     -   Fix input issue
--   Version 1.8.8
+-   Version 1.8.8 (removed)
     -   Update size
     -   Fix issue
--   Version 1.8.7
+-   Version 1.8.7 (removed)
     -   Fix date input issue
     -   Fix dollar icon issue
--   Version 1.8.6
+-   Version 1.8.6 (removed)
     -   Perfect input margin size
     -   Add money, pass, tel, email, date input functions
     -   Add input signial to select panel
--   Version 1.8.5
+-   Version 1.8.5 (removed)
     -   Add input hint for input and textarea
     -   Fix testarea minor bugs
--   Version 1.8.4
+-   Version 1.8.4 (removed)
     -   Fix white border bug
--   Version 1.8.3
+-   Version 1.8.3 (removed)
     -   Beautify tables
     -   Componented padding bar
--   Version 1.8.2
+-   Version 1.8.2 (removed)
     -   Ifx table bug
--   Version 1.8.1
+-   Version 1.8.1 (removed)
     -   Update table format
--   Version 1.8.0
+-   Version 1.8.0 (removed)
     -   Add qrcode function
     -   thanks for qrgenerate js source code
--   Version 1.7.2
+-   Version 1.7.2 (removed)
     -   Fix input pre value bug
--   Version 1.7.1
+-   Version 1.7.1 (removed)
     -   Add padding line to upload page
     -   fix bugs
--   Version 1.7.0
+-   Version 1.7.0 (removed)
     -   Add Uploading view
     -   Add nav bar view
     -   Fix bugs
     -   Update cover view
--   Version 1.6.1
+-   Version 1.6.1 (removed)
     -   Fix minor bugs
     -   Fix border color
--   Version 1.6.1
+-   Version 1.6.1 (removed)
     -   Fix minor bugs
     -   Fix textarea bugs
     -   Fix bounding bugs
--   Version 1.6.0
+-   Version 1.6.0 (removed)
     -   Add Pictures view
     -   Add Domb view
--   Version 1.5.1
+-   Version 1.5.1 (removed)
     -   Fix minor bugs
--   Version 1.5.0
+-   Version 1.5.0 (removed)
     -   Add Info view
     -   Fix bugs
--   Version 1.4.0
+-   Version 1.4.0 (removed)
     -   Add Cover view
     -   Add loading view
     -   Fix input bugs
--   Version 1.3.0
+-   Version 1.3.0 (removed)
     -   Add Textarea view
     -   Fix bugs
--   Version 1.2.1
+-   Version 1.2.1 (removed)
     -   FIx minor bugs
--   Version 1.2.0
+-   Version 1.2.0 (removed)
     -   Add Bar view
     -   Add Search bar view
--   Version 1.1.0
+-   Version 1.1.0 (removed)
     -   Add picture upload view
     -   Add selector view
     -   Fix bugs
--   Version 1.0.0
+-   Version 1.0.0 (removed)
     -   Update to useable version
     -   Input view
     -   Block view

@@ -10,7 +10,6 @@ import {
 Vue.use(vue, {
   credit: "那个谁",
   sample: true,
-  draw: "left",
   extend: ['qrcode', 'draw']
 });
 

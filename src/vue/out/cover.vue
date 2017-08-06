@@ -93,7 +93,6 @@
                     case "draw":
                     case "drawmenu":
                         this.drawStatus.engaged = true;
-                        console.log(this.$dog)
                         window.dog.draw = (outside) => {
                             if (this.drawStatus.opened) {
                                 if (outside) return false;
