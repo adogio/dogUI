@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.4.6
+    -   Make import faster
+    -   Add angular description to documents
 -   Version 4.4.5
     -   Fix version numbers on NPM
     -   Fix dependence bugs
