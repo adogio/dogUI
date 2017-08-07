@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.4.8
+    -   Add float button
+    -   Fix z-index bugs
+    -   Tested caperjs work well with dogui
 -   Version 4.4.7
     -   Add release function of window.dog
     -   Fix minor bugs

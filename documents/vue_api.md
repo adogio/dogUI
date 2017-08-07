@@ -19,6 +19,7 @@
         - [picture view](#picture-view)
         - [search bar](#search-bar)
         - [Fold block](#fold-block)
+        - [Float button](#float-button)
     - [Effects](#effects)
         - [alert](#alert)
         - [loading](#loading)
@@ -219,6 +220,17 @@
 -   Slots
     -   The full content of fold block that will be folded
     -   (slot="half") the half content that will be aleways displayed
+
+### Float button
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-float
+        -   Sample -> flo
+-   Props
+    -   @click: Function -> the function will be triggered after click
+-   Slots
+    -   Stuff that should display on the button
 
 ## Effects
 

@@ -16,7 +16,8 @@ import {
     credit,
     switcher,
     fold,
-    small
+    small,
+    float
 } from './import';
 
 export default {
@@ -40,7 +41,7 @@ export default {
             release: () => {
                 const temp = window.dog;
                 window.dog = undefined;
-                delete dog;
+                // delete dog;
                 return temp;
             },
             back: () => {
@@ -103,6 +104,7 @@ export default {
             Vue.component('dog-switch', switcher);
             Vue.component('dog-fold', fold);
             Vue.component('dog-small', small);
+            Vue.component('dog-float', float);
         } else {
             Vue.component('cov', cover);
             Vue.component('tit', title);
@@ -122,6 +124,7 @@ export default {
             Vue.component('swi', switcher);
             Vue.component('fol', fold);
             Vue.component('sma', small);
+            Vue.component('flo', float);
         }
     }
 }

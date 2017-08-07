@@ -13,6 +13,8 @@
       </div>
       <tit icon="comments" info="DOGUI DEMO">
         <sea placeholder="搜索框" @change="update"></sea>
+        <flo @click="draw">S</flo>
+        <inf info="Caper">文字变化: {{caper}}</inf>
         <sta icon="arrow-right">欢迎浏览 DogUI.
           <br> 这个 demo 是用 Vue.js 的组件构建而成, 包括这段话本身都使用了 dogUI 的组件.
           <br> 随意在这个表单上输入查看 DogUI 的效果吧.
@@ -90,6 +92,8 @@
         seach: "",
         email: "",
         money: "",
+        caper: 5,
+        clock: 5,
         drawS: 0,
         tel: "",
         password: "",

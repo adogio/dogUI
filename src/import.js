@@ -2,4 +2,5 @@ import dogui_vue from './vue/interface';
 
 export default dogui_vue;
 
-export const vue,dogui = dogui_vue;
+export const vue = dogui_vue;
+export const dogui = dogui_vue;
