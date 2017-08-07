@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.4.7
+    -   Add release function of window.dog
+    -   Fix minor bugs
+    -   Edit document
 -   Version 4.4.6
     -   Make import faster
     -   Add angular description to documents

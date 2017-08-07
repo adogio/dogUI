@@ -1,7 +1,7 @@
 {
   "name": "dogui",
-  "version": "4.4.6",
-  "description": "A dog UI library for Vuejs",
+  "version": "4.4.7",
+  "description": "A UI library for Vuejs",
   "main": "src/import.js",
   "scripts": {
     "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",

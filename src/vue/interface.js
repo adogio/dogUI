@@ -37,6 +37,12 @@ export default {
             extend: []
         }
         window.dog = {
+            release: () => {
+                const temp = window.dog;
+                window.dog = undefined;
+                delete dog;
+                return temp;
+            },
             back: () => {
                 if (getURLVar('environment')) {
                     if (getURLVar('environment') !== "android") {
