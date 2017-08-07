@@ -191,7 +191,7 @@
         -   Regular -> dog-view
         -   Sample -> vie
 -   Props
-    -   pictures: array of string -> A array of picture url (either url or base 64) that in display
+    -   srcs: array of string -> A array of picture url (either url or base 64) that in display
 -   Slots
     -   Title of picture block
 
