@@ -228,6 +228,7 @@
         -   Regular -> dog-float
         -   Sample -> flo
 -   Props
+    -   icon: string -> display icon on the button (optional)
     -   @click: Function -> the function will be triggered after click
 -   Slots
     -   Stuff that should display on the button

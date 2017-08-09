@@ -2,21 +2,25 @@
     <div class="savior">
         <button class="float-button" @click="clickThis">
             <slot></slot>
+            <dog-icon v-if="icon" :icon="icon"></dog-icon>
         </button>
     </div>
 </template>
 
 <script>
+    import icon from '../components/icon.vue';
+
     export default {
         data: function () {
             return {}
         },
-        computed: {
-
-        },
+        computed: {},
+        name: "dog-float",
         mounted: function () {},
-        props: [],
-        components: {},
+        props: ['icon'],
+        components: {
+            "dog-icon": icon
+        },
         methods: {
             clickThis: function () {
                 this.$emit('click');

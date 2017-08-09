@@ -1,5 +1,10 @@
 # Changelog
 
+-   Version 4.4.9
+    -   Update float content display
+    -   Add name bar of all out components
+    -   Update documents
+    -   Fix minor bugs
 -   Version 4.4.8
     -   Add float button
     -   Fix z-index bugs
