@@ -2,6 +2,7 @@
   <div id="app">
     <cov icon="paper-plane" info="Loading">
       <div slot="draw">
+        <top>123</top>
         <sta>在这个区域里可以使用任意的模块组件</sta>
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
         <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>

@@ -1,5 +1,13 @@
 # Changelog
 
+-   Version 4.5.0
+    -   Add top credit
+    -   Fix color issue
+    -   Update size of left paddingbar
+    -   Fix minor bugs
+    -   Add more function to float button
+    -   Update Vue addon experience
+    -   Update documents
 -   Version 4.4.9
     -   Update float content display
     -   Add name bar of all out components

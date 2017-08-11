@@ -17,7 +17,8 @@ import {
     switcher,
     fold,
     small,
-    float
+    float,
+    topCredit
 } from './import';
 
 export default {
@@ -70,6 +71,11 @@ export default {
                 case "credit":
                     $dog.credit = options[i];
                     break inner;
+                case "appName":
+                case "topCredit":
+                case "name":
+                    $dog.appName = options[i];
+                    break inner;
                 case "egg":
                     $dog.egg = options[i];
                     break inner;
@@ -105,6 +111,7 @@ export default {
             Vue.component('dog-fold', fold);
             Vue.component('dog-small', small);
             Vue.component('dog-float', float);
+            Vue.component('dog-top', topCredit);
         } else {
             Vue.component('cov', cover);
             Vue.component('tit', title);
@@ -125,6 +132,7 @@ export default {
             Vue.component('fol', fold);
             Vue.component('sma', small);
             Vue.component('flo', float);
+            Vue.component('top', topCredit);
         }
     }
 }

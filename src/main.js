@@ -10,7 +10,8 @@ import {
 Vue.use(vue, {
   credit: "那个谁",
   sample: true,
-  extend: ['qrcode', 'draw']
+  extend: ['qrcode', 'draw'],
+  name: "Dogui"
 });
 
 new Vue({ // eslint-disable-line no-new
