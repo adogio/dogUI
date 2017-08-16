@@ -1,8 +1,8 @@
 <template>
     <div class="savior">
         <button class="float-button" @click="clickThis">
-            <slot></slot>
             <dog-icon v-if="icon" :icon="icon"></dog-icon>
+            <slot></slot>
         </button>
     </div>
 </template>

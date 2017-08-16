@@ -8,7 +8,7 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 4.5.0
+-   Version 4.5.1
 -   See [Angular version of dogui](https://github.com/adogio/dogui-angular)
 -   See [React version of dogui](https://github.com/adogio/dogui-react)
 

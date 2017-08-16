@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 4.5.1
+    -   Fix minor bugs
 -   Version 4.5.0
     -   Add top credit
     -   Fix color issue
