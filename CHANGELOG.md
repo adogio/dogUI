@@ -1,5 +1,7 @@
 # Changelog
 
+-   Version 4.5.2
+    -   Fix minor style bug
 -   Version 4.5.1
     -   Fix minor bugs
 -   Version 4.5.0

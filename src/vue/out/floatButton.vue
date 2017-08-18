@@ -32,7 +32,7 @@
 <style scoped>
     button.float-button {
         transition: all 0.5s;
-        border-radius: 9px;
+        border-radius: 8px;
         width: 45px;
         height: 45px;
         font-size: 21px;
