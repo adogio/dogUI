@@ -34,12 +34,6 @@
             }
         },
         name: "dog-nav",
-        components: {
-
-        },
-        computed: {
-
-        },
         methods: {
             activateNav: function (index) {
                 if (index != this.stacks.length - 1) {
