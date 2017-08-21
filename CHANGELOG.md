@@ -166,6 +166,7 @@
     -   Change window calling methods
     -   Now all window function changed to window.dog
     -   Fix bugs
+-   Version 1.9.0
 -   Version 1.8.11 (removed)
     -   fix minor bugs
     -   Make nav abr works more smoothly
@@ -198,7 +199,7 @@
     -   Ifx table bug
 -   Version 1.8.1 (removed)
     -   Update table format
--   Version 1.8.0 (removed)
+-   Version 1.8.0 
     -   Add qrcode function
     -   thanks for qrgenerate js source code
 -   Version 1.7.2 (removed)
@@ -233,6 +234,7 @@
 -   Version 1.3.0 (removed)
     -   Add Textarea view
     -   Fix bugs
+-   Version 1.2.3
 -   Version 1.2.2
 -   Version 1.2.1 (removed)
     -   FIx minor bugs
@@ -244,7 +246,11 @@
     -   Add picture upload view
     -   Add selector view
     -   Fix bugs
--   Version 1.0.1, 1.0.2
+-   Version 1.0.5
+-   Version 1.0.4
+-   Version 1.0.3
+-   Version 1.0.2
+-   Version 1.0.1 (unpublished)
 -   Version 1.0.0 (removed)
     -   Update to useable version
     -   Input view
