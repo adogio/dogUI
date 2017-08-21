@@ -233,15 +233,18 @@
 -   Version 1.3.0 (removed)
     -   Add Textarea view
     -   Fix bugs
+-   Version 1.2.2
 -   Version 1.2.1 (removed)
     -   FIx minor bugs
 -   Version 1.2.0 (removed)
     -   Add Bar view
     -   Add Search bar view
+-   Version 1.1.1
 -   Version 1.1.0 (removed)
     -   Add picture upload view
     -   Add selector view
     -   Fix bugs
+-   Version 1.0.1, 1.0.2
 -   Version 1.0.0 (removed)
     -   Update to useable version
     -   Input view
