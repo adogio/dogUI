@@ -1,5 +1,7 @@
 # Changelog
 
+-   Verison 4.5.4
+    -   Fix minor bugs
 -   Version 4.5.3
     -   Fix minor input bug
     -   Add button style
