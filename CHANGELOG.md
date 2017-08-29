@@ -250,8 +250,9 @@
     -   Fix bugs
 -   Version 1.0.5
 -   Version 1.0.4
--   Version 1.0.3
--   Version 1.0.2
+-   **_Unseggested_**
+-   Version 1.0.3 (unpublished)
+-   Version 1.0.2 (unpublished)
 -   Version 1.0.1 (unpublished)
 -   Version 1.0.0 (removed)
     -   Update to useable version
