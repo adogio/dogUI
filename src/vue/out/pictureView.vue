@@ -1,9 +1,11 @@
 <template>
-    <div v-if="small&&rows">
-        <div class="row" v-for="(row, indexl) in rows" :key="indexl">
-            <div class="col-xs-4" v-for="(i, indexr) in row" :key="indexr">
-                <div class="box" @click="biggerClick(indexl, indexr)">
-                    <img :src="i" :alt="alt?alt:'X'">
+    <div>
+        <div v-if="small&&rows">
+            <div class="row" v-for="(row, indexl) in rows" :key="indexl">
+                <div class="col-xs-4" v-for="(i, indexr) in row" :key="indexr">
+                    <div class="box" @click="biggerClick(indexl, indexr)">
+                        <img :src="i" :alt="alt?alt:'X'">
+                    </div>
                 </div>
             </div>
         </div>

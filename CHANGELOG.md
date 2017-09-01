@@ -1,5 +1,9 @@
 # Changelog
 
+-   Version 4.5.5, 4.5.6
+    -   Fix picture view bug
+    -   Fix picture bug
+    -   Fix picture upload bug
 -   Verison 4.5.4
     -   Fix minor bugs
 -   Version 4.5.3
