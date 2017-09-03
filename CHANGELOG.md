@@ -166,7 +166,7 @@
     -   Change window calling methods
     -   Now all window function changed to window.dog
     -   Fix bugs
--   Version 1.9.0
+-   Version 1.9.0 (deplicated)
 -   Version 1.8.11 (removed)
     -   fix minor bugs
     -   Make nav abr works more smoothly
