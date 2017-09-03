@@ -1,5 +1,11 @@
 # Changelog
 
+-   Version 4.5.5, 4.5.6
+    -   Fix picture view bug
+    -   Fix picture bug
+    -   Fix picture upload bug
+-   Verison 4.5.4
+    -   Fix minor bugs
 -   Version 4.5.3
     -   Fix minor input bug
     -   Add button style
@@ -248,8 +254,9 @@
     -   Fix bugs
 -   Version 1.0.5
 -   Version 1.0.4
--   Version 1.0.3
--   Version 1.0.2
+-   **_Unseggested_**
+-   Version 1.0.3 (unpublished)
+-   Version 1.0.2 (unpublished)
 -   Version 1.0.1 (unpublished)
 -   Version 1.0.0 (removed)
     -   Update to useable version
