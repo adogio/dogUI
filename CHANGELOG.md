@@ -168,7 +168,7 @@
     -   Update example case
 -   Version 2.1.0
     -   Add alert module
--   Version 2.0.0
+-   Version 2.0.0 (deplicated)
     -   Change window calling methods
     -   Now all window function changed to window.dog
     -   Fix bugs
@@ -265,3 +265,4 @@
     -   Title view
     -   Cell view
 -   Version 0.0.1 (unpublished)
+> npm deprecate dogui@2.0.0 "this version has been deprecated"
