@@ -10,6 +10,7 @@
         <sta>抽屉菜单也可以用按钮打开关闭</sta>
         <but icon="bars" @click="draw(false)" size="normal" color="purple">开启/关闭 抽屉</but>
         <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你还可以将credits放在这里</sma>
+        <ver current="1.2.3" latest="1.2.54">Version</ver>
         <cre></cre>
       </div>
       <tit icon="comments" info="DOGUI DEMO">

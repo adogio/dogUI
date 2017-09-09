@@ -18,7 +18,8 @@ import {
     fold,
     small,
     float,
-    topCredit
+    topCredit,
+    version
 } from './import';
 
 export default {
@@ -42,7 +43,6 @@ export default {
             release: () => {
                 const temp = window.dog;
                 window.dog = undefined;
-                // delete dog;
                 return temp;
             },
             back: () => {
@@ -112,6 +112,7 @@ export default {
             Vue.component('dog-small', small);
             Vue.component('dog-float', float);
             Vue.component('dog-top', topCredit);
+            Vue.component('dog-version', version);
         } else {
             Vue.component('cov', cover);
             Vue.component('tit', title);
@@ -133,6 +134,7 @@ export default {
             Vue.component('sma', small);
             Vue.component('flo', float);
             Vue.component('top', topCredit);
+            Vue.component('ver', version);
         }
     }
 }
