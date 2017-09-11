@@ -72,11 +72,14 @@ export default {
                     $dog.credit = options[i];
                     break inner;
                 case "appName":
+                case "appname":
                 case "topCredit":
+                case "top":
                 case "name":
                     $dog.appName = options[i];
                     break inner;
                 case "egg":
+                case "ester":
                     $dog.egg = options[i];
                     break inner;
                 case "sample":

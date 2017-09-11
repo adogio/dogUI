@@ -169,7 +169,7 @@
     -   Fix alert bugs
     -   Fix auto option bugs from selector
     -   Update example case
--   Version 2.1.0
+-   Version 2.1.0 (deplicated)
     -   Add alert module
 -   Version 2.0.0 (deplicated)
     -   Change window calling methods
@@ -268,4 +268,6 @@
     -   Title view
     -   Cell view
 -   Version 0.0.1 (unpublished)
-    > npm deprecate dogui@2.0.0 "this version has been deprecated"
+
+
+> npm deprecate dogui@2.0.0 "this version has been deprecated"
