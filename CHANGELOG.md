@@ -1,5 +1,8 @@
 # Changelog
 
+-   Version 4.5.8
+    -   Add make file to help parse demo
+    -   Fix minor bugs
 -   Version 4.5.7
     -   Add new module Version
     -   Fix minor bugs
@@ -268,6 +271,5 @@
     -   Title view
     -   Cell view
 -   Version 0.0.1 (unpublished)
-
 
 > npm deprecate dogui@2.0.0 "this version has been deprecated"

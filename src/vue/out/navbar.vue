@@ -46,7 +46,7 @@
             },
             navColor: function (index) {
                 if (index == this.stacks.length - 1) {
-                    return "color: #ff0d00;font-weight: bold;"
+                    return "color: #ff0d00;font-weight: bold;";
                 } else {
                     return "";
                 }
