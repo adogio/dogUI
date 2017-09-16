@@ -168,7 +168,7 @@
     -   Fix select on change
 -   Version 2.1.2
     -   Fix minor bugs
--   Version 2.1.1
+-   Version 2.1.1 (deplicated)
     -   Fix alert bugs
     -   Fix auto option bugs from selector
     -   Update example case
@@ -272,4 +272,4 @@
     -   Cell view
 -   Version 0.0.1 (unpublished)
 
-> npm deprecate dogui@2.0.0 "this version has been deprecated"
+> npm deprecate dogui@2.1.1 "this version has been deprecated"

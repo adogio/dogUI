@@ -1,4 +1,6 @@
-dogui :
+dogui : build
+	
+build :
 	cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js
 
 run : watchify localServe
