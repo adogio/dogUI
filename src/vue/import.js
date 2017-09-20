@@ -16,6 +16,9 @@ import dog_credit from './out/credit.vue';
 import dog_switch from './out/switch.vue';
 import dog_fold from './out/fold.vue';
 import dog_small from './out/small.vue';
+import dog_float from './out/floatButton.vue';
+import dog_topCredit from './out/topCredit.vue';
+import dog_version from './out/version.vue';
 
 export const title = dog_title;
 export const block = dog_block;
@@ -35,3 +38,6 @@ export const credit = dog_credit;
 export const switcher = dog_switch;
 export const fold = dog_fold;
 export const small = dog_small;
+export const float = dog_float;
+export const topCredit = dog_topCredit;
+export const version = dog_version;

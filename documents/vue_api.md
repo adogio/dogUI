@@ -19,6 +19,9 @@
         - [picture view](#picture-view)
         - [search bar](#search-bar)
         - [Fold block](#fold-block)
+        - [Float button](#float-button)
+        - [Credit](#credit)
+        - [Top Credit](#top-credit)
     - [Effects](#effects)
         - [alert](#alert)
         - [loading](#loading)
@@ -191,7 +194,7 @@
         -   Regular -> dog-view
         -   Sample -> vie
 -   Props
-    -   pictures: array of string -> A array of picture url (either url or base 64) that in display
+    -   srcs: array of string -> A array of picture url (either url or base 64) that in display
 -   Slots
     -   Title of picture block
 
@@ -219,6 +222,44 @@
 -   Slots
     -   The full content of fold block that will be folded
     -   (slot="half") the half content that will be aleways displayed
+
+### Float button
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-float
+        -   Sample -> flo
+-   Props
+    -   icon: string -> display icon on the button (optional)
+    -   @click: Function -> the function will be triggered after click
+-   Slots
+    -   Stuff that should display on the button
+
+### Credit
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-credit
+        -   Sample -> cre
+-   Props
+    -   icon: string -> display icon on the button (optional)
+-   Slots
+    -   Stuff that should display on the credit
+    -   Setting in Addon: credit -> string to display company name
+
+### Top Credit
+
+-   Component
+    -   Tag name
+        -   Regular -> dog-top
+        -   Sample -> top
+-   Props
+    -   icon: string -> display icon on the button (optional)
+    -   img: string -> ling og img
+    -   src: string -> link of img (both img and src do same thing)
+-   Slots
+    -   Stuff that should display on the right side of credit
+    -   Setting in Addon: name, appName -> string to display left side of credit
 
 ## Effects
 

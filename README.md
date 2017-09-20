@@ -8,7 +8,9 @@ Every dogui component can work individually without any other dogui component.
 
 ## Version
 
--   Version 4.4.3
+-   Version 4.5.8
+-   See [Angular version of dogui](https://github.com/adogio/dogui-angular)
+-   See [React version of dogui](https://github.com/adogio/dogui-react)
 
 ## Introduction
 
@@ -24,5 +26,6 @@ dogUI is a UI library
 
 ## Documents
 
-- [Wiki of dogui Vue](https://github.com/adogio/dogUI/wiki/Vue)
-- [Api of dogui Vue](https://github.com/adogio/dogUI/wiki/Vue-api)
+-   [Wiki of dogui Vue](https://github.com/adogio/dogUI/wiki/Vue)
+-   [Api of dogui Vue](https://github.com/adogio/dogUI/wiki/Vue-api)
+-   [Changelog](https://github.com/adogio/dogUI/wiki/changelog)

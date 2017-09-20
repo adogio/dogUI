@@ -45,7 +45,6 @@
                     if (value) {
                         el.focus();
                     }
-
                 }
             }
         },
@@ -61,11 +60,7 @@
         },
         mounted: function () {
             this.inputed = this.value;
-            // if (this.type == 'date') {
-            //     this.place = "smallPlaceholder";
-            // } else {
             this.rePlaceHolder();
-            // }
         },
         props: ['type', 'value', 'icon'],
         methods: {

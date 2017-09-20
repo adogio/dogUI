@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <div class="row">
-            <div class="larger-text col-xs-4">
-                {{info}}
-            </div>
-            <div class="larger-text col-xs-8">
-                <slot></slot>
-            </div>
+    <div class="row">
+        <div class="larger-text col-xs-4">
+            {{info}}
+        </div>
+        <div class="larger-text col-xs-8">
+            <slot></slot>
         </div>
     </div>
 </template>

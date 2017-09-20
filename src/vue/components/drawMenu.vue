@@ -38,7 +38,7 @@
 
 <style scoped>
     div.dm {
-        -webkit-backdrop-filter: blur(5px);
+        /* -webkit-backdrop-filter: blur(5px); */
         /* backdrop-filter: blur(5px); */
         overflow: auto;
         position: fixed;
@@ -53,43 +53,43 @@
 
     @keyframes leftChange {
         0% {
-            border-left: 9px solid #DEFFFC;
+            border-left: 6px solid #DEFFFC;
         }
         20% {
-            border-left: 9px solid #EB5160;
+            border-left: 6px solid #EB5160;
         }
         40% {
-            border-left: 9px solid #ED9B40;
+            border-left: 6px solid #ED9B40;
         }
         60% {
-            border-left: 9px solid #CBE896;
+            border-left: 6px solid #CBE896;
         }
         80% {
-            border-left: 9px solid #8BAAAD;
+            border-left: 6px solid #8BAAAD;
         }
         100% {
-            border-left: 9px solid #1FD4F9;
+            border-left: 6px solid #1FD4F9;
         }
     }
 
     @-webkit-keyframes leftChange {
         0% {
-            border-left: 9px solid #DEFFFC;
+            border-left: 6px solid #DEFFFC;
         }
         20% {
-            border-left: 9px solid #EB5160;
+            border-left: 6px solid #EB5160;
         }
         40% {
-            border-left: 9px solid #ED9B40;
+            border-left: 6px solid #ED9B40;
         }
         60% {
-            border-left: 9px solid #CBE896;
+            border-left: 6px solid #CBE896;
         }
         80% {
-            border-left: 9px solid #8BAAAD;
+            border-left: 6px solid #8BAAAD;
         }
         100% {
-            border-left: 9px solid #1FD4F9;
+            border-left: 6px solid #1FD4F9;
         }
     }
 </style>

@@ -16,7 +16,10 @@ import {
     credit,
     switcher,
     fold,
-    small
+    small,
+    float,
+    topCredit,
+    version
 } from './import';
 
 export default {
@@ -37,6 +40,11 @@ export default {
             extend: []
         }
         window.dog = {
+            release: () => {
+                const temp = window.dog;
+                window.dog = undefined;
+                return temp;
+            },
             back: () => {
                 if (getURLVar('environment')) {
                     if (getURLVar('environment') !== "android") {
@@ -63,7 +71,15 @@ export default {
                 case "credit":
                     $dog.credit = options[i];
                     break inner;
+                case "appName":
+                case "appname":
+                case "topCredit":
+                case "top":
+                case "name":
+                    $dog.appName = options[i];
+                    break inner;
                 case "egg":
+                case "ester":
                     $dog.egg = options[i];
                     break inner;
                 case "sample":
@@ -97,6 +113,9 @@ export default {
             Vue.component('dog-switch', switcher);
             Vue.component('dog-fold', fold);
             Vue.component('dog-small', small);
+            Vue.component('dog-float', float);
+            Vue.component('dog-top', topCredit);
+            Vue.component('dog-version', version);
         } else {
             Vue.component('cov', cover);
             Vue.component('tit', title);
@@ -116,6 +135,9 @@ export default {
             Vue.component('swi', switcher);
             Vue.component('fol', fold);
             Vue.component('sma', small);
+            Vue.component('flo', float);
+            Vue.component('top', topCredit);
+            Vue.component('ver', version);
         }
     }
 }

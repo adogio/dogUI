@@ -2,6 +2,7 @@
   <div id="app">
     <cov icon="paper-plane" info="Loading">
       <div slot="draw">
+        <top>123</top>
         <sta>在这个区域里可以使用任意的模块组件</sta>
         <but icon="bell" @click="notification" size="normal" color="blue">调用提醒</but>
         <sta>上面的按钮是从本体中复制过来的, 不会有作用域的问题, 点击一下试试看</sta>
@@ -9,10 +10,13 @@
         <sta>抽屉菜单也可以用按钮打开关闭</sta>
         <but icon="bars" @click="draw(false)" size="normal" color="purple">开启/关闭 抽屉</but>
         <sma>你看, 调用提醒的时候, 也不会被遮挡<br>你还可以将credits放在这里</sma>
+        <ver current="1.2.3" latest="1.2.54">Version</ver>
         <cre></cre>
       </div>
       <tit icon="comments" info="DOGUI DEMO">
         <sea placeholder="搜索框" @change="update"></sea>
+        <flo @click="draw">S</flo>
+        <inf info="Caper">文字变化: {{caper}}</inf>
         <sta icon="arrow-right">欢迎浏览 DogUI.
           <br> 这个 demo 是用 Vue.js 的组件构建而成, 包括这段话本身都使用了 dogUI 的组件.
           <br> 随意在这个表单上输入查看 DogUI 的效果吧.
@@ -90,6 +94,8 @@
         seach: "",
         email: "",
         money: "",
+        caper: 5,
+        clock: 5,
         drawS: 0,
         tel: "",
         password: "",
