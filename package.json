@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "doglib": "^1.0.8",
-    "vue": "2.6.11"
+    "vue": "3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
